@@ -1,0 +1,41 @@
+选择云开发的原因：
+1. 体量不是很大，选择云开发不会带来负面影响
+2. 云开发免去了和学校申请服务器 & 维护服务器的烦恼
+3. 云开发使用微信提供的服务器的数据库，相比学校或个人的服务器会更为稳定，性能更高
+4. 价格是一个月 20，affordable
+5. 云开发省去了一些（重复且低技术含量的）后端开发任务，可以更专注于业务逻辑
+
+小程序目录结构：
+—— cloudfunctions：云函数（封装），可以直接在小程序主程序中调用
+    —— quickstartFunctions：微信提供的云函数，可以直接调用
+        —— folderName
+            —— index.js
+    —— selfFunctions：自己另外开发的云函数（这个文件夹名字是我随便起的）
+        —— folderName
+            —— index.js
+—— miniprogram：小程序主程序
+    —— components：可复用的组件们
+    —— images：静态资源文件，如图片、视频等
+    —— pages：**核心！**，小程序的各个页面
+        —— folderName(pageName)
+            —— index.js：定义交互函数
+            —— index.json：页面配置文件
+            —— index.wxss：即 css 文件，定义页面样式
+            —— index.wxml：即 html 文件，定义页面框架
+        —— folderName(pageName)
+        —— folderName(pageName)
+        ...
+    —— app.js：全局交互函数
+    —— app.json：全局配置文件（+ 路由）
+    —— app.wxss：即 css 文件，定义全局样式
+    —— envList.js：开发环境配置文件，不用动
+    —— sitemap.json
+—— 其它文件：底层配置，基本上不用动
+
+文件相互作用关系：
+1. 同一目录（pageName 文件夹）下的 wxml/wxss/js 文件：
+wxml 文件可直接使用 wxss 文件中定义的样式；wxml 文件可直接使用 js 文件中定义的函数。
+
+2. 和 app.wxss/js 的关系：
+如果 wxml 文件中出现了同一目录下 wxss 文件中没有定义的样式或 js 文件中没有定义的方法，则 wxml 会查找全局（app）wxss / js 文件；如果有，则使用全局定义的样式 / 方法，如果没有则使用默认 / 抛出报错。
+
