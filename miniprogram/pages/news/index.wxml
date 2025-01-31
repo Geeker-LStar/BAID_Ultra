@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">
+    <text>Seiue 日程表</text>
+  </view>
+
+  <scroll-view class="news-section" scroll-y>
+    <view class="news-item" wx:for="{{newsList}}" wx:key="index">
+      <text>{{item}}</text>
+    </view>
+    <view class="more-news">
+      <text>更多 >></text>
+    </view>
+  </scroll-view>
+
+  <view class="sections">
+    <view class="section-item" wx:for="{{sections}}" wx:key="index">
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.news-section {
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.news-item {
+  margin-bottom: 10px;
+}
+
+.more-news {
+  text-align: right;
+  color: blue;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-item {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
