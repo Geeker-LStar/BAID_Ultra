@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">
+    <text>欢迎来到假首页</text>
+  </view>
+  <view class="view">
+    <text>这是一个快捷入口，提供跳转到三个页面的 link：</text>
+    <navigator url="/pages/news/index" open-type="switchTab" class="blue-link">动态（李天星）</navigator>
+    <navigator url="/pages/apps/index" open-type="switchTab" class="blue-link">应用（马睿皓）</navigator>
+    <navigator url="/pages/me/index" open-type="switchTab" class="blue-link">我的（王之众）</navigator>
+  </view>
+  <view class="view">
+    <text class="text">以下是一些注意：</text>
+    <text class="text">1. 不要轻易修改 app.json/js/wxss 文件</text>
+    <text class="text">2. 在自己的文件夹内工作，以防出现修改覆盖或推送 / 拉取问题</text>
+    <text class="text">3. 每次在本地进行修改前先拉取远程仓库内容到本地，以防万一</text>
+    <text class="text">以下是 git 的使用方法：</text>
+    <image src="/images/how-to-use-git.png"></image>
+  </view>
+</view>
