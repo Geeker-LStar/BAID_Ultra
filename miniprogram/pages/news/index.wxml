@@ -1,20 +1,89 @@
+<text>seiue 时间表还没写</text>
+
 <view class="container">
   <view class="header">
-    <text>Seiue 日程表</text>
+    <text class="title">⭐ 学校新闻</text>
+    <text class="more">更多 >></text>
   </view>
+  <view class="list">
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">这些应该写进数据库里。</text>
+    </view>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">从数据库中按照时间倒序选取三个。</text>
+    </view>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">UI 后面还要改。</text>
+    </view>
+    <view class="divider"></view>
+  </view>
+</view>
 
-  <scroll-view class="news-section" scroll-y>
-    <view class="news-item" wx:for="{{newsList}}" wx:key="index">
-      <text>{{item}}</text>
+<view class="container">
+  <view class="header">
+    <text class="title">⭐ 升学规划</text>
+    <text class="more">更多 >></text>
+  </view>
+  <view class="list">
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">1111</text>
     </view>
-    <view class="more-news">
-      <text>更多 >></text>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">2222</text>
     </view>
-  </scroll-view>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">3333</text>
+    </view>
+    <view class="divider"></view>
+  </view>
+</view>
 
-  <view class="sections">
-    <view class="section-item" wx:for="{{sections}}" wx:key="index">
-      <text>{{item}}</text>
+<view class="container">
+  <view class="header">
+    <text class="title">⭐ 竞赛资讯</text>
+    <text class="more">更多 >></text>
+  </view>
+  <view class="list">
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">1111</text>
     </view>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">2222</text>
+    </view>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">3333</text>
+    </view>
+    <view class="divider"></view>
+  </view>
+</view>
+
+<view class="container">
+  <view class="header">
+    <text class="title">⭐ 学生活动</text>
+    <text class="more">更多 >></text>
+  </view>
+  <view class="list">
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">1111</text>
+    </view>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">2222</text>
+    </view>
+    <view class="divider"></view>
+    <view class="list-item">
+      <text class="item-text">3333</text>
+    </view>
+    <view class="divider"></view>
   </view>
 </view>

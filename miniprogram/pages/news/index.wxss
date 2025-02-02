@@ -1,37 +1,58 @@
 .container {
+  width: 95%;
+  background-color: white; /* 米色背景 */
+  border-radius: 15px;
+  margin: 10px auto;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.news-section {
-  height: 200px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.news-item {
-  margin-bottom: 10px;
-}
-
-.more-news {
-  text-align: right;
-  color: blue;
-}
-
-.sections {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-.section-item {
-  margin-bottom: 15px;
+.star {
+  font-size: 20px;
+  color: yellow;
+}
+
+.title {
   font-size: 16px;
+  font-weight: bold;
+}
+
+.more {
+  font-size: 14px;
+  color: #007aff;
+  position: absolute;
+  right: 10px;
+}
+
+.list {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.item-text {
+  font-size: 14px;
+}
+
+.divider {
+  height: 1.5px;
+  background-color: rgb(200, 230, 250); /* 红色分割线 */
+  width: 100%;
 }
