@@ -1,0 +1,15 @@
+<!--pages/login/index.wxml-->
+<view class="container">
+  <view class="input-group">
+    <text>用户名:</text>
+    <input type="text" placeholder="请输入用户名" bindinput="onUsernameInput" />
+  </view>
+  <view class="input-group">
+    <text>密码:</text>
+    <input type="password" placeholder="请输入密码" bindinput="onPasswordInput" />
+  </view>
+  <button bindtap="onLogin">登录</button>
+  <view class="result">
+    <text>返回的 Access Token: {{accessToken}}</text>
+  </view>
+</view>
