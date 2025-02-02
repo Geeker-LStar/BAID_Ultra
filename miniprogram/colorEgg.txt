@@ -1,0 +1,22 @@
+import Egg
+import littleXX as xx
+import marryHao as mrh
+import team
+
+def main():
+	egg = Egg()
+	xx = xx()
+	mrh = mrh()
+	WechatMiniprogramDevelopTeam = team(egg, xx, mrh)
+	result = WechatMiniprogramDevelopTeam.develop()
+	print(result)
+
+if __name__ == "__main__"
+	main()
+
+---
+
+"/miniprogram"
+Damnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+进程已结束，退出代码为0.

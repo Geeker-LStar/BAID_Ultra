@@ -1,2 +1,136 @@
 <!--pages/me/index.wxml-->
-<text>pages/me/index.wxml</text>
+
+<!--置顶的封面-->
+<view>
+  <image src="/images/pages_me_images/upper-image-example.png" class="upperImageStyle"></image>
+</view>
+
+<!--信息块(InfoChunk)-->
+<view class="infoChunk">
+  <!--头像和昵称-->
+  <view class="profileAndName">
+    <!--头像-->
+    <view>
+      <image src="/images/pages_me_images/profile-image-example.png" class="profileImageStyle"></image>
+    </view>
+    <!--列间占位符-->
+    <view class="verticalEmpty">
+    </view>
+    <!--昵称和细节-->
+    <view>
+      <!--昵称-->
+      <text class="nameStyle">此处将展示你的昵称</text>
+      <view></view> <!--换行-->
+      <!--昵称细节-->
+      <text class="detailStyle">此处将展示你的账号类型</text>
+    </view>
+  </view>
+  <!--行间占位符-->
+  <view class="horizontalEmpty">
+  </view>
+  <!--我的日程-->
+  <view class="lightChunk">
+    <!--标题-->
+    <view>
+      <text class="textStyleBold">| 我的日程</text>
+    </view>
+    <!--行间占位符-->
+    <view class="horizontalEmpty">
+    </view>
+    <!--时间文本-->
+    <view>
+      <text class="textStyleNormal">现在是hh:mm，……（鸡汤语录）</text>
+    </view>
+    <!--当前事件-->
+    <view class="bigEvent">
+      <text class="textInsideEvents">综合英语强化  教室XXX  hh:mm~hh:mm</text>
+      <view></view> <!--换行-->
+      <text class="textInsideEvents">教师：张三李四</text>
+    </view>
+    <!--行间占位符-->
+    <view class="horizontalEmpty">
+    </view>
+    <!--下一事件-->
+    <view class="smallEventIncludingText">
+      <!--下一事件文本-->
+      <view class="textOfSmallEvent">
+        <text class="textStlyeNormalNoHeight">即将到来：</text>
+      </view>
+      <!--下一事件内容-->
+      <view class="smallEvent">
+        <text class="textInsideEvents">不知道是什么课</text>
+        <view></view> <!--换行-->
+        <text class="textInsideEventsUnderlined">（点击查看详情）</text>
+      </view>
+    </view>
+  </view>
+</view> <!--end of infochunk-->
+
+<!--空隙(BigGap)-->
+<view class="bigGap">
+</view>
+
+<!--选项块(OptionChunk)-->
+<view class="optionChunk">
+  <!--选项1-->
+  <view class="options">
+    <!--图标-->
+    <view>
+      <image src="/images/pages_me_images/icon-example.png" class="iconInsideOptions"></image>
+    </view>
+    <!--列间占位符-->
+    <view class="betweenIconAndTexts">
+    </view>
+    <!--文字-->
+    <view class="textInsideOptions">
+      <text class="textStlyeNormalNoHeight">我的订阅</text>
+    </view>
+    <!--箭头-->
+    <view>
+      <text class="textStlyeNormalNoHeight">></text>
+    </view>
+  </view>
+  <!--行间占位符-->
+  <view class="horizontalEmpty">
+  </view>
+  <!--选项2-->
+  <view class="options">
+    <!--图标-->
+    <view>
+      <image src="/images/pages_me_images/icon-example.png" class="iconInsideOptions"></image>
+    </view>
+    <!--列间占位符-->
+    <view class="betweenIconAndTexts">
+    </view>
+    <!--文字-->
+    <view class="textInsideOptions">
+      <text class="textStlyeNormalNoHeight">Bug 反馈</text>
+    </view>
+    <!--箭头-->
+    <view>
+      <text class="textStlyeNormalNoHeight">></text>
+    </view>
+  </view>
+  <!--选项3-->
+  <view class="options">
+    <!--图标-->
+    <view>
+      <image src="/images/pages_me_images/icon-example.png" class="iconInsideOptions"></image>
+    </view>
+    <!--列间占位符-->
+    <view class="betweenIconAndTexts">
+    </view>
+    <!--文字-->
+    <view class="textInsideOptions">
+      <text class="textStlyeNormalNoHeight">设置</text>
+    </view>
+    <!--箭头-->
+    <view>
+      <text class="textStlyeNormalNoHeight">></text>
+    </view>
+  </view>
+</view> <!--end of optionchunk-->
+
+<!--空隙(BigGap)-->
+<view class="bigGap">
+</view>
