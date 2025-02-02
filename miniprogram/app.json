@@ -5,7 +5,8 @@
     "pages/fake_homepage/index",
     "pages/news/index",
     "pages/apps/index",
-    "pages/me/index"
+    "pages/me/index",
+    "pages/login/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",

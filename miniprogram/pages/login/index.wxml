@@ -1,0 +1,5 @@
+<!-- pages/login/index.wxml -->
+
+<view>
+  <web-view src="https://geekerlstar.com/seiueapi/" bindmessage="onMessageReceived"></web-view>
+</view>
