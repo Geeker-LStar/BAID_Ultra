@@ -1,0 +1,5 @@
+<!--pages/markdown_test/index.wxml-->
+
+<view class="content-info">
+  <towxml nodes="{{article}}"/>
+</view>

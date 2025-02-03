@@ -16,4 +16,22 @@ App({
 
     this.globalData = {};
   },
+  // 配置 markdown 解析器
+  towxml:require('/towxml/index'),
+  getText: (url, callback) => {
+    wx.request({
+      url: url,
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: (res) => {
+        if (typeof callback === 'function') {
+          callback(res);
+        };
+      },
+      fail(err) {
+        console.error('请求失败', err);
+      }
+    });
+  }
 });
