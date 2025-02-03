@@ -8,6 +8,7 @@
     <navigator url="/pages/apps/index" open-type="switchTab" class="blue-link">应用（马睿皓）</navigator>
     <navigator url="/pages/me/index" open-type="switchTab" class="blue-link">我的（王之众）</navigator>
     <navigator url="/pages/login/index" class="blue-link">登录（李天星）</navigator>
+    <navigator url="/pages/markdown_test/index" class="blue-link">markdown（李天星）</navigator>
   </view>
   <view class="view">
     <text class="text">以下是一些注意：</text>

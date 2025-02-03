@@ -53,6 +53,6 @@
 
 .divider {
   height: 1.5px;
-  background-color: rgb(200, 230, 250); /* 红色分割线 */
+  background-color: rgb(200, 230, 250); 
   width: 100%;
 }
