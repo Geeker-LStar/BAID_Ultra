@@ -1,0 +1,3 @@
+
+
+<web-view bindmessage="handleGetMessage"  src="https://geekerlstar.com/baidultra/test.php"></web-view>

@@ -1,0 +1,18 @@
+/* editor.wxss */
+.container {
+  padding: 10px;
+}
+
+.editor {
+  height: 500px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}

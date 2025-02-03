@@ -6,7 +6,8 @@
     "pages/apps/index",
     "pages/me/index",
     "pages/login/index",
-    "pages/markdown_test/index"
+    "pages/markdown_test/index",
+    "pages/article_publish_test/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",

@@ -3,12 +3,13 @@
     <text>欢迎来到假首页</text>
   </view>
   <view class="view">
-    <text>这是一个快捷入口，提供跳转到四个页面的 link：</text>
+    <text>这是一个快捷入口，提供跳转到现有页面的 link：</text>
     <navigator url="/pages/news/index" open-type="switchTab" class="blue-link">动态（李天星）</navigator>
     <navigator url="/pages/apps/index" open-type="switchTab" class="blue-link">应用（马睿皓）</navigator>
     <navigator url="/pages/me/index" open-type="switchTab" class="blue-link">我的（王之众）</navigator>
     <navigator url="/pages/login/index" class="blue-link">登录（李天星）</navigator>
     <navigator url="/pages/markdown_test/index" class="blue-link">markdown（李天星）</navigator>
+    <navigator url="/pages/article_publish_test/index" class="blue-link">发布文章（李天星）</navigator>
   </view>
   <view class="view">
     <text class="text">以下是一些注意：</text>
