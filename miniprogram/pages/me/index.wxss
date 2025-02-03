@@ -1,192 +1,178 @@
-/* pages/me/index.wxss */
+/*wxss*/
 
-.upperImageStyle{
-  width: 750rpx;
-  height: 375rpx;
-}
-
-.infoChunk {
-  width: 710rpx;
+.full-screen {
+  width: 100vw;
   height: auto;
-  position: relative;
-  top: -50rpx;
   background-color: #262626;
   display: flex;
   flex-direction: column;
-  padding: 40rpx;
+  align-items: center;
 }
 
-.profileAndName {
+.upper-image-view {
+  width: 100%;
+  height: 25vh;
+}
+
+.upper-image {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-and-name-view {
+  width: 100%;
+  height: 14vh;
   display: flex;
   flex-direction: row;
-  width: auto;
-  height: auto;
+  align-items: center;
 }
 
-.profileImageStyle {
-  width: 142rpx;
-  height: 142rpx;
-}
-
-.nameStyle {
-  color: #ffffff;
-  font-size: 40rpx;
-  font-weight: 500;
-  font-style: normal;
-  font-family: Microsoft YaHei;
-  line-height: 2;
-}
-
-.detailStyle {
-  color: #D0CECE;
-  font-size: 29rpx;
-  font-weight: 100;
-  font-style: normal;
-  font-family: Microsoft YaHei;
-  line-height: 2;
-}
-
-.lightChunk {
+.profile-view {
+  height: 9.6vh;
+  width: 9.6vh;
   display: flex;
-  width: 620rpx;
-  height: auto;
-  background-color: #3B3838;
+}
+
+.profile {
+  height: 100%;
+  width: 100%;
+}
+
+.name-and-accounttype-view {
+  height: 9.6vh;
+  width: auto;
+  display: flex;
   flex-direction: column;
-  padding: 25rpx;
+  justify-content: center;
 }
 
-.textStyleBold {
+.name {
   color: #ffffff;
-  font-size: 30rpx;
-  font-weight: 900;
-  font-style: normal;
-  font-family: Microsoft YaHei;
-  line-height: 2;
-}
-
-.textStyleNormal {
-  color: #ffffff;
-  font-size: 30rpx;
-  font-weight: 400;
-  font-style: normal;
-  font-family: Microsoft YaHei;
-  line-height: 2;
-}
-
-.textStlyeNormalNoHeight {
-  color: #ffffff;
-  font-size: 30rpx;
-  font-weight: 400;
+  font-size: 3vh;
+  font-weight: 500;
   font-style: normal;
   font-family: Microsoft YaHei;
   line-height: 0;
 }
 
-.bigEvent {
-  width: 566rpx;
-  height: auto;
-  background-color: pink;
-  padding: 22rpx;
+.account-type {
+  color: #D0CECE;
+  font-size: 2vh;
+  font-weight: 100;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+  line-height: 0;
 }
 
-.textInsideEvents {
+.event-decoration {
+  background-color: #3B3838;
+  width: 92%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.event-view {
+  width: 90%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+}
+
+.subevent-view {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-title {
+  color: #ffffff;
+  font-size: 3vh;
+  font-weight: 900;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+}
+
+.event-time {
+  color: #FFFFFF;
+  font-size: 2.5vh;
+  font-weight: 500;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+  position: relative;
+  left: 2vw; /*缩进*/
+}
+
+.current-activity-decoration {
+  width: 95%;
+  height: 10vh;
+  background-color: #F5FF5D;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-activity-view{
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-activity {
   color: #000000;
-  font-size: 30rpx;
+  font-size: 2.5vh;
   font-weight: 400;
   font-style: normal;
   font-family: Microsoft YaHei;
-  line-height: 2;
 }
 
-.textInsideEventsUnderlined {
+.next-activity-decoration {
+  width: 100%;
+  height: 4vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.next-activity-view {
+  width: 70%;
+  height: 100%;
+  background-color: #87FFD2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-activity-without-underline {
   color: #000000;
-  font-size: 30rpx;
+  font-size: 2vh;
+  font-weight: 400;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+}
+
+.next-activity-underlined {
+  color: #000000;
+  font-size: 2vh;
   font-weight: 400;
   font-style: normal;
   text-decoration: underline;
   font-family: Microsoft YaHei;
-  line-height: 2;
 }
 
-.smallEventIncludingText {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 566rpx;
-  height: auto;
-  padding: 22rpx;
-}
-
-.textOfSmallEvent{
-  position: relative;
-  left: -22rpx;
-}
-
-.smallEvent {
-  width: auto;
-  height: auto;
-  background-color: lightblue;
-  padding: 15rpx;
-}
-
-.horizontalEmpty {
-  width: auto;
-  height: 15rpx;
-}
-
-.verticalEmpty {
-  width: 40rpx;
-  height: auto;
-}
-
-.bigGap {
-  width: 750rpx;
-  height: 30rpx;
-  position: relative;
-  top: -50rpx;
-  background-color: #262626;
-}
-
-.optionChunk {
-  width: 750rpx;
-  height: auto;
-  position: relative;
-  top: -50rpx;
-  background-color: #262626;
-  display: flex;
-  flex-direction: column;
-  padding: 0rpx;
-}
-
-.options {
-  display: flex;
-  flex-direction: row;
-  width: 710rpx;
-  padding: 20rpx;
-  border: 1px;
-  border-style: solid;
-  border-color: #3B3838;
-}
-
-.iconInsideOptions {
-  width: 30rpx;
-  height: 30rpx;
-  position: relative;
-  top: 3rpx;
-}
-
-.betweenIconAndTexts {
-  width: 10rpx;
-  height: auto;
-}
-
-.textInsideOptions {
-  width: 640rpx;
-  height: auto;
-}
-
-/*判定箱显示，方便debug
-
+/*调试模式
 view {
   border: 1px;
   border-style: solid;
