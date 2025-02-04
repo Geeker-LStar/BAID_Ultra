@@ -145,7 +145,7 @@
 }
 
 .next-activity-view {
-  width: 70%;
+  width: 66.5%;
   height: 100%;
   background-color: #87FFD2;
   border-radius: 10px;
@@ -206,7 +206,7 @@
   line-height: 1;
 }
 
-/*调试模式
+/*调试模式*/
 view {
   border: 1px;
   border-style: solid;
