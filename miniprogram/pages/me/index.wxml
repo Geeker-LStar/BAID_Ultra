@@ -66,4 +66,47 @@
       </view>
     </view>
   </view>
+  <!--空白-->
+  <view style="height: 5vh;"></view>
+  <!--选项1-->
+  <view class="option-view">
+    <!--空白-->
+    <view style="width: 5vw;"></view>
+    <!--文字-->
+    <view class="option-text-view">
+      <text class="option-text">我的订阅</text>
+    </view>
+    <!--箭头-->
+    <view class="option-arrow-view">
+      <text class="option-text">>></text>
+    </view>
+  </view>
+  <!--空白-->
+  <view style="height: 2vh;"></view>
+  <!--选项2-->
+  <view class="option-view">
+    <!--空白-->
+    <view style="width: 5vw;"></view>
+    <!--文字-->
+    <view class="option-text-view">
+      <text class="option-text">Bug 反馈</text>
+    </view>
+    <!--箭头-->
+    <view class="option-arrow-view">
+      <text class="option-text">>></text>
+    </view>
+  </view>
+  <!--选项3-->
+  <view class="option-view">
+    <!--空白-->
+    <view style="width: 5vw;"></view>
+    <!--文字-->
+    <view class="option-text-view">
+      <text class="option-text">设置</text>
+    </view>
+    <!--箭头-->
+    <view class="option-arrow-view">
+      <text class="option-text">>></text>
+    </view>
+  </view>
 </view>
