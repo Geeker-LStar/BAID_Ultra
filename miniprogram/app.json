@@ -7,7 +7,8 @@
     "pages/me/index",
     "pages/login/index",
     "pages/markdown_test/index",
-    "pages/article_publish_test/index"
+    "pages/article_publish_test/index",
+    "pages/article_show_test/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
