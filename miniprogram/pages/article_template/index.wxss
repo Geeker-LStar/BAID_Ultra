@@ -1,0 +1,42 @@
+/* article_template/index.wxss */
+.container {
+  padding: 10px;
+}
+
+.article-content {
+  background-color: #fff;  /* 白色背景 */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* title 样式 */
+.article-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* publisher 和 time 使用 flex 排列 */
+.article-header {
+  flex-direction: column; /* 垂直排列 */
+  gap: 8px; /* 增加它们之间的间距 */
+}
+
+.article-publisher,
+.article-time {
+  font-size: 14px;
+  color: #888;
+}
+
+/* 内容区域 */
+.article-body {
+  margin-top: 20px;
+}
+
+.article-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}

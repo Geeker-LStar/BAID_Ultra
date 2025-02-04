@@ -13,9 +13,15 @@ Page({
   handleGetMessage: function (e) {
     console.log(e.detail.data)
     const data = e.detail.data[0];
-    if (data && data.content) {
+    if (data) {
+      const title = data.title;
       const content = data.content;
-      console.log(content);  // 如果 content 存在，则打印
+      const publisher = data.publisher;
+      const publish_time = data.publish_time
+      console.log(title); 
+      console.log(content);  
+      console.log(publisher);
+      console.log(publish_time);   
       
       // 写入数据库
       // 获取数据库实例
@@ -38,7 +44,10 @@ collection.orderBy('id', 'desc').limit(1).get({
     collection.add({
       data: {
         id: nextId, // 使用计算出来的递增 ID
+        title: title,
         content: content,
+        publisher: publisher,
+        publish_time: publish_time,
         is_show: 1
       },
       success(insertRes) {
@@ -56,7 +65,7 @@ collection.orderBy('id', 'desc').limit(1).get({
 
 
     } else {
-      console.log('没有 content 字段');
+      console.log('data 为空。');
     }
   }
   

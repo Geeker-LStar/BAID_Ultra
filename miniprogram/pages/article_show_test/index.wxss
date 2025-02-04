@@ -1,1 +1,35 @@
-/* pages/article_show_test/index.wxss */
+/* 页面容器样式 */
+.container {
+  padding: 20px;
+}
+
+/* 文章列表容器 */
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  /* 每篇文章之间的间距 */
+}
+
+/* 每篇文章的容器 */
+.article-item {
+  background-color: #f5f5dc;  /* 淡米色背景 */
+  padding: 15px;
+  border-radius: 12px;  /* 圆角效果 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* 添加阴影 */
+  transition: background-color 0.3s, box-shadow 0.3s;  /* 平滑过渡 */
+}
+
+/* 文章标题 */
+.article-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;  /* 标题左对齐 */
+  margin: 0;  /* 确保没有额外的间距 */
+}
+
+/* hover 效果 */
+.article-item:hover {
+  background-color: #e6e6e6;  /* 悬停时的背景颜色 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* 增强阴影效果 */
+}

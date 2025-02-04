@@ -1,5 +1,13 @@
-
-
-<view class="content-info">
+<!-- <view class="content-info">
   <towxml nodes="{{article}}"/>
+</view> -->
+
+
+<view class="article-list">
+  <!-- 遍历 articles 数据，生成多个文章项 -->
+  <view class="article-item" wx:for="{{articles}}" wx:key="_id" bindtap="goToArticlePage" data-id="{{item._id}}">
+    <text class="article-title">{{item.title}}</text>
+  </view>
 </view>
+
+

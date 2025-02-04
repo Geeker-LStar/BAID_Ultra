@@ -21,6 +21,7 @@ Page({
       this.setData({
         article:obj,
       });
+      console.log(obj)
     });
   },
 })

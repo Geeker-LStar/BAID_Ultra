@@ -1,5 +1,5 @@
 {
-  "__warning__": "！！如果你**不完全确定自己在做什么，请不要动这个文件中的内容。",
+  "__warning__": "！！如果你**不完全确定**自己在做什么，请不要动这个文件中的内容。",
   "pages": [
     "pages/fake_homepage/index",
     "pages/news/index",
@@ -8,7 +8,8 @@
     "pages/login/index",
     "pages/markdown_test/index",
     "pages/article_publish_test/index",
-    "pages/article_show_test/index"
+    "pages/article_show_test/index",
+    "pages/article_template/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",

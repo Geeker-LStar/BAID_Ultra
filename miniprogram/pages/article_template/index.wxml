@@ -1,0 +1,11 @@
+<!-- article_template/index.wxml -->
+<view class="container">
+  <view class="article-content">
+    <text class="article-title">{{title}}</text>
+    <text class="article-publisher">Published by: {{publisher}}</text>
+    <text class="article-time">Published on: {{publish_time}}</text>
+    <view class="article-body">
+      <towxml nodes="{{content}}"/>
+    </view>
+  </view>
+</view>
