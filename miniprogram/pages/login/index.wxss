@@ -1,38 +1,38 @@
-/* pages/login/index.wxss */
-
+/* login.wxss */
 .container {
   padding: 20px;
 }
 
-.input-group {
+.input-item {
   margin-bottom: 20px;
 }
 
-.input-group text {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.input-group input {
+input {
   width: 100%;
   padding: 10px;
+  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-button {
+.submit-btn {
   width: 100%;
-  padding: 10px;
-  background-color: #07c160;
+  padding: 12px;
+  background-color: #007aff;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
 }
 
-.result {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #333;
+.error-message {
+  background-color: #f8d7da;  /* 背景颜色，通常是红色系，表示错误 */
+  color: #721c24;  /* 文本颜色，常用暗红色或深色，以增强可读性 */
+  border: 1px solid #f5c6cb;  /* 边框颜色，通常与背景色相近 */
+  padding: 10px;  /* 内边距，使内容与边框有一定的间隔 */
+  border-radius: 5px;  /* 边框圆角，使其更加柔和 */
+  font-size: 14px;  /* 字体大小，根据需要调整 */
+  margin: 10px 0;  /* 上下间距，用于与其他元素分隔 */
+  font-family: Arial, sans-serif;  /* 字体 */
+  box-sizing: border-box;  /* 确保内边距不会影响总宽度 */
 }

@@ -1,5 +1,32 @@
-<!-- pages/login/index.wxml -->
+<!-- login.wxml -->
+<view class="container">
+  <!-- 希悦账号输入框 -->
+  <view class="input-item">
+    <text>希悦账号</text>
+    <input 
+      type="text" 
+      placeholder="请输入希悦账号" 
+      bindinput="onAccountInput" 
+      model:value="{{account}}" 
+    />
+  </view>
 
-<view>
-  <web-view src="https://geekerlstar.com/seiueapi/" bindmessage="onMessageReceived"></web-view>
+  <!-- 希悦密码输入框 -->
+  <view class="input-item">
+    <text>希悦密码</text>
+    <input 
+      type="password" 
+      placeholder="请输入希悦密码" 
+      bindinput="onPasswordInput" 
+      model:value="{{password}}" 
+    />
+  </view>
+
+  <!-- 提交按钮 -->
+  <button class="submit-btn" bindtap="onSubmit">提交</button>
+
+  <!-- <view wx:if="{{errorMessage}}" class="error-message">
+    {{errorMessage}}
+  </view> -->
 </view>
+

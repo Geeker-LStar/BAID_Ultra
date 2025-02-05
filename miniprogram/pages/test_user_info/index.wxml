@@ -1,0 +1,48 @@
+<!--pages/test_user_info/index.wxml-->
+<view>
+  <!-- 如果用户已登录，渲染这一部分 -->
+  <view wx:if="{{isLoggedIn}}">
+    <view>
+  <view>
+    <text>账号: {{account}}</text>
+  </view>
+  <view>
+    <text>状态: {{active_status ? '激活' : '未激活'}}</text>
+  </view>
+  <view>
+  <text>班级列表:</text>
+  <view wx:for="{{admin_classes}}" wx:key="index">
+    <text>{{item}}</text>  <!-- 显示数组中的每个班级 -->
+  </view>
+</view>
+
+  <view>
+    <text>性别: {{gender === 'f' ? '女' : '男'}}</text>
+  </view>
+  <view>
+    <text>姓名: {{name}}</text>
+  </view>
+  <view>
+    <text>电话: {{phone}}</text>
+  </view>
+  <view>
+    <text>拼音: {{pinyin}}</text>
+  </view>
+  <view>
+    <text>角色: {{role}}</text>
+  </view>
+  <text>课程列表:</text>
+  <view wx:for="{{schedule}}" wx:key="index">
+    <text>{{item.title}}</text>  <!-- 显示数组中的每个班级 -->
+  </view>
+</view>
+
+  </view>
+  
+  <!-- 如果用户未登录，渲染这一部分 -->
+  <view wx:else>
+    <text>您尚未登录，请先登录。</text>
+    <!-- 在这里添加未登录的内容，比如登录按钮等 -->
+  </view>
+</view>
+

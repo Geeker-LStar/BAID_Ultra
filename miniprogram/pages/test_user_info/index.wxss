@@ -1,0 +1,59 @@
+/* pages/test_user_info/index.wxss */
+
+/* 页面背景渐变 */
+page {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* 如果用户已登录，容器的样式 */
+view {
+  margin-bottom: 20px;
+}
+
+/* 账号信息样式 */
+text {
+  font-size: 16px;
+  color: #333;
+  line-height: 2;
+}
+
+/* 状态文本的样式 */
+view text {
+  font-weight: bold;
+  color: #007BFF; /* 蓝色 */
+}
+
+/* 班级列表的样式 */
+view wx:for {
+  margin-top: 10px;
+}
+
+view wx:for text {
+  font-size: 14px;
+  color: #555;
+  margin-left: 10px;
+}
+
+/* 未登录的提示样式 */
+view wx:else text {
+  font-size: 18px;
+  color: #FF5722; /* 红色 */
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* 其他字段（性别、姓名等）的样式 */
+view text {
+  margin-top: 15px;
+}
+
+/* 背景渐变和边距的样式调整 */
+view wx:if {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
