@@ -1,4 +1,84 @@
 <!--pages/me_setting/index.wxml-->
-<text>pages/me_setting/index.wxml</text>
-<text>嘿社长Surprise！你一定是从假首页来的罢！</text>
-<text>（毕竟也没有其他方式了bushi）</text>
+
+<!--屏幕-->
+<view class="full-screen">
+
+  <!--顶栏-->
+  <view class="top-view">
+    <text class="top-text">设置</text>
+  </view>
+
+  <!--空白-->
+  <view style="height: 2vh;"></view>
+
+  <!--单个设置-->
+  <view class="option-view">
+    <!--空白-->
+    <view style="width: 5vw;"></view>
+    <!--文字-->
+    <view class="option-text-view">
+      <text class="option-text">账号管理与安全</text>
+    </view>
+    <!--箭头-->
+    <view class="option-arrow-view">
+      <text class="option-text">>></text>
+    </view>
+  </view>
+
+  <!--空白-->
+  <view style="height: 2vh;"></view>
+
+  <!--单个设置-->
+  <view class="option-view">
+    <!--空白-->
+    <view style="width: 5vw;"></view>
+    <!--文字-->
+    <view class="option-text-view">
+      <text class="option-text">通知管理</text>
+    </view>
+    <!--箭头-->
+    <view class="option-arrow-view">
+      <text class="option-text">>></text>
+    </view>
+  </view>
+
+  <!--单个设置-->
+  <view class="option-view">
+    <!--空白-->
+    <view style="width: 5vw;"></view>
+    <!--文字-->
+    <view class="option-text-view">
+      <text class="option-text">隐私设置</text>
+    </view>
+    <!--箭头-->
+    <view class="option-arrow-view">
+      <text class="option-text">>></text>
+    </view>
+  </view>
+
+  <!--空白-->
+  <view style="height: 2vh;"></view>
+
+  <!--单个设置-->
+  <view class="option-view">
+    <!--空白-->
+    <view style="width: 5vw;"></view>
+    <!--文字-->
+    <view class="option-text-view">
+      <text class="option-text">语言及外观</text>
+    </view>
+    <!--箭头-->
+    <view class="option-arrow-view">
+      <text class="option-text">>></text>
+    </view>
+  </view>
+
+  <!--空白-->
+  <view style="height: 42vh;"></view>
+
+  <!--退出登录-->
+  <view class="exit-view">
+    <text class="exit-text">退出登录</text>
+  </view>  
+
+</view>
