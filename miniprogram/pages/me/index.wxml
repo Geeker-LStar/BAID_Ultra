@@ -97,7 +97,7 @@
     </view>
   </view>
   <!--选项3-->
-  <view class="option-view">
+  <view class="option-view" bindtap="goToSetting">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->

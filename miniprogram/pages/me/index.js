@@ -62,5 +62,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  goToSetting() {
+    wx.navigateTo({
+      url: '/pages/me_setting/index',
+    });
   }
+
 })
