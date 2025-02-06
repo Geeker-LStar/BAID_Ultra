@@ -12,7 +12,8 @@
     "pages/article_template/index",
     "pages/me_setting/index",
     "pages/test_user_info/index",
-    "pages/lab/index"
+    "pages/lab/index",
+    "pages/article_list_template/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",

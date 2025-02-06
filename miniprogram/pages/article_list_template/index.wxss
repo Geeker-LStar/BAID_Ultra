@@ -1,0 +1,22 @@
+/* pages/example/example.wxss */
+.container {
+  padding: 20px;
+}
+
+.datatable-info {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.document-item {
+  margin-bottom: 15px;
+}
+
+.navigate-button {
+  margin-top: 10px;
+  background-color: #007aff;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
