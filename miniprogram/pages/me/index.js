@@ -67,9 +67,9 @@ Page({
 
   goToSetting() {
     console.log('我的：正在尝试跳转设置页面……');
-    this.setData({
-      isLogged: false,
-    })
+    // this.setData({
+    //   isLogged: false,
+    // })
     wx.navigateTo({
       url: '/pages/me_setting/index',
     });

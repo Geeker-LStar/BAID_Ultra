@@ -81,6 +81,26 @@
   line-height: 1;
 }
 
+.log-view {
+  width: 45vw;
+  height: 10vh;
+  background-color: #595959;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-text {
+  color: #00eeff;
+  font-size: 4vh;
+  font-weight: 900;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+  line-height: 1;
+}
+
 /*调试模式
 view {
   border: 1px;
