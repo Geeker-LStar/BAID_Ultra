@@ -69,5 +69,17 @@ Page({
     let userId = wx.getStorageSync('userId')
     console.log(userId)
     console.log(userId == '') //true为未登录
-  }
+  },
+
+  consoleInfo() {
+    console.info('这是一个重要提示！')
+  },
+
+  consoleWarn() {
+    console.warn('警告：程序即将崩溃！')
+  },
+
+  consoleError() {
+    console.warn('错误：未知错误。程序已崩溃。')
+  },
 })
