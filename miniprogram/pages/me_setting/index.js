@@ -68,6 +68,7 @@ Page({
 
   logOut() {
     wx.removeStorageSync('userId');
+    wx.removeStorageSync('name');
     console.log("已经执行删除用户ID代码");
     wx.switchTab({
       url: '/pages/me/index',

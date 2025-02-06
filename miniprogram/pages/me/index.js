@@ -6,10 +6,11 @@ Page({
    */
   data: {
     isLogged: undefined,
+    name: wx.getStorageSync('name')
   },
 
   onLoad() {
-    console.log("me-onload")
+    console.log("me-onload");
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -22,7 +23,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    console.log('me-onshow')
+    let userId = wx.getStorageSync('userId');
+    this.setData({
+      isLogged: (userId != ''),
+      name: wx.getStorageSync('name')
+    });
   },
 
   /**
@@ -60,25 +65,20 @@ Page({
 
   },
 
-  /*修改登录状态 */
-  alterUserId() {
-    let userId = wx.getStorageSync('userId');
-    this.setData({
-      userId: userId,
-    });
-    if (userId == undefined) {
-      console.log('用户id为空');
-    }
-    else {
-      console.log('用户id不是空')
-    }
-  },
-
   goToSetting() {
     console.log('我的：正在尝试跳转设置页面……');
+    this.setData({
+      isLogged: false,
+    })
     wx.navigateTo({
       url: '/pages/me_setting/index',
     });
-  }
+  },
 
+  goToLogIn() {
+    console.log('我的：正在尝试跳转登录页面……');
+    wx.navigateTo({
+      url: '/pages/login/index',
+    });
+  },
 })

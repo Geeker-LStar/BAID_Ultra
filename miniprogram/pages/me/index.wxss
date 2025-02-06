@@ -206,6 +206,25 @@
   line-height: 1;
 }
 
+.please-login-view {
+  width: 50%;
+  height: 8vh;
+  background-color: red;
+  border-radius: 4vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.please-login-text {
+  color: #000000;
+  font-size: 4vh;
+  font-weight: 900;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+}
+
 /*调试模式
 view {
   border: 1px;
