@@ -63,7 +63,7 @@
 
 .exit-view {
   width: 45vw;
-  height: 10vh; /*黄金分割率*/
+  height: 10vh;
   background-color: #595959;
   border-radius: 5px;
   display: flex;

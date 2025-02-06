@@ -77,8 +77,8 @@
   <view style="height: 42vh;"></view>
 
   <!--退出登录-->
-  <view class="exit-view">
+  <button class="exit-view">
     <text class="exit-text">退出登录</text>
-  </view>  
+  </button>  
 
 </view>
