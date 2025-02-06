@@ -65,6 +65,7 @@ Page({
   },
 
   goToSetting() {
+    console.log('我的：正在尝试跳转设置页面……')
     wx.navigateTo({
       url: '/pages/me_setting/index',
     });
