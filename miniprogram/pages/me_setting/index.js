@@ -1,4 +1,6 @@
 // pages/me_setting/index.js
+
+
 Page({
 
   /**
@@ -62,5 +64,16 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  logOut() {
+    wx.removeStorageSync('userId');
+    console.log("已经执行删除用户ID代码");
+    wx.switchTab({
+      url: '/pages/me/index',
+    })
+    wx.showToast({
+      title: '你已退出登录！',
+    });
+  },
 })

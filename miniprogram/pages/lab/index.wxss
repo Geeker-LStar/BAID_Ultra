@@ -1,1 +1,12 @@
 /* pages/lab/index.wxss */
+
+.IDget {
+  width: 100px;
+  height: 50px;
+}
+
+.if-test {
+  width: 100px;
+  height: 50px;
+  background-color: black;
+}

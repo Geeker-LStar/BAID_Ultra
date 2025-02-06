@@ -1,3 +1,9 @@
 <!--pages/lab/index.wxml-->
 <text>我将在这里实验奇奇怪怪的代码，确保犯错时不会影响其他工作区。</text>
 <text>By XX</text>
+
+<button class="IDget" bind:tap="getUserID">
+  <text>点击获取用户ID</text>
+</button>
+
+<view wx:if="{{condition}}" class="if-test"></view>

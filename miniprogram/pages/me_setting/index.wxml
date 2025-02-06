@@ -77,7 +77,7 @@
   <view style="height: 42vh;"></view>
 
   <!--退出登录-->
-  <button class="exit-view">
+  <button class="exit-view" bind:tap="logOut">
     <text class="exit-text">退出登录</text>
   </button>  
 

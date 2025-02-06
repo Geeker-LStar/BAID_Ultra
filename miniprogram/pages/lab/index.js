@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    condition: true,
   },
 
   /**
@@ -62,5 +62,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  /*获取用户id */
+  getUserID() {
+    let userId = wx.getStorageSync('userId')
+    console.log(userId)
+    console.log(userId == '') //true为未登录
   }
 })

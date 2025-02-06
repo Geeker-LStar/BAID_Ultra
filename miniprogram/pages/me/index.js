@@ -5,16 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isLogged: undefined,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onLoad() {
+    console.log("me-onload")
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +22,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    console.log('me-onshow')
   },
 
   /**
@@ -64,8 +60,22 @@ Page({
 
   },
 
+  /*修改登录状态 */
+  alterUserId() {
+    let userId = wx.getStorageSync('userId');
+    this.setData({
+      userId: userId,
+    });
+    if (userId == undefined) {
+      console.log('用户id为空');
+    }
+    else {
+      console.log('用户id不是空')
+    }
+  },
+
   goToSetting() {
-    console.log('我的：正在尝试跳转设置页面……')
+    console.log('我的：正在尝试跳转设置页面……');
     wx.navigateTo({
       url: '/pages/me_setting/index',
     });

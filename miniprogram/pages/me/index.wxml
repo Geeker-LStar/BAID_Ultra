@@ -29,7 +29,7 @@
   <!--空白-->
   <view style="height: 1.5vh;"></view>
   <!--事件-->
-  <view class="event-decoration">
+  <view class="event-decoration" wx:if="{{userId != undefined}}">
     <view class="event-view">
       <!--事件标题-->
       <text class="event-title">|  我的日程</text>
@@ -97,7 +97,7 @@
     </view>
   </view>
   <!--选项3-->
-  <view class="option-view" bindtap="goToSetting">
+  <view class="option-view" bind:tap="goToSetting">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
