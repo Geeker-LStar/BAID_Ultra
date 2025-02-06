@@ -19,11 +19,6 @@
   color: blue;
 }
 
-.grenn-link {
-  color: green;
-  text-decoration: underline;
-}
-
 .line {
   width: 100%;
   height: 1px;
