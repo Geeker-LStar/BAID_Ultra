@@ -17,16 +17,11 @@ Page({
     // 通过 wx.getStorageSync 判断用户是否已登录
     const userId = wx.getStorageSync('userId');
     
-    // 如果 userInfo 存在，表示用户已登录
-    if (userId) {
-      this.setData({
-        isLogged: true
-      });
-    } else {
-      this.setData({
-        isLogged: false
-      });
-    }
+    // 如果 userId != ''，表示用户已登录
+    this.setData({
+      isLogged: (userId != ''),
+    })
+    
   },
 
   /**

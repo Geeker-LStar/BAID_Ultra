@@ -78,14 +78,14 @@
 
   <view>
   <!-- 如果 isLogged 为 true，显示退出登录按钮 -->
-  <button class="exit-view" wx:if="{{isLogged}}" bind:tap="logOut">
+  <view class="exit-view" wx:if="{{isLogged}}" bind:tap="logOut">
     <text class="exit-text">退出登录</text>
-  </button>  
+  </view>  
   
   <!-- 如果 isLogged 为 false，显示去登录按钮 -->
-  <button class="log-view" wx:else bind:tap="goToLogIn">
-    <text class="log-text">去登录</text>
-  </button>
+  <view class="log-view" wx:else bind:tap="goToLogIn">
+    <text class="log-text">点击登录</text>
+  </view>
 </view>
 
 
