@@ -47,9 +47,45 @@ Page({
             userId: res.data.userId // 如果成功返回userId，进行保存
           });
           // 将 userId 存储到本地存储中
-          console.log(res.data.userId);
           wx.setStorageSync('userId', res.data.userId);
-          wx.showToast({ title: '登录成功', icon: 'success' });
+          console.log(res.data.userId);
+          wx.showToast({
+            title: '登录成功',
+            icon: 'success',
+          });
+          // 获取一些需要在别的页面显示的数据，存储起来
+          wx.request({
+            url: `http://123.56.160.48:520/info/${this.data.userId}`,
+            method: 'GET',
+            header: {
+              'X-SU-Partner': 'ba5d5a7a1d7fbfcff0cc3e5318421f279dd5f72d0075cd2f93b42ef4e5dbe498'
+            },
+            success: (res) => {  // 使用箭头函数
+              console.log(res.data);
+              
+              wx.setStorageSync('name', res.data.data.name);
+              wx.setStorageSync('pinyin', res.data.data.pinyin);
+              wx.setStorageSync('role', res.data.data.role);
+
+              console.log("set successful");
+              // this.setData({
+              //   account: res.data.data.account,
+              //   active_status: res.data.data.active_status,
+              //   admin_classes: res.data.data.admin_classes,
+              //   gender: res.data.data.gender,
+              //   name: res.data.data.name,
+              //   phone: res.data.data.phone,
+              //   pinyin: res.data.data.pinyin,
+              //   role: res.data.data.role
+              // });
+            }
+          });
+          setTimeout(function() {
+            // 延迟跳转
+            wx.switchTab({
+              url: '/pages/me/index',
+            });
+          }, 800);  // 延时 0.8s
         } else {
           this.handleError(res.data.status);
         }
