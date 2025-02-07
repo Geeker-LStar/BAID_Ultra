@@ -13,7 +13,9 @@
     "pages/me_setting/index",
     "pages/test_user_info/index",
     "pages/lab/index",
-    "pages/article_list_template/index"
+    "pages/article_list_template/index",
+    "pages/test_establish_club/index",
+    "pages/test_show_club/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
