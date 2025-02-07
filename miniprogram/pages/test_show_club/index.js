@@ -1,17 +1,20 @@
-// pages/me/index.js
+// pages/test_show_club/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isLogged: undefined,
-    name: wx.getStorageSync('name')
+
   },
 
-  onLoad() {
-    console.log("me-onload");
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -23,11 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    let userId = wx.getStorageSync('userId');
-    this.setData({
-      isLogged: (userId != ''),
-      name: wx.getStorageSync('name')
-    });
+
   },
 
   /**
@@ -63,22 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  goToSetting() {
-    console.log('我的：正在尝试跳转设置页面……');
-    // this.setData({
-    //   isLogged: false,
-    // })
-    wx.navigateTo({
-      url: '/pages/me_setting/index',
-    });
-  },
-
-  goToLogIn() {
-    console.log('我的：正在尝试跳转登录页面……');
-    wx.navigateTo({
-      url: '/pages/login/index',
-    });
-  },
+  }
 })

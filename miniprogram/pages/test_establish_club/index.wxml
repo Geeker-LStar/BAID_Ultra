@@ -1,0 +1,49 @@
+<view class="form-container">
+  <form bindsubmit="onFormSubmit" class="form">
+    <!-- 社团名称 -->
+    <view class="form-item">
+      <text class="form-label">社团名称</text>
+      <input class="form-input" name="club_name" placeholder="请输入社团名称" required />
+    </view>
+
+    <!-- 社团归类 -->
+    <view class="form-item">
+      <text class="form-label">社团归类</text>
+      <picker class="form-input" mode="selector" range="{{clubClasses}}" value="{{clubClassIndex}}" bindchange="onClassChange">
+        <view class="picker-text">{{clubClasses[clubClassIndex]}}</view>
+      </picker>
+    </view>
+
+    <!-- 社团简介 -->
+    <view class="form-item">
+      <text class="form-label">社团简介</text>
+      <textarea class="form-input" name="club_intro" placeholder="请输入社团简介" required />
+    </view>
+
+    <!-- 社团海报 -->
+    <view class="form-item">
+      <text class="form-label">社团海报</text>
+      <button bindtap="choosePoster">选择图片</button>
+      <image wx:if="{{posterUrl}}" src="{{posterUrl}}" class="image-preview" />
+    </view>
+
+    <!-- 社团课程大纲 -->
+    <view class="form-item">
+      <text class="form-label">社团课程大纲</text>
+      <button bindtap="chooseSyllabus">选择PDF/Word文件</button>
+      <text wx:if="{{syllabusFileName}}" class="file-preview">{{syllabusFileName}}</text>
+    </view>
+
+    <!-- 社长联系方式 -->
+    <view class="form-item">
+      <text class="form-label">社长联系方式</text>
+      <input class="form-input" name="club_contact" placeholder="请输入社长联系方式" required />
+    </view>
+
+    <!-- 提交按钮 -->
+    <view class="form-submit">
+  <button class="submit-btn" bindtap="onFormSubmit" formType="submit">提交</button>
+</view>
+
+  </form>
+</view>

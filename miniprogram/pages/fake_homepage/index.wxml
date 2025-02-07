@@ -7,14 +7,15 @@
     <navigator url="/pages/news/index" open-type="switchTab" class="blue-link">动态（李天星）</navigator>
     <navigator url="/pages/apps/index" open-type="switchTab" class="blue-link">应用（马睿皓）</navigator>
     <navigator url="/pages/me/index" open-type="switchTab" class="blue-link">我的（王之众）</navigator>
+    <navigator url="/pages/lab/index" class="blue-link">实验室（王之众）</navigator>
     <navigator url="/pages/login/index" class="blue-link">登录（李天星）</navigator>
     <navigator url="/pages/markdown_test/index" class="blue-link">markdown（李天星）</navigator>
     <navigator url="/pages/article_publish_test/index" class="blue-link">发布文章（李天星）</navigator>
     <navigator url="/pages/article_show_test/index" class="blue-link">显示文章（李天星）</navigator>
     <navigator url="/pages/test_user_info/index" class="blue-link">显示用户信息（李天星）</navigator>
-    <view class="line"></view>
-    <text>（一条正经的分割线）</text>
-    <navigator url="/pages/me_setting/index" class="grenn-link">我的-设置（王之众）</navigator>
+    <navigator url="/pages/test_establish_club/index" class="blue-link">创建社团（李天星）</navigator>
+    <navigator url="/pages/test_establish_club/index" class="blue-link">显示社团（李天星）</navigator>
+    <text>（“设置”可以在“我的”中跳转）</text>
   </view>
   <view class="view">
     <text class="text">以下是一些注意：</text>

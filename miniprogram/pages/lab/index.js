@@ -1,17 +1,20 @@
-// pages/me/index.js
+// pages/lab/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isLogged: undefined,
-    name: wx.getStorageSync('name')
+    condition: true,
   },
 
-  onLoad() {
-    console.log("me-onload");
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -23,11 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    let userId = wx.getStorageSync('userId');
-    this.setData({
-      isLogged: (userId != ''),
-      name: wx.getStorageSync('name')
-    });
+
   },
 
   /**
@@ -65,20 +64,22 @@ Page({
 
   },
 
-  goToSetting() {
-    console.log('我的：正在尝试跳转设置页面……');
-    // this.setData({
-    //   isLogged: false,
-    // })
-    wx.navigateTo({
-      url: '/pages/me_setting/index',
-    });
+  /*获取用户id */
+  getUserID() {
+    let userId = wx.getStorageSync('userId')
+    console.log(userId)
+    console.log(userId == '') //true为未登录
   },
 
-  goToLogIn() {
-    console.log('我的：正在尝试跳转登录页面……');
-    wx.navigateTo({
-      url: '/pages/login/index',
-    });
+  consoleInfo() {
+    console.info('这是一个重要提示！')
+  },
+
+  consoleWarn() {
+    console.warn('警告：程序即将崩溃！')
+  },
+
+  consoleError() {
+    console.warn('错误：未知错误。程序已崩溃。')
   },
 })

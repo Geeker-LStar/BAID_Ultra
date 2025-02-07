@@ -1,0 +1,18 @@
+<!--pages/lab/index.wxml-->
+<text>我将在这里实验奇奇怪怪的代码，确保犯错时不会影响其他工作区。</text>
+<text>By XX</text>
+
+<!--实验：获取ID-->
+<button class="IDget" bind:tap="getUserID">
+  <text>点击获取用户ID</text>
+</button>
+
+<!--实验：wxif-->
+<view wx:if="{{condition}}" class="if-test"></view>
+
+<!--实验：console的多种方法-->
+<button bind:tap="consoleInfo">点击使用console.info()</button>
+
+<button bind:tap="consoleWarn">点击使用console.warn()</button>
+
+<button bind:tap="consoleError">点击使用console.error()</button>

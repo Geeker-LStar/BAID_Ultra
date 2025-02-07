@@ -19,7 +19,8 @@
     <!--昵称和账号类型-->
     <view class="name-and-accounttype-view">
       <!--昵称-->
-      <text class="name">此处将显示你的昵称</text>
+      <text class="name" wx:if="{{isLogged}}">{{name}}</text>
+      <text class="name" wx:else>未登录用户</text>
       <!--空白-->
       <view style="height: 5vh;"></view>
       <!--账号类型-->
@@ -27,9 +28,10 @@
     </view>
   </view>
   <!--空白-->
-  <view style="height: 1.5vh;"></view>
+  <view style="height: 1.5vh;" wx:if="isLogged"></view>
+  <view style="height: 10vh;" wx:else></view>
   <!--事件-->
-  <view class="event-decoration">
+  <view class="event-decoration" wx:if="{{isLogged}}">
     <view class="event-view">
       <!--事件标题-->
       <text class="event-title">|  我的日程</text>
@@ -66,15 +68,20 @@
       </view>
     </view>
   </view>
+  <!--未登录界面-->
+  <view class="please-login-view" bind:tap="goToLogIn" wx:else>
+    <text class="please-login-text">点击登录</text>
+  </view>
   <!--空白-->
-  <view style="height: 5vh;"></view>
+  <view style="height: 5vh;" wx:if="isLogged"></view>
+  <view style="height: 9vh;" wx:else></view>
   <!--选项1-->
   <view class="option-view">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">我的订阅</text>
+      <text class="option-text">我的订阅（无法点击）</text>
     </view>
     <!--箭头-->
     <view class="option-arrow-view">
@@ -89,7 +96,7 @@
     <view style="width: 5vw;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">Bug 反馈</text>
+      <text class="option-text">Bug 反馈（无法点击）</text>
     </view>
     <!--箭头-->
     <view class="option-arrow-view">
@@ -97,7 +104,7 @@
     </view>
   </view>
   <!--选项3-->
-  <view class="option-view" bindtap="goToSetting">
+  <view class="option-view" bind:tap="goToSetting">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->

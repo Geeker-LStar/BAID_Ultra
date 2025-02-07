@@ -1,0 +1,64 @@
+/* 基本容器 */
+.form-container {
+  padding: 20px;
+}
+
+/* 表单项 */
+.form-item {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.textarea {
+  height: 100px;
+}
+
+.picker-text {
+  font-size: 14px;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* 图片预览 */
+.image-preview {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+/* 文件名称预览 */
+.file-preview {
+  margin-top: 10px;
+  color: #333;
+}
+
+/* 提交按钮 */
+.form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  background-color: #007aff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+}

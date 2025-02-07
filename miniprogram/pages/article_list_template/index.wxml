@@ -1,0 +1,12 @@
+<!-- pages/example/example.wxml -->
+<view class="container">
+  <view class="datatable-info">
+    <text>当前数据表: {{datatableName}}</text>
+  </view>
+
+  <!-- 遍历显示符合条件的文档 -->
+  <view wx:for="{{documents}}" wx:key="index" class="document-item">
+    <text>{{item.title}}</text>
+    <button bindtap="goToArticle" data-id="{{item._id}}" class="navigate-button">跳转</button>
+  </view>
+</view>
