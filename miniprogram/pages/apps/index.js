@@ -1,66 +1,28 @@
-// pages/apps/index.js
+// pages/app/app.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    head_buttonList: [
+      { label: 'App 1', page: 'App 1'}, 
+      { label: 'App 2', page: 'App 2'},
+      { label: 'App 3', page: 'App 3'},
+      { label: 'App 4', page: 'App 4'},
+    ], 
+    down_buttonList: [
+      { logo: '/images/logo1.svg', label: 'Test', content: 'Test', page: 'Test' },
+      { logo: '/images/logo2.svg', label: 'Label 2', content: 'Content 2', page: 'app2' },
+      { logo: '/images/logo3.svg', label: 'Label 3', content: 'Content 3', page: 'app3' },
+      { logo: '/images/logo4.svg', label: 'Label 4', content: 'Content 4', page: 'down4' },
+      { logo: '/images/logo5.svg', label: 'Label 5', content: 'Content 5', page: 'down5' },
+      { logo: '/images/logo6.svg', label: 'Label 6', content: 'Content 6', page: 'down6' }
+    ],
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  // 点击按钮跳转到对应的页面
+  navigateToApp: function (event) {
+    const current_page = event.currentTarget.dataset.app;
+    //console.log(current_page);
+    wx.navigateTo({
+      url: `apps/Lists/${current_page}/${current_page}` // 假设每个 down 都有对应的页面路径
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
-})
+});

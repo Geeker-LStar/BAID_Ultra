@@ -1,2 +1,35 @@
-<!--pages/apps/index.wxml-->
-<text>pages/apps/index.wxml</text>
+<!-- pages/app/app.wxml -->
+<view class="head-container">
+  <!-- 横向滑动卡片组件 -->
+  <swiper class="head-card-swiper" indicator-dots="{{true}}" autoplay="{{false}}" interval="5000" duration="500">
+    <block wx:for="{{head_buttonList}}" wx:key="index">
+      <swiper-item>
+        <view class="head-card" bindtap="navigateToApp" data-app="{{item.page}}" hover-class="button-item-active">
+          <text>{{item.label}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <!-- 两个并排按钮的圆角矩形框 -->
+  <view class="mid-button-container">
+    <button class="mid-button" bindtap="navigateToApp" data-app="app5" hover-class="button-item-active">按钮 1</button>
+    <button class="mid-button" bindtap="navigateToApp" data-app="app6" hover-class="button-item-active">按钮 2</button>
+  </view>
+
+  <!-- 6 个按钮的列表 -->
+  <!-- 高端功能 <scroll-view  scroll-y class="button-list"> --> <!--  bindscrolltolower="loadMore" -->
+  <view class="button-list">
+    <block wx:for="{{down_buttonList}}" wx:key="index">
+      <view class="button-item" hover-class="button-item-active" data-app="{{item.page}}" bindtap="navigateToApp"> 
+      <!-- wx:if="{{index < showCount}}"  -->
+        <image class="button-logo" src="{{item.logo}}"></image>
+        <view class="button-context">
+          <text class="button-label">{{item.label}}</text>
+          <text class="button-content">{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- </scroll-view> -->
+</view>
