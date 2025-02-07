@@ -10,14 +10,14 @@
       </swiper-item>
     </block>
   </swiper>
-  
+
   <!-- 两个并排按钮的圆角矩形框 -->
   <view class="mid-button-container">
     <button class="mid-button" bindtap="navigateToApp" data-app="app5" hover-class="button-item-active">按钮 1</button>
     <button class="mid-button" bindtap="navigateToApp" data-app="app6" hover-class="button-item-active">按钮 2</button>
   </view>
 
-  <!-- 6 个按钮的列表 -->
+  <!-- 底部按钮列表 -->
   <!-- 高端功能 <scroll-view  scroll-y class="button-list"> --> <!--  bindscrolltolower="loadMore" -->
   <view class="button-list">
     <block wx:for="{{down_buttonList}}" wx:key="index">

@@ -1,6 +1,6 @@
 // pages/app/app.js
 Page({
-  data: {
+  data: { //针对下方按钮和滑动按钮的维护简便化
     head_buttonList: [
       { label: 'App 1', page: 'App 1'}, 
       { label: 'App 2', page: 'App 2'},
@@ -22,7 +22,7 @@ Page({
     const current_page = event.currentTarget.dataset.app;
     //console.log(current_page);
     wx.navigateTo({
-      url: `apps/Lists/${current_page}/${current_page}` // 假设每个 down 都有对应的页面路径
+      url: `apps/Lists/${current_page}/${current_page}`
     });
   },
 });
