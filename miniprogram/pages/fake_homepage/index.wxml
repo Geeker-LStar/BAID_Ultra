@@ -15,6 +15,7 @@
     <navigator url="/pages/test_user_info/index" class="blue-link">显示用户信息（李天星）</navigator>
     <navigator url="/pages/test_establish_club/index" class="blue-link">创建社团（李天星）</navigator>
     <navigator url="/pages/test_establish_club/index" class="blue-link">显示社团（李天星）</navigator>
+    <navigator url="/pages/wx_login/index" class="blue-link">微信登录（李天星）</navigator>
     <text>（“设置”可以在“我的”中跳转）</text>
   </view>
   <view class="view">

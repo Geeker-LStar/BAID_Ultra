@@ -1,0 +1,13 @@
+/* pages/wx_login/index.wxss */
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #1AAD19;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}

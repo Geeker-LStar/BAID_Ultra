@@ -1,0 +1,6 @@
+<view class="container">
+  <button wx:if="{{!hasUserInfo}}" bindtap="login">微信登录</button>
+  <view wx:if="{{hasUserInfo}}">
+    <text>欢迎，{{userInfo}}</text>
+  </view>
+</view>
