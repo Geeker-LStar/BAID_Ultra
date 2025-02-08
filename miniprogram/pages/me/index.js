@@ -75,6 +75,13 @@ Page({
     });
   },
 
+  goToBugReport() {
+    console.log('我的：正在尝试跳转Bug反馈页面……')
+    wx.navigateTo({
+      url: '/pages/bug_report/index',
+    });
+  },
+
   goToLogIn() {
     console.log('我的：正在尝试跳转登录页面……');
     wx.navigateTo({

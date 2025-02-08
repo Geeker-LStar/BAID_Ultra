@@ -10,3 +10,33 @@
   height: 50px;
   background-color: black;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.input-box {
+  width: 80%;
+  height: 80rpx;
+  font-size: 32rpx;
+  padding: 10rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+button {
+  background-color: #007aff;
+  color: white;
+  font-size: 32rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+}
+
+.result {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}

@@ -91,7 +91,7 @@
   <!--空白-->
   <view style="height: 2vh;"></view>
   <!--选项2-->
-  <view class="option-view">
+  <view class="option-view" bind:tap="goToBugReport">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->

@@ -12,11 +12,12 @@
     "pages/article_template/index",
     "pages/me_setting/index",
     "pages/test_user_info/index",
-    "pages/apps/apps/Lists/Test/Test", 
+    "pages/apps/apps/Lists/Test/Test",
     "pages/lab/index",
     "pages/article_list_template/index",
     "pages/test_establish_club/index",
-    "pages/test_show_club/index"
+    "pages/test_show_club/index",
+    "pages/bug_report/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
