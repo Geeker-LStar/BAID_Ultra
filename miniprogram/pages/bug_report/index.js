@@ -1,12 +1,11 @@
-// pages/lab/index.js
+// pages/bug_report/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    condition: true,
-    inputValue: '',
+
   },
 
   /**
@@ -63,30 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  /*获取用户id */
-  getUserID() {
-    let userId = wx.getStorageSync('userId')
-    console.log(userId)
-    console.log(userId == '') //true为未登录
-  },
-
-  consoleInfo() {
-    console.info('这是一个重要提示！')
-  },
-
-  consoleWarn() {
-    console.warn('警告：程序即将崩溃！')
-  },
-
-  consoleError() {
-    console.warn('错误：未知错误。程序已崩溃。')
-  },
-
-  onInput(event) {
-    this.setData({
-      inputValue: event.detail.value
-    });
-  },
+  }
 })

@@ -17,7 +17,8 @@
     "pages/article_list_template/index",
     "pages/test_establish_club/index",
     "pages/test_show_club/index",
-    "pages/wx_login/index"
+    "pages/wx_login/index",
+    "pages/bug_report/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",

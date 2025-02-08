@@ -16,3 +16,7 @@
 <button bind:tap="consoleWarn">点击使用console.warn()</button>
 
 <button bind:tap="consoleError">点击使用console.error()</button>
+
+<!--实验：输入框-->
+<input placeholder="请输入内容"/>
+<text class="result">输入内容：{{inputValue}}</text>
