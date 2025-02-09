@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.menu-item:hover {
+  color: #007aff;
+}
+
+.main-content {
+  width: 70%;
+  padding: 20px;
+}
+
+.club-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.club-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.club-item:hover {
+  background-color: #f7f7f7;
+}

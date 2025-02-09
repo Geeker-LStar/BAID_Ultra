@@ -1,0 +1,20 @@
+<view class="container">
+  <!-- 左侧侧边栏 -->
+  <view class="sidebar">
+    <view class="menu-item" bindtap="filterClubs" data-class="all">所有</view>
+    <view class="menu-item" bindtap="filterClubs" data-class="0">学科学术类</view>
+    <view class="menu-item" bindtap="filterClubs" data-class="1">文艺创作类</view>
+    <view class="menu-item" bindtap="filterClubs" data-class="2">多元探索类</view>
+  </view>
+
+  <!-- 右侧主栏 -->
+  <view class="main-content">
+    <view class="club-list">
+      <block wx:for="{{clubList}}" wx:key="index">
+        <view class="club-item" bindtap="viewClubDetails" data-id="{{item._id}}">
+          <text>{{item.club_name}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

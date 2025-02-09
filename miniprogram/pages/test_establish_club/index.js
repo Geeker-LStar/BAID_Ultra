@@ -75,7 +75,7 @@ Page({
           club_id: nextId,
           club_name: formData.club_name,
           club_leader: userId,
-          club_class: clubClassIndex,
+          club_class: parseInt(clubClassIndex),
           club_intro: formData.club_intro,
           club_contact: formData.club_contact,
         };
@@ -187,7 +187,7 @@ Page({
             Promise.all(uploadPromises).then(() => {
               // 所有文件上传成功后，跳转到新的页面
               wx.redirectTo({
-                url: '/pages/test_show_club/index',
+                url: `/pages/test_show_club/index?id=${clubId}`,
               });
             }).catch((err) => {
               console.error("上传失败", err);

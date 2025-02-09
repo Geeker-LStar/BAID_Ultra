@@ -1,2 +1,50 @@
-<!--pages/test_show_club/index.wxml-->
-<text>pages/test_show_club/index.wxml</text>
+<view class="container">
+  <!-- 社团基本信息 -->
+  <view class="info">
+    <view class="info-item">
+      <text class="label">社团名称：</text>
+      <text class="content">{{clubName || '暂无内容'}}</text>
+    </view>
+    
+    <view class="info-item">
+      <text class="label">社长：</text>
+      <text class="content">{{clubHead || '暂无内容'}}</text>
+    </view>
+    
+    <view class="info-item">
+      <text class="label">社团简介：</text>
+      <text class="content">{{clubIntro || '暂无内容'}}</text>
+    </view>
+
+    <view class="info-item">
+      <text class="label">社团类别：</text>
+      <text class="content">{{clubClass || '暂无内容'}}</text>
+    </view>
+
+    <view class="info-item">
+      <text class="label">社长联系方式：</text>
+      <text class="content">{{clubContact || '暂无内容'}}</text>
+    </view>
+
+    <view class="info-item">
+      <text class="label">社团课程大纲：</text>
+      <view>
+  <!-- 点击后渲染 web-view -->
+  <view wx:if="{{!showWebView}}" bindtap="onClickShowWebView">点击查看</view>
+
+  <!-- 点击后动态显示 web-view -->
+  <view wx:if="{{showWebView}}">
+    <web-view src="{{syllabusUrl}}" bindnavigationback="onWebViewBack"></web-view>
+  </view>
+</view>
+
+    </view>
+  
+  </view>
+
+  <!-- 社团海报 -->
+  <!-- <view class="poster"> -->
+    <image wx:if="{{clubPoster}}" src="{{clubPoster}}" mode="widthFix" />
+    <!-- <text wx:else class="no-poster">（社团海报）暂无内容</text> -->
+  <!-- </view> -->
+</view>

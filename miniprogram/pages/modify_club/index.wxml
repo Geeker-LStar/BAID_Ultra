@@ -1,0 +1,29 @@
+<!--pages/modify_club/index.wxml-->
+
+<view class="container">
+  <form bindsubmit="onSubmit">
+    <view class="form-item">
+      <text class="label">社团名称</text>
+      <input class="input" name="club_name" value="{{club_name}}" bindinput="onInputChange" placeholder="请输入社团名称" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">社团类别</text>
+      <picker class="input" mode="selector" range="{{clubClassOptions}}" value="{{club_class}}" bindchange="onClassChange">
+        <view class="picker-value">{{clubClassOptions[club_class]}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">社团简介</text>
+      <textarea class="input" name="club_intro" value="{{club_intro}}" bindinput="onInputChange" placeholder="请输入社团简介"></textarea>
+    </view>
+
+    <view class="form-item">
+      <text class="label">社长联系方式</text>
+      <input class="input" name="club_contact" value="{{club_contact}}" bindinput="onInputChange" placeholder="请输入社长联系方式" />
+    </view>
+
+    <button class="submit-btn" formType="submit">提交</button>
+  </form>
+</view>

@@ -1,0 +1,49 @@
+/* pages/modify_club/index.wxss */
+
+.container {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.form-item {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+textarea.input {
+  height: 100px;
+}
+
+.picker-value {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #007aff;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+}

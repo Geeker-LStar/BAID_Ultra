@@ -18,7 +18,9 @@
     "pages/test_establish_club/index",
     "pages/test_show_club/index",
     "pages/wx_login/index",
-    "pages/bug_report/index"
+    "pages/bug_report/index",
+    "pages/club_list_template/index",
+    "pages/modify_club/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
