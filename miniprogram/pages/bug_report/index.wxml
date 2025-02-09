@@ -1,2 +1,48 @@
 <!--pages/bug_report/index.wxml-->
-<text>pages/bug_report/index.wxml</text>
+<view class="full-screen">
+
+  <!--顶栏-->
+  <view class="top-view">
+    <text class="top-text">Bug 反馈</text>
+  </view>
+   
+  <view style="height: 2vh;"></view>
+  <!--小字-->
+  <view class="hint-view">
+    <text class="hint-text">标题</text>
+  </view>
+  <view style="height: 1vh;"></view>
+  <!--标题输入框-->
+  <textarea placeholder="  请输入您的问题标题" class="input-title" bindinput="titleOnInput" auto-height="true" placeholder-style="font-size: 2vh"></textarea>
+
+  <view style="height: 2vh;"></view>
+  <!--小字-->
+  <view class="hint-view">
+    <text class="hint-text">详细描述</text>
+  </view>
+  <view style="height: 2.8vh;"></view>
+  <!--标题输入框-->
+  <view class="input-content-view">
+    <view style="width: 100%; display: flex; flex-direction: column;">
+      <text class="input-placeholder" wx:if="{{showPlaceholder}}">请详细描述您遇到的问题：</text>
+      <view style="height: 2.5vh;"></view>
+      <text class="input-placeholder" wx:if="{{showPlaceholder}}">例如：打开了哪一个界面？</text>
+      <view style="height: 2.5vh;"></view>
+      <text class="input-placeholder" wx:if="{{showPlaceholder}}">进行了什么操作？</text>
+      <view style="height: 2.5vh;"></view>
+      <text class="input-placeholder" wx:if="{{showPlaceholder}}">问题是否能稳定复现？</text>
+    </view>
+    <textarea class="input-content" bindinput="contentOnInput" auto-height="true"></textarea>
+  </view>
+
+  <view style="height: 2vh;"></view>
+  <!--小字-->
+  <view class="hint-view">
+    <text class="hint-text">上传Bug图片</text>
+  </view>
+  <view style="height: 1vh;"></view>
+  <view class="upload-images-view" bind:tap="uploadImages">
+    <text style="font-size: 2.5vh;">点击上传图片</text>
+  </view>
+
+</view>

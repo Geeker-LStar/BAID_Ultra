@@ -1,1 +1,111 @@
 /* pages/bug_report/index.wxss */
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-view {
+  width: 100%;
+  height: 6.5vh;
+  background-color: #595959;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-text {
+  color: #FFFFFF;
+  font-size: 3vh;
+  font-weight: 900;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+}
+
+.hint-view {
+  width: 90%;
+  height: 3vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hint-text {
+  color: #BFBFBF;
+  font-size: 2vh;
+  font-weight: 300;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+}
+
+.input-title {
+  color: white;
+  padding: 2vw;
+  width: 90%;
+  background-color: #3B3838;
+  border-radius: 10px;
+}
+
+.input-content-view {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-placeholder {
+  color: #808080;
+  font-size: 2vh;
+  font-weight: 500;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+  z-index: 10;
+  line-height: 0vh;
+}
+
+.input-content {
+  color: white;
+  padding: 2vw;
+  width: 100%;
+  min-height: 10vh;
+  background-color: #3B3838;
+  border-radius: 10px;
+  position: relative;
+  top: -9.8vh;
+}
+
+.upload-images-view {
+  width: 40%;
+  height: 8vh;
+  background-color: #07C160;
+  border-radius: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*调试模式
+view {
+  border: 1px;
+  border-style: solid;
+  border-color: red;
+} 
+
+text {
+  border: 1px;
+  border-style: solid;
+  border-color: greenyellow;
+}
+
+textarea {
+  border: 1px;
+  border-style: solid;
+  border-color: blueviolet;
+}*/
