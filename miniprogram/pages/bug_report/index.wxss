@@ -2,7 +2,7 @@
 
 .full-screen {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #262626;
   display: flex;
   flex-direction: column;
@@ -45,6 +45,7 @@
 
 .input-title {
   color: white;
+  font-size: 2vh;
   padding: 2vw;
   width: 90%;
   background-color: #3B3838;
@@ -53,10 +54,13 @@
 
 .input-content-view {
   width: 90%;
-  height: auto;
+  background-color: #3B3838;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 2vw;
 }
 
 .input-placeholder {
@@ -65,19 +69,29 @@
   font-weight: 500;
   font-style: normal;
   font-family: Microsoft YaHei;
-  z-index: 10;
-  line-height: 0vh;
+  position: absolute;
+  top: 1vw
+}
+
+.input-fake-content {
+  color: #ffffff;
+  font-size: 2vh;
+  font-weight: 500;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+  position: absolute;
+  top: 1vw;
+  line-height: 2.5vh;
 }
 
 .input-content {
-  color: white;
-  padding: 2vw;
-  width: 100%;
-  min-height: 10vh;
-  background-color: #3B3838;
-  border-radius: 10px;
-  position: relative;
-  top: -9.8vh;
+  font-size: 2vh;
+  color: #ffffff;
+  caret-color: #ffffff;
+  width: 95%;
+  position: absolute;
+  top: 1vw;
+  line-height: 2.5vh;
 }
 
 .upload-images-view {

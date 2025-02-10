@@ -1,5 +1,5 @@
 <!--pages/lab/index.wxml-->
-<text>我将在这里实验奇奇怪怪的代码，确保犯错时不会影响其他工作区。</text>
+<text>我将在这里实验奇奇怪怪的代码，这个页面将作为一个彩蛋。</text>
 <text>By XX</text>
 
 <!--实验：获取ID-->
@@ -19,4 +19,10 @@
 
 <!--实验：输入框-->
 <input placeholder="请输入内容"/>
-<text class="result">输入内容：{{inputValue}}</text>
+
+<view style="background-color: wheat; width: 100px; height: 100px; position: relative;">
+  <view style="background-color: violet; width: 50px; height: 50px; position: absolute; top: 0px;"></view>
+  <view style="width: 30px; height: 30px; background-color: yellowgreen; position: absolute; top: 0px;"></view>
+</view>
+
+<text>你好\n你好\n你好</text>
