@@ -7,7 +7,10 @@ Page({
   data: {
     showPlaceholder: true,
     contentViewHeight: (85/9),
+    contentTextareaHeight: 10.4,
+    imagesConuter: 0,
 
+    //用户数据
     title: '',
     content: '',
     images: [],
@@ -33,7 +36,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    console.log('bug 反馈页面已显示');
+    this.data.imagesConuter = 0;
+    this.data.openid = wx.getStorageSync('openid');
+    console.log(this.data.openid);
   },
 
   /**
@@ -88,30 +94,57 @@ Page({
     if (this.data.showPlaceholder) {
       this.setData({
         contentViewHeight: (85/9),
+        contentTextareaHeight: 10.4,
       });
     } else {
       const matches = content.match(/(\r\n|\n)/g);
       let lines = matches ? matches.length : 0;
+      lines = (lines >= 15) ? 15 : lines;
       this.setData({
         contentViewHeight: (2 + lines * (67/27)),
+        contentTextareaHeight: (2.7 + lines * (37/15)),
       });
+      console.log(this.data.contentViewHeight, this.data.contentTextareaHeight)
     };
-    console.log(this.data.contentViewHeight);
   },
 
   uploadImages() {
-    wx.chooseMedia({
-      count: 3,
-      mediaType: ['image'],
-      success: (result) => {
-        const path = result.tempFiles[0].tempFilePath;
-        console.log('图片的地址是', path);
-        this.data.images.push(path);
-      },
-      fail:(err) => {
-        console.error('出错了，原因是\n', err);
-      },
-    });
-    console.log(this.data.images);
+    if (this.data.imagesConuter < 4) {
+      wx.chooseMedia({
+        count: 1,
+        mediaType: ['image'],
+        success: (result) => {
+          const path = result.tempFiles[0].tempFilePath;
+          console.log('图片的地址是', path);
+          this.data.imagesConuter += 1;
+          this.data.images.push(path);
+          this.setData({
+            images: [...this.data.images],
+          }); //刷新页面
+          console.log(this.data.images, this.data.imagesConuter);
+        },
+        fail:(err) => {
+          console.error('出错了，原因是：\n', err);
+        },
+      });
+    } else {
+      wx.showToast({
+        title: '图片最多四张！',
+        icon: 'error',
+        duration: 2000,
+        mask: true,
+      });
+    };
   },
+
+  deleteImage(event) {
+    const index = event.currentTarget.dataset.index
+    this.data.imagesConuter -= 1;
+    this.data.imagesConuter = (this.data.imagesConuter < 0) ? 0 : this.data.imagesConuter; // 防止意料之外的错误
+    this.data.images.splice(index, 1);
+    this.setData({
+      images: [...this.data.images],
+    });
+    console.log(this.data.imagesConuter);
+  }, 
 })
