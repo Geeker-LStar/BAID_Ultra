@@ -77,9 +77,20 @@ Page({
 
   goToBugReport() {
     console.log('我的：正在尝试跳转Bug反馈页面……')
-    wx.navigateTo({
-      url: '/pages/bug_report/index',
-    });
+    if (!wx.getStorageSync('openId')) {
+      console.log('没有微信登录。');
+      wx.navigateTo({
+        url: '/pages/wx_login/index',
+      });
+      wx.showToast({
+        title: '请登录微信！',
+        icon: 'error',
+      });
+    } else {
+      wx.navigateTo({
+        url: '/pages/bug_report/index',
+      });
+    }
   },
 
   goToLogIn() {

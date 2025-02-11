@@ -154,6 +154,25 @@
   height: 10vw;
 }
 
+.submit-view {
+  width: 40%;
+  height: 8vh;
+  background-color: #3B3838;
+  border-radius: 4vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-text {
+  color: #ffffff;
+  font-size: 3.5vh;
+  font-weight: 900;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+}
+
 /*调试模式
 view {
   border: 1px;
