@@ -109,7 +109,7 @@ Page({
         this.data.images.push(path);
       },
       fail:(err) => {
-        console.error('出错了，因为', err);
+        console.error('出错了，原因是\n', err);
       },
     });
     console.log(this.data.images);
