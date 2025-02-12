@@ -8,7 +8,6 @@ Page({
     showPlaceholder: true,
     contentViewHeight: (85/9),
     contentTextareaHeight: 10.4,
-    imagesConuter: 0,
 
     // 用户数据
     title: '',
@@ -37,9 +36,8 @@ Page({
   onShow() {
     console.log('bug 反馈页面已显示');
     this.setData({
-      imagesConuter: 0,
       openid: wx.getStorageSync('openId'),
-    })
+    });
     console.log(this.data.openid);
   },
 
@@ -115,19 +113,18 @@ Page({
 
   uploadImages() {
     // 判断图片数量
-    if (this.data.imagesConuter < 4) {
+    if (this.data.images.length < 4) {
       wx.chooseMedia({
         count: 1,
         mediaType: ['image'],
         success: (result) => {
           const path = result.tempFiles[0].tempFilePath;
           console.log('图片的地址是', path);
-          this.data.imagesConuter += 1; // 图片数量+1
           this.data.images.push(path);
           this.setData({
             images: [...this.data.images],
           }); // 刷新页面
-          console.log(this.data.images, this.data.imagesConuter);
+          console.log(this.data.images);
         },
         fail:(err) => {
           console.error('出错了，原因是：\n', err);
@@ -146,13 +143,10 @@ Page({
   // 处理删除图片按钮被点击
   deleteImage(event) {
     const index = event.currentTarget.dataset.index // 要删除的图片的index
-    this.data.imagesConuter -= 1;
-    this.data.imagesConuter = (this.data.imagesConuter < 0) ? 0 : this.data.imagesConuter; // 防止意料之外的错误
     this.data.images.splice(index, 1);
     this.setData({
       images: [...this.data.images],
     });
-    console.log(this.data.imagesConuter);
   }, 
 
   // 处理用户提交反馈
@@ -177,7 +171,7 @@ Page({
         url: '/pages/me/index',
       })
       wx.showToast({
-        title: '请于console查看信息',
+        title: 'console已输出',
       });
     };
   },

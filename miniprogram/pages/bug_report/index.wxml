@@ -70,5 +70,6 @@
   <view class="submit-view" bind:tap="submitReport">
     <text class="submit-text">提交反馈</text>
   </view>
+  <view style="height: 15vh;"></view>
 
 </view>
