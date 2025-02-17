@@ -24,7 +24,7 @@
       <!--空白-->
       <view style="height: 5vh;"></view>
       <!--账号类型-->
-      <text class="account-type">undefined</text>
+      <text class="account-type">这是一个空白内容</text>
     </view>
   </view>
   <!--空白-->
