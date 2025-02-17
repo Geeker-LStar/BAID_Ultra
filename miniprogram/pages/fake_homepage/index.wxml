@@ -17,6 +17,7 @@
     <navigator url="/pages/club_list_template/index" class="blue-link">显示社团列表（李天星）</navigator>
     <navigator url="/pages/wx_login/index" class="blue-link">微信登录（李天星）</navigator>
     <navigator url="/pages/modify_club/index" class="blue-link">编辑社团（李天星）</navigator>
+    <navigator url="/pages/authority/index" class="blue-link">权限管理（李天星）</navigator>
     <text>（“设置”和“Bug反馈”可以在“我的”中跳转Doge）</text>
   </view>
   <view class="view">

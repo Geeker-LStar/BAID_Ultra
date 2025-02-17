@@ -1,0 +1,32 @@
+<!--pages/authority/index.wxml-->
+
+<view class="container">
+  <!-- 基础功能部分 -->
+  <view class="basic-function">
+    <view class="section-title">基础功能</view>
+    
+    <view class="sub-section">
+      <view class="title">社团列表</view>
+      <!-- 这里可以显示社团列表 -->
+    </view>
+
+    <view class="sub-section">
+      <view class="title">选修课列表</view>
+      <!-- 这里可以显示选修课列表 -->
+    </view>
+  </view>
+
+  <!-- 权限功能部分 -->
+  <view class="permission-function" wx:if="{{seiueLogged}}">
+    <view class="section-title">权限功能</view>
+    <!-- 显示权限功能内容 -->
+    <view class="content">
+      <text>这里是权限功能区的内容</text>
+    </view>
+  </view>
+
+  <!-- 如果未登录，显示登录按钮 -->
+  <view class="login-button" wx:else>
+    <button bindtap="navigateToLogin">通过希悦登录</button>
+  </view>
+</view>

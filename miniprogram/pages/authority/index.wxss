@@ -1,0 +1,28 @@
+/* pages/authority/index.wxss */
+
+.container {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-section {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.permission-function {
+  margin-top: 20px;
+}
+
+.login-button {
+  margin-top: 20px;
+  text-align: center;
+}
