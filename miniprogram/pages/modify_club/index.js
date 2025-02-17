@@ -123,5 +123,38 @@ Page({
           icon: 'none'
         });
       });
+  },
+  // 删除社团
+  onDeleteClub() {
+    const clubId = this.data.clubId;
+    wx.showModal({
+      title: '确认删除',
+      content: '你确定要删除这个社团吗？删除后无法恢复。',
+      success: (res) => {
+        if (res.confirm) {
+          // 调用云数据库删除记录
+          wx.cloud.database().collection('test_clubs').doc(clubId).remove()
+            .then(() => {
+              wx.showToast({
+                title: '删除成功',
+                icon: 'success',
+                success: () => {
+                  // 删除成功后，跳转到首页或其他页面
+                  wx.navigateBack({
+                  delta : 1 // 返回上一页
+                  });
+                }
+              });
+            })
+            .catch(err => {
+              console.error(err);
+              wx.showToast({
+                title: '删除失败',
+                icon: 'none'
+              });
+            });
+        }
+      }
+    });
   }
 });

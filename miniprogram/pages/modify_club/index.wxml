@@ -25,5 +25,6 @@
     </view>
 
     <button class="submit-btn" formType="submit">提交</button>
+    <button bindtap="onDeleteClub" class="delete-btn">删除社团</button>
   </form>
 </view>
