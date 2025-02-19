@@ -1,4 +1,8 @@
 /* pages/app/app.wxss */
+page{
+    background-color: #d7faf4;
+}
+
 .head-container {
   height: 150vh;
   display: flex;

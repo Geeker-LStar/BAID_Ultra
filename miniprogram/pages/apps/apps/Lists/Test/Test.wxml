@@ -1,2 +1,25 @@
-<!--pages/apps/apps/Lists/Test/Test.wxml-->
-<text>pages/apps/apps/Lists/Test/Test.wxml</text>
+<!-- pages/app/app.wxml -->
+<view class="button-container">
+  <block wx:for="{{buttons}}" wx:key="index">
+    <view class="button-wrapper">
+      <button 
+        class="custom-button" 
+        bindtap="handleButtonClick" 
+        data-index="{{index}}"
+        id="btn{{index}}"
+        hover-class="button-item-active"
+      >
+        {{item.label}}
+      </button>
+      <!-- 动画容器 -->
+      <view class="ripple-container">
+        <view 
+          wx:for="{{item.ripples}}" 
+          wx:key="rippleIndex" 
+          class="ripple" 
+          style="top: {{item.top}}px; left: {{item.left}}px;"
+        ></view>
+      </view>
+    </view>
+  </block>
+</view>
