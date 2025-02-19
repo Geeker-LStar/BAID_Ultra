@@ -16,7 +16,7 @@
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
-    <view class="option-text-view">
+    <view class="option-text-view" bind:tap="goToAccount">
       <text class="option-text">账号管理与安全</text>
     </view>
     <!--箭头-->
