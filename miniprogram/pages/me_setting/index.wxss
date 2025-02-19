@@ -36,6 +36,10 @@
   border: 1px solid #3B3838;
 }
 
+.option-view:hover {
+  background-color: #1F1F1F;
+}
+
 .option-text-view {
   width: 84%;
   height: 100%;
@@ -61,15 +65,20 @@
   line-height: 1;
 }
 
-.exit-view {
+.exit-log-view {
   width: 45vw;
   height: 10vh;
   background-color: #595959;
-  border-radius: 5px;
+  border-radius: 2vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.exit-log-view:hover {
+  border: white 0.5vh solid;
+  height: 9vh;
 }
 
 .exit-text {
@@ -79,17 +88,6 @@
   font-style: normal;
   font-family: Microsoft YaHei;
   line-height: 1;
-}
-
-.log-view {
-  width: 45vw;
-  height: 10vh;
-  background-color: #595959;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 .log-text {

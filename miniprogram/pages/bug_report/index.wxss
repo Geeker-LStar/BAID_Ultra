@@ -104,6 +104,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: border;
+}
+
+.upload-images-view:hover {
+  border: #FFFFFF solid;
 }
 
 .image-overall-view {
@@ -144,6 +149,10 @@
   justify-content: center;
 }
 
+.delete-button:hover {
+  background-color: #D6D6D6;
+}
+
 .image-uploaded {
   width: 100%;
   height: 76%;
@@ -163,6 +172,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.submit-view:hover {
+  border: white 0.5vh solid;
+  height: 7vh;
 }
 
 .submit-text {

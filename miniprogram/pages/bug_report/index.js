@@ -142,11 +142,14 @@ Page({
 
   // 处理删除图片按钮被点击
   deleteImage(event) {
-    const index = event.currentTarget.dataset.index // 要删除的图片的index
-    this.data.images.splice(index, 1);
-    this.setData({
-      images: [...this.data.images],
-    });
+    // 为了使动画可以播放，使用setTimeout进行延迟
+    setTimeout(() => {
+      const index = event.currentTarget.dataset.index // 要删除的图片的index
+      this.data.images.splice(index, 1);
+      this.setData({
+        images: [...this.data.images],
+      });
+    }, 100); // 延迟0.1秒
   }, 
 
   // 处理用户提交反馈

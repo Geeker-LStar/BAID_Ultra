@@ -181,6 +181,10 @@
   border: 1px solid #3B3838;
 }
 
+.option-view:hover {
+  background-color: #1F1F1F;
+}
+
 .option-text-view {
   width: 84%;
   height: 100%;
@@ -215,6 +219,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.please-login-view:hover {
+  border: white 0.5vh solid;
+  height: 7vh;
 }
 
 .please-login-text {
