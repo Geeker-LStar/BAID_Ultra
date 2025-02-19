@@ -21,7 +21,8 @@
     "pages/bug_report/index",
     "pages/club_list_template/index",
     "pages/modify_club/index",
-    "pages/authority/index"
+    "pages/authority/index",
+    "pages/me_setting_account/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
