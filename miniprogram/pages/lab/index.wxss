@@ -41,6 +41,18 @@ button {
   font-size: 28rpx;
 }
 
-view {
-  border: 1px solid red;
+.DHexample {
+  width: 25vw;
+  height: 10vh;
+  background-color: green;
+  transition: transform, border;
 }
+
+.DHexample:hover {
+  transform: scale(1.1);
+  border: 5px red solid;
+}
+
+/*view {
+  border: 1px solid red;
+}*/
