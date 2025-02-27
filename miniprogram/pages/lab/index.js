@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    condition: true,
+    buttonStatus: false,
+    buttonBgColor: '#14141400', // buttonBackgroundColor
+    buttonCcColor: '#141414', // buttonCircleColor
+
     inputValue: '',
     TBAnimation: {},
   },
@@ -56,7 +59,7 @@ Page({
         //console.log(targetX, targetY, r, StartAngle, EndAngle);
         context.beginPath();
         context.arc(targetX, targetY, r, StartAngle, EndAngle);
-        context.fillStyle = '#ffffff';
+        context.fillStyle = this.data.buttonCcColor;
         context.fill();
       });
     console.log('按钮初始化完毕');
@@ -143,8 +146,17 @@ Page({
   },
 
 
-  // todo用户点击画布时的函数
+  // 用户点击画布时的函数
   handleTheCanvasClick() {
+    // 改变data
+    this.setData({
+      buttonStatus: this.data.buttonStatus? false: true,
+    });
+    this.setData({
+      buttonBgColor: this.data.buttonStatus? '#141414': '#14141400',
+      buttonCcColor: this.data.buttonStatus? '#FFFFFF': '#141414',
+    });
+
     // 计算vh和vw对应的px值
     //const screen_width = wx.getWindowInfo().screenWidth;
     const screen_height = wx.getWindowInfo().screenHeight;
@@ -168,7 +180,7 @@ Page({
         context.scale(dpr, dpr);
 
         // 使用setInterval制作动画
-        let targetX = 1.5 * VH; // MAX 4vh
+        let targetX = this.data.buttonStatus? 1.5 * VH: 4 * VH; // MAX 4vh MIN 1.5vh
         let targetY = 1.5 * VH;
         let r = 1 * VH;
         let startAngle = 0;
@@ -177,13 +189,22 @@ Page({
           context.clearRect(0, 0, width, height);
           context.beginPath();
           context.arc(targetX, targetY, r, startAngle, endAngle);
-          context.fillStyle = '#ffffff';
+          context.fillStyle = this.data.buttonCcColor;
           context.fill();
-          if (targetX < 4.0 * VH) {
-            targetX += 0.3 * VH;
+          if (this.data.buttonStatus) {
+            // 增加targetX的值（有上限）
+            if (targetX < 4.1 * VH){
+              targetX = targetX > 3.5 * VH? 4.1 * VH: targetX + 0.6 * VH;
+            } else {
+              clearInterval(animation);
+            };
           } else {
-            clearInterval(animation);
-          }
+            if (targetX > 1.5 * VH) {
+              targetX = targetX < 2.1 * VH? 1.5 * VH: targetX - 0.6 * VH;
+            } else {
+              clearInterval(animation);
+            };
+          };
         }, 16.67);
 
         /*

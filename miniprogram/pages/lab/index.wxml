@@ -40,4 +40,4 @@
 <view style="height: 20px;"></view>
 
 <!--画布按钮-->
-<canvas id="theCanvas" type="2d" style="background-color: #141414; width: 6vh; height: 3vh; border-radius: 1.5vh;" bind:tap="handleTheCanvasClick"></canvas>
+<canvas id="theCanvas" type="2d" style="background-color: {{buttonBgColor}}; width: 6vh; height: 3vh; border-radius: 1.5vh; border: 0.1vh #141414 solid;" bind:tap="handleTheCanvasClick"></canvas>
