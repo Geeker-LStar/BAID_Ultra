@@ -4,7 +4,7 @@
     <view class="button-wrapper">
       <button 
         class="custom-button" 
-        bindtap="handleButtonClick" 
+        bindtap="ButtonRippleClick" 
         data-index="{{index}}"
         id="btn{{index}}"
         hover-class="button-item-active"
@@ -22,4 +22,12 @@
       </view>
     </view>
   </block>
+  <button 
+        class="custom-button" 
+        data-index="{{index}}"
+        hover-class="button-item-active"
+        data-directPage="1"
+      >
+        仅大小变化动画
+      </button>
 </view>
