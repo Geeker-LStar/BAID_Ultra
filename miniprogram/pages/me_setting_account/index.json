@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "账号管理与安全",
+  "navigationBarBackgroundColor": "#262626",
+  "navigationBarTextStyle": "white"
 }

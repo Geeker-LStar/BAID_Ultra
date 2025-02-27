@@ -3,11 +3,6 @@
 <!--屏幕-->
 <view class="full-screen">
 
-  <!--顶栏-->
-  <view class="top-view">
-    <text class="top-text">设置</text>
-  </view>
-
   <!--空白-->
   <view style="height: 2vh;"></view>
 
