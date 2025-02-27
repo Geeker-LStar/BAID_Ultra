@@ -1,5 +1,5 @@
 /* pages/index/index.wxss */
-@import "../../../../../style/animation.wxss";
+@import "../../../../../behaviors/animation/animation.wxss";
 
 .custom-button {
     width: 200px;

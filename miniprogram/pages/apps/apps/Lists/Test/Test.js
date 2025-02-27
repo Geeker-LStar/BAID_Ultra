@@ -1,4 +1,4 @@
-const buttonEffects = require("./behaviors/buttonEffects");
+const buttonEffects = require("../../../../../behaviors/animation/animation");
 
 Page({
   behaviors: [buttonEffects], // 直接应用行为
