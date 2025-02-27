@@ -7,6 +7,7 @@ Page({
   data: {
     condition: true,
     inputValue: '',
+    TBAnimation: {},
   },
 
   /**
@@ -20,7 +21,45 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
+    // 计算vh对应的px值
+    //const screen_width = wx.getWindowInfo().screenWidth;
+    const screen_height = wx.getWindowInfo().screenHeight;
+    const VH = screen_height / 100; // 单位px
 
+    wx.createSelectorQuery()
+      .select('#theCanvas')
+      .fields({node: true, size: true})
+      .exec((res) => {
+        // Canvas对象
+        const the_canvas = res[0].node;
+        // 渲染上下文
+        const context = the_canvas.getContext('2d');
+        // 画布的宽高
+        const width = res[0].width;
+        const height = res[0].height;
+        // 初始化宽高
+        const dpr = wx.getWindowInfo().pixelRatio;
+        the_canvas.width = width * dpr;
+        the_canvas.height = height * dpr;
+        context.scale(dpr, dpr);
+
+        // 绘制
+        // 清空画布
+        context.clearRect(0, 0, width, height)
+        // 圆形
+        let targetX = 1.5 * VH;
+        //let targetX = 4.0 * VH; // Max targetX
+        let targetY = 1.4 * VH;
+        let r = 1 * VH;
+        let StartAngle = 0
+        let EndAngle = 2 * Math.PI;
+        //console.log(targetX, targetY, r, StartAngle, EndAngle);
+        context.beginPath();
+        context.arc(targetX, targetY, r, StartAngle, EndAngle);
+        context.fillStyle = '#ffffff';
+        context.fill();
+      });
+    console.log('按钮初始化完毕');
   },
 
   /**
@@ -89,6 +128,81 @@ Page({
       inputValue: event.detail.value
     });
   },
+
+  handleTheButtonClick() {
+    console.group('点击按钮的输出');
+    console.log(this.theButtonAnimation);
+    this.theButtonAnimation.translateX(50).step();
+    const animation_export = this.theButtonAnimation.export();
+    console.log(animation_export);
+    this.setData({
+      TBAnimation: animation_export,
+    });
+    console.log(this.data.TBAnimation);
+    console.groupEnd();
+  },
+
+
+  // todo用户点击画布时的函数
+  handleTheCanvasClick() {
+    // 计算vh和vw对应的px值
+    //const screen_width = wx.getWindowInfo().screenWidth;
+    const screen_height = wx.getWindowInfo().screenHeight;
+    const VH = screen_height / 100; // 单位px
+
+    wx.createSelectorQuery()
+      .select('#theCanvas')
+      .fields({node: true, size: true})
+      .exec((res) => {
+        // Canvas对象
+        const the_canvas = res[0].node;
+        // 渲染上下文
+        const context = the_canvas.getContext('2d');
+        // 画布的宽高
+        const width = res[0].width;
+        const height = res[0].height;
+        // 初始化宽高
+        const dpr = wx.getWindowInfo().pixelRatio;
+        the_canvas.width = width * dpr;
+        the_canvas.height = height * dpr;
+        context.scale(dpr, dpr);
+
+        // 使用setInterval制作动画
+        let targetX = 1.5 * VH; // MAX 4vh
+        let targetY = 1.5 * VH;
+        let r = 1 * VH;
+        let startAngle = 0;
+        let endAngle = 2 * Math.PI;
+        let animation = setInterval(() => {
+          context.clearRect(0, 0, width, height);
+          context.beginPath();
+          context.arc(targetX, targetY, r, startAngle, endAngle);
+          context.fillStyle = '#ffffff';
+          context.fill();
+          if (targetX < 4.0 * VH) {
+            targetX += 0.3 * VH;
+          } else {
+            clearInterval(animation);
+          }
+        }, 16.67);
+
+        /*
+        // 绘制
+        // 清空画布
+        context.clearRect(0, 0, width, height)
+        // 圆形
+        let targetX = 1.5 * VH;
+        let targetY = 1.5 * VH;
+        let r = 1 * VH;
+        let StartAngle = 0
+        let EndAngle = 2 * Math.PI;
+        //console.log(targetX, targetY, r, StartAngle, EndAngle);
+        context.beginPath();
+        context.arc(targetX, targetY, r, StartAngle, EndAngle);
+        context.fillStyle = '#eeeeee';
+        context.fill();*/
+      });
+  }
 })
 
 ////////////////////////////////////////////////////////

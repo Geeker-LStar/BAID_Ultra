@@ -11,11 +11,11 @@
 <view wx:if="{{condition}}" class="if-test"></view>
 
 <!--实验：console的多种方法-->
-<button bind:tap="consoleInfo">点击使用console.info()</button>
+<button bind:tap="consoleInfo" class="button">点击使用console.info()</button>
 
-<button bind:tap="consoleWarn">点击使用console.warn()</button>
+<button bind:tap="consoleWarn" class="button">点击使用console.warn()</button>
 
-<button bind:tap="consoleError">点击使用console.error()</button>
+<button bind:tap="consoleError" class="button">点击使用console.error()</button>
 
 <!--实验：输入框-->
 <input placeholder="请输入内容"/>
@@ -28,3 +28,16 @@
 <text>你好\n你好\n你好</text>
 
 <view class="DHexample">这是按钮</view>
+
+<view style="height: 20px;"></view>
+
+<!--制作一个按钮-->
+<view class="the-button" id="The Button" bind:tap="handleTheButtonClick">
+  <view class="the-inner-circle">
+  </view>
+</view>
+
+<view style="height: 20px;"></view>
+
+<!--画布按钮-->
+<canvas id="theCanvas" type="2d" style="background-color: #141414; width: 6vh; height: 3vh; border-radius: 1.5vh;" bind:tap="handleTheCanvasClick"></canvas>

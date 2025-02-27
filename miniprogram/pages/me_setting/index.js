@@ -94,4 +94,10 @@ Page({
       url: '/pages/login/index',
     });
   },
+
+  goToAccount() {
+    wx.navigateTo({
+      url: '/pages/me_setting_account/index',
+    });
+  },
 })

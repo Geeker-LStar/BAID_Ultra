@@ -28,7 +28,7 @@
   margin-bottom: 20rpx;
 }
 
-button {
+.button {
   background-color: #007aff;
   color: white;
   font-size: 32rpx;
@@ -48,9 +48,25 @@ button {
   transition: transform, border;
 }
 
-.DHexample:hover {
-  transform: scale(1.1);
-  border: 5px red solid;
+.the-button {
+  width: 5vh;
+  height: 2vh;
+  border-radius: 1.5vh;
+  padding: 0.5vh;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.the-inner-circle {
+  width: 2vh;
+  height: 2vh;
+  border-radius: 1vh;
+  background-color: white;
+  position: relative;
+  left: 0vh; /*Max 3vh*/
 }
 
 /*view {
