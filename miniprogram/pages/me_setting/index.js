@@ -100,4 +100,10 @@ Page({
       url: '/pages/me_setting_account/index',
     });
   },
+
+  goToNotifications() {
+    wx.navigateTo({
+      url: '/pages/me_setting_notifications/index',
+    });
+  },
 })

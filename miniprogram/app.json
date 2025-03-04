@@ -23,8 +23,12 @@
     "pages/modify_club/index",
     "pages/authority/index",
     "pages/me_setting_account/index",
+<<<<<<< HEAD
     "components/animation/animation",
     "pages/apps/apps/Lists/Test/subpage/subpage"
+=======
+    "pages/me_setting_notifications/index"
+>>>>>>> refs/remotes/origin/master
   ],
   "window": {
     "backgroundColor": "#F1F1F1",

@@ -1,0 +1,19 @@
+<!--pages/me_setting_notifications/index.wxml-->
+
+<view class="fs">
+
+  <!--空白-->
+  <view style="height: 2vh;"></view>
+
+  <view class="option-view">
+    <view style="width: 5%;"></view>
+    <view class="option-text-view">
+      <text class="option-text">开启通知</text>
+    </view>
+    <view style="width: 6%;"></view>
+    <view class="right-side-view">
+      <canvas id="activateNotifications" type="2d" class="canvas-button" bind:tap="handleActiveNotifications"></canvas>
+    </view>
+  </view>
+
+</view>

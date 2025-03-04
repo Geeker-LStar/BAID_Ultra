@@ -14,7 +14,24 @@ App({
       });
     }
 
-    this.globalData = {};
+    // “设置”内按钮状态
+    if (!wx.getStorageSync('settingDataOK')) {
+      wx.setStorageSync('settingDataOK', true);
+      wx.setStorageSync('notificationsOn', true)
+    };
+
+    this.globalData = {
+      // 设置“设置”页面内数据
+      btArcCl: {
+        true: '#333333',
+        false: '#EFECDC',
+      },
+      btBgCl: {
+        true: '#E2FDFF',
+        false: '#00000000',
+      },
+    };
+
   },
   // 配置 markdown 解析器
   towxml:require('/towxml/index'),
