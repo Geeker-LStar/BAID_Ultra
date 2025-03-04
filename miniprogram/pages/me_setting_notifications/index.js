@@ -5,15 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 变量名称解释
-    // btSts: buttonStatus（按钮的开、关）
-    // btBgCl: buttonBackgroudColor
-    // btArcCl: buttonArcColor（控制按钮内小圆圈的颜色）
     VH: null,
-    btSts_activateNotifications: false,
-    btBgCl_activeNotifications: '#3B3838', // 开启 #FFFFFF
-    btArcCl: '#D4D4D4', // 开启 #00CC6A（绿色）
-    app: getApp().globalData,
+    canvasId: [
+      '#activateNotifications',
+    ],
+    btBgCls: {
+      '#activateNotifications': null,
+    },
   },
 
   /**
@@ -29,11 +27,22 @@ Page({
   onReady() {
     // 计算vh对应的px值
     const screen_height = wx.getWindowInfo().screenHeight;
-    const VH_ = screen_height / 100;
+    const _VH = screen_height / 100;
     this.setData({
-      VH: VH_,
+      VH: _VH,
     });
-    this.init_canvas('#activateNotifications', this.data.VH);
+
+    // 初始化所有canvas
+    for (const id of this.data.canvasId) {
+      this.init_canvas(id, this.data.VH);
+      // 初始化背景色
+      this.data.btBgCls[id] = getApp().globalData.btBgCl[wx.getStorageSync(id)];
+      this.setData({
+        btBgCls: this.clone(this.data.btBgCls),
+      });
+      console.log(wx.getStorageSync(id));
+    };
+
   },
 
   /**
@@ -80,7 +89,7 @@ Page({
 
   // 初始化画布
   init_canvas(selector, VH) {
-    // 渲染内部圆圈
+
     wx.createSelectorQuery()
       .select(selector)
       .fields({node: true, size: true})
@@ -97,25 +106,36 @@ Page({
   
         // 清空画布
         ctx.clearRect(0, 0, width, height);
-        let targetX = 1.5 * VH;
+
+        // 渲染内部圆圈
+        let targetX = wx.getStorageSync(selector)? 4.0 * VH: 1.5 * VH;
         let targetY = 1.4 * VH;
         let r = 1 * VH;
         let startAngle = 0;
         let endAngle = 2 * Math.PI;
         ctx.beginPath();
         ctx.arc(targetX, targetY, r, startAngle, endAngle);
-        ctx.fillStyle = this.data.btArcCl;
+        ctx.fillStyle = getApp().globalData.btArcCl[wx.getStorageSync(selector)];
         ctx.fill();
       });
+
   },
 
-  // 渲染画布动画
-  draw_animation(selector, btSts, btArcCl) {
-    const screen_height = wx.getWindowInfo().screenHeight;
-    const VH = screen_height / 100;
-
+  // 处理画布被点击
+  handleCanvasClick(event) {
+    console.log('oi');
+    const id = event.currentTarget.dataset.id;
+    // 修改按钮状态
+    wx.setStorageSync(id, !wx.getStorageSync(id))
+    const btSts = wx.getStorageSync(id);
+    const VH = this.data.VH;
+    this.data.btBgCls[id] = getApp().globalData.btBgCl[btSts];
+    this.setData({
+      btBgCls: this.clone(this.data.btBgCls),
+    });
+    // 施加动画
     wx.createSelectorQuery()
-      .select(selector)
+      .select(id)
       .fields({node: true, size: true})
       .exec((res) => {
         const canvas = res[0].node;
@@ -127,44 +147,33 @@ Page({
         canvas.height = height * dpr;
         ctx.scale(dpr, dpr);
 
-        // 动画环节
-        let targetX = btSts? 1.5 * VH: 4 * VH;
-        let targetY = 1.5 * VH;
+        let targetX = btSts? 1.5 * VH: 4.0 * VH;
+        let dX = 0;
+        let targetY = 1.4 * VH;
         let r = 1 * VH;
         let startAngle = 0;
         let endAngle = 2 * Math.PI;
         let animation = setInterval(() => {
+          dX += btSts? 0.4 * VH: -0.4 * VH; // targetX的偏移
+          dX = Math.abs(dX) >= 2.5 * VH? 2.5 * VH * dX / Math.abs(dX): dX;
           ctx.clearRect(0, 0, width, height);
           ctx.beginPath();
-          ctx.arc(targetX, targetY, r, startAngle, endAngle);
-          ctx.fillStyle = btArcCl;
+          ctx.arc(targetX + dX, targetY, r, startAngle, endAngle);
+          ctx.fillStyle = getApp().globalData.btArcCl[btSts];
           ctx.fill();
-          if (btSts) {
-            if (targetX < 4.1 * VH) {
-              targetX = targetX > 3.5 * VH? 4.1 * VH: targetX + 0.6 * VH;
-            } else {
-              clearInterval(animation);
-            };
-          } else {
-            if (targetX > 1.5 * VH) {
-              targetX = targetX < 2.1 * VH? 1.5 * VH: targetX - 0.6 * VH;
-            } else {
-              clearInterval(animation);
-            };
+          if (Math.abs(dX) >= 2.5 * VH) {
+            clearInterval(animation);
           };
-        });
+        }, 16.67);
       });
   },
 
-  handleActiveNotifications() {
-    this.setData({
-      btSts_activateNotifications: this.data.btSts_activateNotifications? false: true,
-    });
-    this.setData({
-      btBgCl_activeNotifications: this.data.btSts_activateNotifications? '#FFFFFF': '#3B3838',
-      btArcCl: this.data.btSts_activateNotifications? '#00CC6A': '#D4D4D4',
-    });
-    this.draw_animation('#activateNotifications', this.data.btSts_activateNotifications, this
-    .data.btArcCl);
+  // 克隆对象
+  clone(obj) {
+    let newObj = {};
+    for (const key in obj) {
+      newObj[key] = obj[key];
+    };
+    return newObj;
   },
 })

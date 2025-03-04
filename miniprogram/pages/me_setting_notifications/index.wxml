@@ -12,7 +12,7 @@
     </view>
     <view style="width: 6%;"></view>
     <view class="right-side-view">
-      <canvas id="activateNotifications" type="2d" class="canvas-button" bind:tap="handleActiveNotifications"></canvas>
+      <canvas id="activateNotifications" type="2d" class="canvas-button" style="background-color: {{btBgCls['#activateNotifications']}};" bind:tap="handleCanvasClick" data-id='#activateNotifications'></canvas>
     </view>
   </view>
 

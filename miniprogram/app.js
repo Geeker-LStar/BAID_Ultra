@@ -15,20 +15,24 @@ App({
     }
 
     // “设置”内按钮状态
-    if (!wx.getStorageSync('settingDataOK')) {
-      wx.setStorageSync('settingDataOK', true);
-      wx.setStorageSync('notificationsOn', true)
+    if (wx.getStorageSync('settingDataOK') != 'Ok') {
+      wx.setStorageSync('settingDataOK', 'Ok');
+      wx.setStorageSync('#activateNotifications', true)
     };
 
     this.globalData = {
       // 设置“设置”页面内数据
+      // 变量名称解释
+      // btSts: buttonStatus（按钮的开、关）
+      // btBgCl: buttonBackgroudColor
+      // btArcCl: buttonArcColor（控制按钮内小圆圈的颜色）
       btArcCl: {
-        true: '#333333',
-        false: '#EFECDC',
+        true: '#FFFFFF',
+        false: '#FAFAFA',
       },
       btBgCl: {
-        true: '#E2FDFF',
-        false: '#00000000',
+        true: '#2D608A',
+        false: '#09090D',
       },
     };
 
