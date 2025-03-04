@@ -1,6 +1,34 @@
-module.exports = Behavior({
+Component({
+    externalClasses: ['custom-class'],
+    properties: {
+      label: {
+        type: String,
+        value: "Sample_Button"
+      },
+      btnId: {
+        type: String,
+        value: ""
+      },
+      directPage: {
+        type: String,
+        value: ""
+      },
+      hoverClass: {
+        type: String,
+        value: "button-item-active"
+      },
+      bindTap: {
+        type: String,
+        value: ""
+      },
+      class: {
+        type: String,
+        value: ""
+      }
+    },
+
     data: {
-      ripples: [],
+        ripples: []
     },
   
     methods: {

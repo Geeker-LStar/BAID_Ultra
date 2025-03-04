@@ -1,7 +1,5 @@
-/* pages/index/index.wxss */
-@import "../../../../../behaviors/animation/animation.wxss";
-
-.custom-button {
+/* pages/apps/apps/Lists/Test/subpage/subpage.wxss */
+.custom-button1 {
     width: 200px;
     height: 50px;
     border-radius: 10px;
@@ -10,8 +8,4 @@
     font-size: 16px;
     border: none;
     position: relative;
-}
-
-.block{
-    border: 2px solid #C3B3A3;
 }

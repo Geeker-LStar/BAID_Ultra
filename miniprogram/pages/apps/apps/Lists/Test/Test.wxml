@@ -1,6 +1,6 @@
 <!-- pages/app/app.wxml -->
 <view class="button-container">
-  <block wx:for="{{buttons}}" wx:key="index">
+  <block wx:for="{{buttons}}" wx:key="index" class="block">
     <view class="button-wrapper">
       <button 
         class="custom-button" 
@@ -8,6 +8,7 @@
         data-index="{{index}}"
         id="btn{{index}}"
         hover-class="button-item-active"
+        data-directpage="./subpage/subpage"
       >
         {{item.label}}
       </button>
@@ -21,13 +22,24 @@
         ></view>
       </view>
     </view>
-  </block>
-  <button 
+    </block>
+    <button 
         class="custom-button" 
         data-index="{{index}}"
+        bindtap="NormalRedirect"
         hover-class="button-item-active"
-        data-directPage="1"
-      >
+        data-directpage="./subpage/subpage"
+    >
         仅大小变化动画
-      </button>
+    </button>
+
+    <button 
+    class="custom-button" 
+    data-index="{{index}}"
+    id="btn-single"
+    hover-class="button-item-active"
+    data-directpage="./subpage/subpage"
+  >
+    扩散(独立)
+  </button>
 </view>

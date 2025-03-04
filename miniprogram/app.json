@@ -22,7 +22,9 @@
     "pages/club_list_template/index",
     "pages/modify_club/index",
     "pages/authority/index",
-    "pages/me_setting_account/index"
+    "pages/me_setting_account/index",
+    "components/animation/animation",
+    "pages/apps/apps/Lists/Test/subpage/subpage"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
