@@ -7,11 +7,11 @@
   <view style="height: 2vh;"></view>
 
   <!--单个设置-->
-  <view class="option-view">
+  <view class="option-view" bind:tap="goToAccount">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
-    <view class="option-text-view" bind:tap="goToAccount">
+    <view class="option-text-view">
       <text class="option-text">账号管理与安全</text>
     </view>
     <!--箭头-->
@@ -24,7 +24,7 @@
   <view style="height: 2vh;"></view>
 
   <!--单个设置-->
-  <view class="option-view">
+  <view class="option-view" bind:tap="goToNotifications">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
