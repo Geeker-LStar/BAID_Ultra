@@ -38,7 +38,7 @@
   </view>
 
   <!--单个设置-->
-  <view class="option-view">
+  <view class="option-view" bind:tap="goToPrivacy">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
@@ -55,7 +55,7 @@
   <view style="height: 2vh;"></view>
 
   <!--单个设置-->
-  <view class="option-view">
+  <view class="option-view" bind:tap="goToLanguageAndTheme">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
