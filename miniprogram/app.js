@@ -14,12 +14,6 @@ App({
       });
     }
 
-    // “设置”内按钮状态
-    if (wx.getStorageSync('settingDataOK') != 'Ok') {
-      wx.setStorageSync('settingDataOK', 'Ok');
-      wx.setStorageSync('#activateNotifications', true)
-    };
-
     this.globalData = {
       // 设置“设置”页面内数据
       // 变量名称解释
@@ -34,8 +28,20 @@ App({
         true: '#2D608A',
         false: '#09090D',
       },
+      canvasId: [
+        '#activateNotifications',
+      ],
     };
 
+    // “设置”内按钮状态
+    for (const id of this.globalData.canvasId) {
+      if (wx.getStorageSync(id) == '') {
+        // 如果有按钮信息为空，就将执行重置程序。
+        console.warn('检测到本地存储的设置选项缺失，已重置设置的全部选项！');
+        wx.setStorageSync('#activateNotifications', true);
+        break;
+      };
+    };
   },
   // 配置 markdown 解析器
   towxml:require('/towxml/index'),
