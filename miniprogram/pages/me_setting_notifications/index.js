@@ -6,9 +6,7 @@ Page({
    */
   data: {
     VH: null,
-    canvasId: [
-      '#activateNotifications',
-    ],
+    canvasId: getApp().globalData.canvasId,
     btBgCls: {
       '#activateNotifications': null,
     },
@@ -40,7 +38,6 @@ Page({
       this.setData({
         btBgCls: this.clone(this.data.btBgCls),
       });
-      console.log(wx.getStorageSync(id));
     };
 
   },
@@ -123,7 +120,6 @@ Page({
 
   // 处理画布被点击
   handleCanvasClick(event) {
-    console.log('oi');
     const id = event.currentTarget.dataset.id;
     // 修改按钮状态
     wx.setStorageSync(id, !wx.getStorageSync(id))

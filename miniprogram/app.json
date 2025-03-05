@@ -25,7 +25,9 @@
     "pages/me_setting_account/index",
     "components/animation/animation",
     "pages/apps/apps/Lists/Test/subpage/subpage",
-    "pages/me_setting_notifications/index"
+    "pages/me_setting_notifications/index",
+    "pages/me_setting_privacy/index",
+    "pages/language_and_theme/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",

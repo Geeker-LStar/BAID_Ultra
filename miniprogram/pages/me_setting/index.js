@@ -106,4 +106,16 @@ Page({
       url: '/pages/me_setting_notifications/index',
     });
   },
+
+  goToPrivacy() {
+    wx.navigateTo({
+      url: '/pages/me_setting_privacy/index',
+    });
+  },
+
+  goToLanguageAndTheme() {
+    wx.navigateTo({
+      url: '/pages/language_and_theme/index',
+    });
+  },
 })

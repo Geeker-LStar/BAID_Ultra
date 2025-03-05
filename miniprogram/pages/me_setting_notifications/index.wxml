@@ -16,4 +16,40 @@
     </view>
   </view>
 
+  <!--空白-->
+  <view style="height: 2vh;"></view>
+
+  <view class="option-view">
+    <view style="width: 5%;"></view>
+    <view class="option-text-view">
+      <text class="option-text">通知类型1</text>
+    </view>
+    <view style="width: 6%;"></view>
+    <view class="right-side-view">
+      <text style="position: absolute; right: 0vw; color: white;">待定</text>
+    </view>
+  </view>
+
+  <view class="option-view">
+    <view style="width: 5%;"></view>
+    <view class="option-text-view">
+      <text class="option-text">通知类型2</text>
+    </view>
+    <view style="width: 6%;"></view>
+    <view class="right-side-view">
+      <text style="position: absolute; right: 0vw; color: white;">待定</text>
+    </view>
+  </view>
+
+  <view class="option-view">
+    <view style="width: 5%;"></view>
+    <view class="option-text-view">
+      <text class="option-text">……</text>
+    </view>
+    <view style="width: 6%;"></view>
+    <view class="right-side-view">
+      <text style="position: absolute; right: 0vw; color: white;">待定</text>
+    </view>
+  </view>
+
 </view>
