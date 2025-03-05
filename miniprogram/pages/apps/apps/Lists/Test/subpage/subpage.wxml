@@ -1,8 +1,2 @@
 <!--pages/apps/apps/Lists/Test/subpage/subpage.wxml-->
-<ripple-button
-    id="btn0"
-    hover-class="button-item-active"
-    bindtap="ButtonRippleClick"
-    class="custom-button1"
-    lable="测试1"
-></ripple-button>
+<text>pages/apps/apps/Lists/Test/subpage/subpage.wxml</text>

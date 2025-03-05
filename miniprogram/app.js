@@ -1,6 +1,6 @@
 // app.js
 App({
-  onLaunch: function () {
+    onLaunch: function () {
     if (!wx.cloud) {
       console.error("请使用 2.2.3 或以上的基础库以使用云能力");
     } else {
@@ -12,12 +12,14 @@ App({
         env: "",
         traceUser: true,
       });
+      const buttonEffects = require("./behaviors/animation/animation");
+      behaviors: [buttonEffects];
     }
 
     // “设置”内按钮状态
     if (wx.getStorageSync('settingDataOK') != 'Ok') {
       wx.setStorageSync('settingDataOK', 'Ok');
-      wx.setStorageSync('#activateNotifications', true)
+      wx.settorageSync('#activateNotifications', true)
     };
 
     this.globalData = {

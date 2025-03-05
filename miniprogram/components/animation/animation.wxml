@@ -1,20 +1,2 @@
 <!--components/animation/animation.wxml-->
-<view class="button-wrapper">
-  <button 
-    id="{{btnId}}"
-    data-directPage="{{directPage}}"
-    hover-class="{{hoverClass}}"
-    bindtap="{{bindTap}}"
-    class="custom-class"
-  >
-    {{label}}
-  </button>
-
-  <!-- 动画容器 -->
-  <view class="ripple-container">
-    <view 
-      class="ripple" 
-      style="top: {{rippleTop}}px; left: {{rippleLeft}}px;"
-    ></view>
-  </view>
-</view>
+<text>components/animation/animation.wxml</text>

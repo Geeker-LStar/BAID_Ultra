@@ -8,7 +8,7 @@
         data-index="{{index}}"
         id="btn{{index}}"
         hover-class="button-item-active"
-        data-directpage="./subpage/subpage"
+        data-directpage="{{item.link}}"
       >
         {{item.label}}
       </button>
@@ -25,7 +25,7 @@
     </block>
     <button 
         class="custom-button" 
-        data-index="{{index}}"
+        data-index="12"
         bindtap="NormalRedirect"
         hover-class="button-item-active"
         data-directpage="./subpage/subpage"
@@ -34,12 +34,13 @@
     </button>
 
     <button 
-    class="custom-button" 
-    data-index="{{index}}"
-    id="btn-single"
-    hover-class="button-item-active"
-    data-directpage="./subpage/subpage"
-  >
+        class="custom-button" 
+        bindtap="ButtonRippleClick" 
+        data-index="4"
+        id="btn00"
+        hover-class="button-item-active"
+        data-directpage="./subpage/subpage"
+    >
     扩散(独立)
-  </button>
+    </button>
 </view>

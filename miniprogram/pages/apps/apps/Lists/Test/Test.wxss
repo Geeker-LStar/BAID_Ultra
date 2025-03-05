@@ -1,11 +1,11 @@
 /* pages/index/index.wxss */
-@import "../../../../../behaviors/animation/animation.wxss";
+/*@import "../../../../../behaviors/animation/animation.wxss";*/
 
 .custom-button {
     width: 200px;
     height: 50px;
     border-radius: 10px;
-    background-color: #007bff;
+    background-color: #818e9b;
     color: #fff;
     font-size: 16px;
     border: none;

@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import "./behaviors/animation/animation.wxss";
 
 .container {
   display: flex;

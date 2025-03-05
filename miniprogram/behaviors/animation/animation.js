@@ -27,7 +27,6 @@ module.exports = Behavior({
             const { touches } = event;
             if (touches && touches.length > 0) {
               const { clientX, clientY } = touches[0]; // 获取点击位置
-              
               let query = this.createSelectorQuery(); // 创建查询对象
               let id = event.currentTarget.id; // 获取点击元素的 id
               query.select('#' + id).boundingClientRect(function(rect) {
