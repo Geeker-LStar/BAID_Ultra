@@ -6,7 +6,9 @@ Page({
    */
   data: {
     VH: null,
-    canvasId: getApp().globalData.canvasId,
+    canvasId: [
+      '#activateNotifications',
+    ],
     btBgCls: {
       '#activateNotifications': null,
     },
@@ -122,7 +124,7 @@ Page({
   handleCanvasClick(event) {
     const id = event.currentTarget.dataset.id;
     // 修改按钮状态
-    wx.setStorageSync(id, !wx.getStorageSync(id))
+    wx.setStorageSync(id, !wx.getStorageSync(id));
     const btSts = wx.getStorageSync(id);
     const VH = this.data.VH;
     this.data.btBgCls[id] = getApp().globalData.btBgCl[btSts];
@@ -144,7 +146,7 @@ Page({
         ctx.scale(dpr, dpr);
 
         let targetX = btSts? 1.5 * VH: 4.0 * VH;
-        let dX = 0;
+        let dX = 0; // dX = deltaX
         let targetY = 1.4 * VH;
         let r = 1 * VH;
         let startAngle = 0;

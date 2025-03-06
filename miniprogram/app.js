@@ -36,8 +36,10 @@ App({
         true: '#2D608A',
         false: '#09090D',
       },
+      // 所有按钮canvas的wxml的id
       canvasId: [
-        '#activateNotifications',
+        '#activateNotifications', // 开启通知
+        '#darkModeOn', // 打开深色模式
       ],
     };
 
@@ -47,6 +49,7 @@ App({
         // 如果有按钮信息为空，就将执行重置程序。
         console.warn('检测到本地存储的设置选项缺失，已重置设置的全部选项！');
         wx.setStorageSync('#activateNotifications', true);
+        wx.setStorageSync('#darkModeOn', true);
         break;
       };
     };

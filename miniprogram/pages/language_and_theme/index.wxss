@@ -69,3 +69,11 @@
   position: absolute;
   right: 0vw;
 }
+
+.canvas-button {
+  position: absolute;
+  right: 0vw;
+  height: 3vh;
+  width: 6vh;
+  border-radius: 1.5vh;
+}

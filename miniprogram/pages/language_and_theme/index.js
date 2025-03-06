@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 初始化页面数据
+    VH: null,
+    canvasId: [
+      '#darkModeOn',
+    ],
+    btBgCls: {
+      '#darkModeOn': null,
+    },
   },
 
   /**
@@ -19,7 +26,21 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
+    // 计算VH
+    const screen_height = wx.getWindowInfo().screenHeight;
+    const _VH = screen_height / 100;
+    this.setData({
+      VH: _VH,
+    });
 
+    // 初始化所有canvas
+    for (const id of this.data.canvasId) {
+      this.init_canvas(id, this.data.VH);
+      this.data.btBgCls[id] = getApp().globalData.btBgCl[wx.getStorageSync(id)];
+      this.setData({
+        btBgCls: this.clone(this.data.btBgCls),
+      });
+    };
   },
 
   /**
@@ -62,5 +83,86 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  init_canvas(selector, VH) {
+    wx.createSelectorQuery()
+      .select(selector)
+      .fields({node: true, size: true})
+      .exec((res) => {
+        // 初始化
+        const canvas = res[0].node;
+        const ctx = canvas.getContext('2d');
+        const width = res[0].width;
+        const height = res[0].height;
+        const dpr = wx.getWindowInfo().pixelRatio;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+  
+        // 清空画布
+        ctx.clearRect(0, 0, width, height);
+
+        // 渲染内部圆圈
+        let targetX = wx.getStorageSync(selector)? 4.0 * VH: 1.5 * VH;
+        let targetY = 1.4 * VH;
+        let r = 1 * VH;
+        let startAngle = 0;
+        let endAngle = 2 * Math.PI;
+        ctx.beginPath();
+        ctx.arc(targetX, targetY, r, startAngle, endAngle);
+        ctx.fillStyle = getApp().globalData.btArcCl[wx.getStorageSync(selector)];
+        ctx.fill();
+      });
+  },
+
+  handleCanvasClick(event) {
+    const id = event.currentTarget.dataset.id;
+    wx.setStorageSync(id, !wx.getStorageSync(id));
+    const btSts = wx.getStorageSync(id);
+    const VH = this.data.VH;
+    this.data.btBgCls[id] = getApp().globalData.btBgCl[btSts];
+    this.setData({
+      btBgCls: this.clone(this.data.btBgCls),
+    });
+    // 动画
+    wx.createSelectorQuery()
+      .select(id)
+      .fields({node: true, size: true})
+      .exec((res) => {
+        const canvas = res[0].node;
+        const ctx = canvas.getContext('2d');
+        const width = res[0].width;
+        const height = res[0].height;
+        const dpr = wx.getWindowInfo().pixelRatio;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+
+        let targetX = btSts? 1.5 * VH: 4.0 * VH;
+        let dX = 0;
+        let targetY = 1.4 * VH;
+        let r = 1 * VH;
+        let startAngle = 0;
+        let endAngle = 2 * Math.PI;
+        let animation = setInterval(() => {
+          dX += btSts? 0.4 * VH: -0.4 * VH;
+          dX = Math.abs(dX) >= 2.5 * VH? 2.5 * VH * dX / Math.abs(dX): dX;
+          ctx. clearRect(0, 0, width, height);
+          ctx.beginPath();
+          ctx.arc(targetX + dX, targetY, r, startAngle, endAngle);
+          ctx.fillStyle = getApp().globalData.btArcCl[btSts];
+          ctx.fill();
+          if (Math.abs(dX) >= 2.5 * VH) {clearInterval(animation);};
+        }, 16.67);
+      });
+  },
+
+  clone(obj) {
+    let newObj = {};
+    for (const key in obj) {
+      newObj[key] = obj[key];
+    };
+    return newObj;
+  },
 })

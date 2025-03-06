@@ -20,17 +20,30 @@
     </view>
   </view>
 
+  <view style="height: 2vh;"></view>
+
   <view class="option-view">
     <view style="width: 5%;"></view>
     <view class="option-text-view">
-      <text class="option-text">语言</text>
+      <text class="option-text">打开深色模式</text>
+    </view>
+    <view style="width: 6%;"></view> <!--调整横向空缺-->
+    <view class="right-side-view">
+      <canvas class="canvas-button" id="darkModeOn" type="2d" style="background-color: {{btBgCls['#darkModeOn']}};" bind:tap="handleCanvasClick" data-id='#darkModeOn'></canvas>
+    </view>
+  </view>
+
+  <view style="height: 2vh;"></view>
+  
+  <view class="option-view">
+    <view style="width: 5%;"></view>
+    <view class="option-text-view">
+      <text class="option-text">字体样式和大小</text>
     </view>
     <view class="right-side-view">
-      <text class="light-text">简体中文</text>
     </view>
-    <view style="width: 2%;"></view>
     <view class="option-arrow-view">
-      <view class="option-text">>></view>
+      <text class="option-text">>></text>
     </view>
   </view>
 
