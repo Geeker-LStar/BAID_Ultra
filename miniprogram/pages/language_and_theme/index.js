@@ -13,9 +13,9 @@ Page({
     btBgCls: {
       '#darkModeOn': null,
     },
-    
+
     optionsOn: false,
-    optionsProtect: null,
+    optionsProtect: false,
   },
 
   /**
@@ -175,18 +175,42 @@ Page({
 
   handleLanguage() {
     console.log('你点击了“语言”');
-    this.setData({
-      optionsOn: !this.data.optionsOn,
-    });
     if (!this.data.optionsOn) {
-      this.init_canvas("#darkModeOn", this.data.VH);
+      this.setData({
+        optionsOn: true,
+        optionsProtect: true,
+      });
+      setTimeout(() => {
+        this.setData({
+          optionsProtect: false,
+        });
+      }, 100);
+    } else {
+      if (!this.data.optionsProtect) {
+        this.setData({
+          optionsOn: false,
+        });
+        this.init_canvas('#darkModeOn', this.data.VH);
+      };
     };
   },
 
   handleLeftClick() {
     setTimeout(() => {
-      console.log('屏幕被点击！');
-      console.log(this.data.optionsOn);
-    }, 10)
+      if (this.data.optionsOn) {
+        if (!this.data.optionsProtect) {
+          this.setData({
+            optionsOn: false,
+          });
+          this.init_canvas('#darkModeOn', this.data.VH);
+        };
+      };
+    }, 10);
+  },
+
+  handleChooseLanguage(event) {
+    const lang = event.currentTarget.dataset.lang;
+    wx.setStorageSync('lang', lang)
+    console.log(wx.getStorageSync('lang'));
   },
 })

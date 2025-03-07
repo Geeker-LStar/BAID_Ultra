@@ -53,6 +53,13 @@ App({
         break;
       };
     };
+
+    // 检测语言设置
+    if (wx.getStorageSync('lang') == '') {
+      console.warn('检测到本地存储的语言设置缺失，已重置为简体中文（zh-CN）！');
+      wx.setStorageSync('lang', 'zh-CN');
+    };
+    
   },
   // 配置 markdown 解析器
   towxml:require('/towxml/index'),
