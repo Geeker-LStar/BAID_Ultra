@@ -13,6 +13,9 @@ Page({
     btBgCls: {
       '#darkModeOn': null,
     },
+    
+    optionsOn: false,
+    optionsProtect: null,
   },
 
   /**
@@ -164,5 +167,26 @@ Page({
       newObj[key] = obj[key];
     };
     return newObj;
+  },
+
+  handleFontStyleAndSize() {
+    console.log('你点击了“字体样式和大小”。');
+  },
+
+  handleLanguage() {
+    console.log('你点击了“语言”');
+    this.setData({
+      optionsOn: !this.data.optionsOn,
+    });
+    if (!this.data.optionsOn) {
+      this.init_canvas("#darkModeOn", this.data.VH);
+    };
+  },
+
+  handleLeftClick() {
+    setTimeout(() => {
+      console.log('屏幕被点击！');
+      console.log(this.data.optionsOn);
+    }, 10)
   },
 })

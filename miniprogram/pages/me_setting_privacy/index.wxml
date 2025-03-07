@@ -1,2 +1,6 @@
 <!--pages/me_setting_privacy/index.wxml-->
-<text>pages/me_setting_privacy/index.wxml</text>
+<view class="fs">
+
+  <!--内容--><text style="color: #ffffff;">没有隐私政策！</text>
+
+</view>

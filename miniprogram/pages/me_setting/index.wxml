@@ -43,7 +43,7 @@
     <view style="width: 5vw;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">隐私设置</text>
+      <text class="option-text">隐私政策</text>
     </view>
     <!--箭头-->
     <view class="option-arrow-view">

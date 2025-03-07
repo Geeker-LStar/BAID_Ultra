@@ -77,3 +77,33 @@
   width: 6vh;
   border-radius: 1.5vh;
 }
+
+.language-options {
+  position: absolute;
+  top: 5vh;
+  left: 0vw;
+  background-color: #595959;
+  border: 1px black solid;
+  border-radius: 1.5vw;
+  width: 36vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language-text {
+  color: #ffffff;
+  width: 90%;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: 100;
+  font-style: normal;
+  font-family: Microsoft YaHei;
+  line-height: 4vh;
+  z-index: 100;
+}
+
+.language-text:hover {
+  background-color: #504D4D
+}

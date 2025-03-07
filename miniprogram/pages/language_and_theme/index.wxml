@@ -1,18 +1,21 @@
 <!--pages/language_and_theme/index.wxml-->
 
-<view class='fs'>
+<view class='fs' bind:tap="handleLeftClick">
 
   <!--空白-->
   <view style="height: 2vh;"></view>
 
-  <view class="option-view">
+  <view class="option-view" bind:tap="handleLanguage">
     <view style="width: 5%;"></view>
     <view class="option-text-view">
       <text class="option-text">语言</text>
     </view>
     <view class="right-side-view">
       <text class="light-text">简体中文</text>
-      <text style="position: absolute; top: 5vh;">testtest</text>
+      <view class="language-options" wx:if="{{optionsOn}}">
+        <text class="language-text">简体中文</text>
+        <text class="language-text">English</text>
+      </view>
     </view>
     <view style="width: 2%;"></view>
     <view class="option-arrow-view">
@@ -29,13 +32,13 @@
     </view>
     <view style="width: 6%;"></view> <!--调整横向空缺-->
     <view class="right-side-view">
-      <canvas class="canvas-button" id="darkModeOn" type="2d" style="background-color: {{btBgCls['#darkModeOn']}};" bind:tap="handleCanvasClick" data-id='#darkModeOn'></canvas>
+      <canvas class="canvas-button" id="darkModeOn" type="2d" style="background-color: {{btBgCls['#darkModeOn']}};" bind:tap="handleCanvasClick" data-id='#darkModeOn' wx:if="{{!optionsOn}}"></canvas>
     </view>
   </view>
 
   <view style="height: 2vh;"></view>
   
-  <view class="option-view">
+  <view class="option-view" bind:tap="handleFontStyleAndSize">
     <view style="width: 5%;"></view>
     <view class="option-text-view">
       <text class="option-text">字体样式和大小</text>
