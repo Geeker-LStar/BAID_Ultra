@@ -11,6 +11,16 @@ Page({
 
     inputValue: '',
     TBAnimation: {},
+
+    en: {
+      lang: 'English',
+    },
+
+    zh: {
+      lang: '简体中文',
+    },
+
+    language: wx.getStorageSync('lang'),
   },
 
   /**

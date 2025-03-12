@@ -187,10 +187,12 @@ Page({
       }, 100);
     } else {
       if (!this.data.optionsProtect) {
-        this.setData({
-          optionsOn: false,
-        });
-        this.init_canvas('#darkModeOn', this.data.VH);
+        setTimeout(() => {
+          this.setData({
+            optionsOn: false,
+          });
+          this.init_canvas('#darkModeOn', this.data.VH);
+        }, 200);
       };
     };
   },
