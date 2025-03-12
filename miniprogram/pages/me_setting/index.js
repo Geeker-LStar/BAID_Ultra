@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isLogged: false
+    isLogged: false,
+
+    texts: null,
   },
 
   /**
@@ -20,8 +22,7 @@ Page({
     // 如果 userId != ''，表示用户已登录
     this.setData({
       isLogged: (userId != ''),
-    })
-    
+    });
   },
 
   /**
@@ -35,7 +36,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    if (wx.getStorageSync('lang') == 'en') {
+      this.setData({
+        texts: require("../../i18n/setting/en.js"),
+      });
+    } else {
+      this.setData({
+        texts: require("../../i18n/setting/zh.js"),
+      });
+    };
+    // this.setData({texts: require(wx.getStorageSync('lang') == 'en'? '../../i18n/setting/en.js': '../../i18n/setting/zh.js'),});
   },
 
   /**

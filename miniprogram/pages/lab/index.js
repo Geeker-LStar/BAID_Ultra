@@ -12,22 +12,23 @@ Page({
     inputValue: '',
     TBAnimation: {},
 
-    en: {
-      lang: 'English',
-    },
-
-    zh: {
-      lang: '简体中文',
-    },
-
-    language: wx.getStorageSync('lang'),
+    texts: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    if (wx.getStorageSync('lang') == 'en') {
+      this.setData({
+        texts: require("../../i18n/lab/en.js")
+      });
+    } else {
+      this.setData({
+        texts: require("../../i18n/lab/zh.js")
+      });
+    };
+    console.log(require("../../i18n/lab/en.js"));
   },
 
   /**
