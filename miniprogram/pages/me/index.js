@@ -6,7 +6,8 @@ Page({
    */
   data: {
     isLogged: undefined,
-    name: wx.getStorageSync('name')
+    name: wx.getStorageSync('name'),
+    texts: null,
   },
 
   onLoad() {
@@ -28,6 +29,17 @@ Page({
       isLogged: (userId != ''),
       name: wx.getStorageSync('name')
     });
+    
+    // 处理多语言
+    if (wx.getStorageSync('lang') == 'en') {
+      this.setData({
+        texts: require("../../i18n/me/en.js"),
+      });
+    } else {
+      this.setData({
+        texts: require("../../i18n/me/zh.js"),
+      });
+    };
   },
 
   /**

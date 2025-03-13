@@ -16,6 +16,8 @@ Page({
 
     optionsOn: false,
     optionsProtect: false,
+
+    texts: null,
   },
 
   /**
@@ -50,7 +52,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    if (wx.getStorageSync('lang') == 'en') {
+      this.setData({
+        texts: require("../../i18n/lang_and_theme/en.js"),
+      });
+    } else {
+      this.setData({
+        texts: require("../../i18n/lang_and_theme/zh.js"),
+      });
+    };
   },
 
   /**
@@ -192,7 +202,7 @@ Page({
             optionsOn: false,
           });
           this.init_canvas('#darkModeOn', this.data.VH);
-        }, 200);
+        }, 100);
       };
     };
   },
@@ -214,5 +224,6 @@ Page({
     const lang = event.currentTarget.dataset.lang;
     wx.setStorageSync('lang', lang)
     console.log(wx.getStorageSync('lang'));
+    this.onShow();
   },
 })

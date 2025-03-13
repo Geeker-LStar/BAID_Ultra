@@ -12,6 +12,8 @@ Page({
     btBgCls: {
       '#activateNotifications': null,
     },
+
+    texts: null,
   },
 
   /**
@@ -48,6 +50,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    if (wx.getStorageSync('lang') == 'en') {
+      this.setData({
+        texts: require("../../i18n/notifications/en.js"),
+      });
+    } else {
+      this.setData({
+        texts: require("../../i18n/notifications/zh.js"),
+      });
+    };
 
   },
 

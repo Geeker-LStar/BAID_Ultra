@@ -8,10 +8,10 @@
   <view class="option-view" bind:tap="handleLanguage">
     <view style="width: 5%;"></view>
     <view class="option-text-view">
-      <text class="option-text">语言</text>
+      <text class="option-text">{{texts.lang}}</text>
     </view>
     <view class="right-side-view">
-      <text class="light-text">你的语言</text>
+      <text class="light-text">{{texts.lang_detail}}</text>
 
       <!--选项框-->
       <view class="language-options" wx:if="{{optionsOn}}">
@@ -31,7 +31,7 @@
   <view class="option-view">
     <view style="width: 5%;"></view>
     <view class="option-text-view">
-      <text class="option-text">打开深色模式</text>
+      <text class="option-text">{{texts.dark_mode}}</text>
     </view>
     <view style="width: 6%;"></view> <!--调整横向空缺-->
     <view class="right-side-view">
@@ -44,7 +44,7 @@
   <view class="option-view" bind:tap="handleFontStyleAndSize">
     <view style="width: 5%;"></view>
     <view class="option-text-view">
-      <text class="option-text">字体样式和大小</text>
+      <text class="option-text">{{texts.font}}</text>
     </view>
     <view class="right-side-view">
     </view>

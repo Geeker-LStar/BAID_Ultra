@@ -20,11 +20,11 @@
     <view class="name-and-accounttype-view">
       <!--昵称-->
       <text class="name" wx:if="{{isLogged}}">{{name}}</text>
-      <text class="name" wx:else>未登录用户</text>
+      <text class="name" wx:else>{{texts.guest}}</text>
       <!--空白-->
       <view style="height: 5vh;"></view>
       <!--账号类型-->
-      <text class="account-type">这是一个空白内容</text>
+      <text class="account-type">{{texts.name_detail}}</text>
     </view>
   </view>
   <!--空白-->
@@ -34,7 +34,7 @@
   <view class="event-decoration" wx:if="{{isLogged}}">
     <view class="event-view">
       <!--事件标题-->
-      <text class="event-title">|  我的日程</text>
+      <text class="event-title">{{texts.my_schedule}}</text>
       <!--空白-->
       <view style="height: 1.5vh;"></view>
       <!--当前时间-->
@@ -55,7 +55,7 @@
         <view class="next-activity-decoration">
           <!--文本-->
           <view style="width: 30%;">
-            <text class="event-time">即将到来：</text> <!--此处与event-time共享格式-->
+            <text class="event-time">{{texts.coming_soon}}</text> <!--此处与event-time共享格式-->
           </view>
           <!--下一事件本体-->
           <view class="next-activity-view">
@@ -70,7 +70,7 @@
   </view>
   <!--未登录界面-->
   <view class="please-login-view" bind:tap="goToLogIn" wx:else>
-    <text class="please-login-text">点击登录</text>
+    <text class="please-login-text">{{texts.login}}</text>
   </view>
   <!--空白-->
   <view style="height: 5vh;" wx:if="isLogged"></view>
@@ -81,7 +81,7 @@
     <view style="width: 5vw;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">Bug 反馈</text>
+      <text class="option-text">{{texts.bug_report}}</text>
     </view>
     <!--箭头-->
     <view class="option-arrow-view">
@@ -94,7 +94,7 @@
     <view style="width: 5vw;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">设置</text>
+      <text class="option-text">{{texts.setting}}</text>
     </view>
     <!--箭头-->
     <view class="option-arrow-view">

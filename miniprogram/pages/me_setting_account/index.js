@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    texts: null,
   },
 
   /**
@@ -26,7 +26,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    if (wx.getStorageSync('lang') == 'en') {
+      this.setData({
+        texts: require("../../i18n/acc_and_sec/en.js"),
+      });
+    } else {
+      this.setData({
+        texts: require("../../i18n/acc_and_sec/zh.js"),
+      });
+    };
   },
 
   /**

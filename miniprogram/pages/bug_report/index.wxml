@@ -3,7 +3,7 @@
 
   <!--顶栏-->
   <view class="top-view">
-    <text class="top-text">Bug 反馈（退出会丢失内容！）</text>
+    <text class="top-text">Bug 反馈</text>
   </view>
    
   <view style="height: 2vh;"></view>

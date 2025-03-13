@@ -11,7 +11,7 @@
     <view style="width: 5%;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">头像</text>
+      <text class="option-text">{{texts.profile}}</text>
     </view>
     <!--图像-->
     <view class="right-side-view">
@@ -31,11 +31,11 @@
     <view style="width: 5%;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">昵称</text>
+      <text class="option-text">{{texts.name}}</text>
     </view>
     <!--昵称-->
     <view class="right-side-view">
-      <text class="name-text">最多展示六字</text> <!--todo:昵称过长的处理还没有完成-->
+      <text class="name-text">昵称</text> <!--todo:昵称过长的处理还没有完成-->
     </view>
     <!--空白-->
     <view style="width: 2%;"></view>
@@ -54,7 +54,7 @@
     <view style="width: 5%;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">我的希悦账号</text>
+      <text class="option-text">{{texts.my_seiue_acc}}</text>
     </view>
     <!--右侧（空白）-->
     <view class="right-side-view">
@@ -73,7 +73,7 @@
     <view style="width: 5%;"></view>
     <!--文字-->
     <view class="option-text-view">
-      <text class="option-text">查看已登录设备</text>
+      <text class="option-text">{{texts.logged_in_devices}}</text>
     </view>
     <!--右侧（空白）-->
     <view class="right-side-view">
