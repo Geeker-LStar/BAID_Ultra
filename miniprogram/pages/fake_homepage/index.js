@@ -3,6 +3,7 @@ Page({
     newsItems: ['1111', '2222', '3333'],
   },
   onLoad: function() {
-    console.log('页面加载了');
+    // console.log('页面加载了');
+    // console.log(wx.cloud.database);
   },
 });
