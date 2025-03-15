@@ -43,3 +43,5 @@
 <canvas id="theCanvas" type="2d" style="background-color: {{buttonBgColor}}; width: 6vh; height: 3vh; border-radius: 1.5vh; border: 0.1vh #141414 solid;" bind:tap="handleTheCanvasClick"></canvas>
 
 <text>{{texts.language}}</text>
+
+<button bind:tap="wxcloudexp">点击获取database</button>

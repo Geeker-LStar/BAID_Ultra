@@ -234,7 +234,12 @@ Page({
         context.fillStyle = '#eeeeee';
         context.fill();*/
       });
-  }
+  },
+
+  wxcloudexp() {
+    const db = wx.cloud.database;
+    console.log(db);
+  },
 })
 
 ////////////////////////////////////////////////////////
