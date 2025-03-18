@@ -9,4 +9,5 @@ module.exports = {
     submit: '提交反馈',
     error: '标题或描述未填',
     unable_to_upload: '图片最多4张！',
+    success: '反馈成功！',
 };

@@ -14,6 +14,8 @@ Page({
     content: '',
     images: [],
     openid: '',
+
+    texts: null,
   },
 
   /**
@@ -173,6 +175,8 @@ Page({
         mask: false,
       });
     } else {
+      // 控制台
+      console.groupCollapsed();
       console.log('提交成功，即将输出反馈内容……')
       const timestamp = Date.now();
       console.info('反馈的标题是：\n', this.data.title);
@@ -180,11 +184,48 @@ Page({
       console.info('反馈所上传的图片的临时链接是：\n', this.data.images);
       console.info('用户的openid是：\n', this.data.openid);
       console.info('用户提交反馈时的毫秒时间戳是：\n', timestamp);
+      console.groupEnd();
+
+      // 上传数据库
+      const db = wx.cloud.database();
+      db.collection('bug_report').add({
+        data: {
+          title: this.data.title,
+          describtion: this.data.content, // 命名失误
+          openid: this.data.openid,
+          timestamp: timestamp,
+        },
+        success: (res) => {
+          // 上传照片到云（如有）
+          console.log('数据上传成功，开始上传图片……');
+          if (this.data.images.length > 0) {
+            let num = 0;
+            const ID = res._id; // 获取对象ID
+            console.group('图片上传结果');
+            for (const img of this.data.images) {
+              num += 1;
+              const imgPath = `bug_report_imgs/${ID}_${num}.jpg`; // 将图片的文件设置为对象数据的ID
+              wx.cloud.uploadFile({
+                cloudPath: imgPath,
+                filePath: img,
+                success: (res) => {
+                  console.group();
+                  console.log(`已上传路径为${imgPath}的图片。`)
+                  console.log(res);
+                  console.groupEnd();
+                },
+              });
+            };
+            console.groupEnd();
+          };
+        },
+      });
+
       wx.switchTab({
         url: '/pages/me/index',
       })
       wx.showToast({
-        title: 'console已输出',
+        title: this.data.texts.success,
       });
     };
   },

@@ -9,4 +9,5 @@ module.exports = {
     submit: 'Submit',
     error: 'Incomplete!',
     unable_to_upload: 'Max 4 Images!',
+    success: 'Success!',
 };
