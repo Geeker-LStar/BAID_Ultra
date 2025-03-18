@@ -39,6 +39,16 @@ Page({
       openid: wx.getStorageSync('openId'),
     });
     console.log(this.data.openid);
+    
+    if (wx.getStorageSync('lang') == 'en') {
+      this.setData({
+        texts: require("../../i18n/bug_report/en.js"),
+      });
+    } else {
+      this.setData({
+        texts: require("../../i18n//bug_report/zh.js"),
+      });
+    };
   },
 
   /**
@@ -132,10 +142,10 @@ Page({
       });
     } else {
       wx.showToast({
-        title: '图片最多四张！',
+        title: this.data.texts.unable_to_upload,
         icon: 'error',
         duration: 2000,
-        mask: true,
+        mask: false,
       });
     };
   },
@@ -157,10 +167,10 @@ Page({
     // 是否必填项已经填写
     if (!this.data.content || !this.data.title) {
       wx.showToast({
-        title: '标题或描述未填！',  
+        title: this.data.texts.error,  
         icon: 'error',
         duration: 2000,
-        mask: true,
+        mask: false,
       });
     } else {
       console.log('提交成功，即将输出反馈内容……')

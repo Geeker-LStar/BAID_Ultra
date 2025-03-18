@@ -3,28 +3,28 @@
 
   <!--顶栏-->
   <view class="top-view">
-    <text class="top-text">Bug 反馈</text>
+    <text class="top-text">{{texts.head}}</text>
   </view>
    
   <view style="height: 2vh;"></view>
   <!--小字-->
   <view class="hint-view">
-    <text class="hint-text">标题</text>
+    <text class="hint-text">{{texts.title}}</text>
   </view>
   <view style="height: 1vh;"></view>
   <!--标题输入框-->
-  <textarea placeholder="请输入您的标题" class="input-title" bindinput="titleOnInput" auto-height="true" placeholder-style="font-size: 2vh"></textarea>
+  <textarea placeholder='{{texts.title_ph}}' class="input-title" bindinput="titleOnInput" auto-height="true" placeholder-style="font-size: 2vh"></textarea>
 
   <view style="height: 2vh;"></view>
   <!--小字-->
   <view class="hint-view">
-    <text class="hint-text">详细描述</text>
+    <text class="hint-text">{{texts.detail}}</text>
   </view>
   <view style="height: 1vh;"></view>
   <!--详细描述输入框-->
   <view class="input-content-view" style="height: {{contentViewHeight}}vh;">
     <view style="height: 2vh;"></view>
-    <text class="input-placeholder" wx:if="{{showPlaceholder}}">请详细描述您遇到的问题：\n例如：打开了哪一个界面？\n进行了什么操作？\n问题是否能稳定复现？</text>
+    <text class="input-placeholder" wx:if="{{showPlaceholder}}">{{texts.detail_ph}}</text>
     <textarea class="input-content" bindinput="contentOnInput" style="height:{{contentTextareaHeight}}vh;"></textarea>
   </view>
   <!--废掉的详细描述，先放着当个吉祥物
@@ -45,7 +45,7 @@
   <view style="height: 2vh;"></view>
   <!--小字-->
   <view class="hint-view">
-    <text class="hint-text">上传Bug图片（最多四张，选填）</text>
+    <text class="hint-text">{{texts.upload_img}}</text>
   </view>
   <view style="height: 1vh;"></view>
   <view class="image-overall-view">
@@ -58,7 +58,7 @@
       <view class="image-with-delete-button">
         <image src="{{item}}" class="image-uploaded"></image>
         <view class="delete-button" bind:tap="deleteImage" data-index="{{index}}">
-          <text>点击删除</text>
+          <text>{{texts.delete}}</text>
         </view>
       </view>
       <view style="width: 5%;"></view>
@@ -68,7 +68,7 @@
   <view style="height: 6.5vh;"></view>
   <!--提交Bug反馈按钮-->
   <view class="submit-view" bind:tap="submitReport">
-    <text class="submit-text">提交反馈</text>
+    <text class="submit-text">{{texts.submit}}</text>
   </view>
   <view style="height: 15vh;"></view>
 
