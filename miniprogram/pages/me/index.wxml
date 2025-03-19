@@ -24,7 +24,8 @@
       <!--空白-->
       <view style="height: 5vh;"></view>
       <!--账号类型-->
-      <text class="account-type">{{texts.name_detail}}</text>
+      <text class="account-type" wx:if="{{isLogged}}">{{role}}</text>
+      <text class="account-type" wx:else>{{texts.name_detail}}</text>
     </view>
   </view>
   <!--空白-->

@@ -30,19 +30,12 @@ Page({
     };
     console.log(require("../../i18n/lab/en.js"));
 
-    const db = wx.cloud.database();
-    db.collection('lab-dataset').add({
-      data: {
-        test: 'testTexts',
-      },
-      success: function(res) {
-        console.log('成功哦');
-        console.log(res);
-      },
-    });
-    db.collection('lab-dataset').doc('a56e23cd67d7b2a80132175b18655962').get({
-      success: function(res) {
-        console.log('又成功了\n', res);
+    wx.showModal({
+      title: '标题',
+      content: '内容',
+      showCancel: false,
+      complete: (res) => {
+        console.log('回调');
       },
     });
   },

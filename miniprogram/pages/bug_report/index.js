@@ -223,7 +223,7 @@ Page({
 
       wx.switchTab({
         url: '/pages/me/index',
-      })
+      });
       wx.showToast({
         title: this.data.texts.success,
       });

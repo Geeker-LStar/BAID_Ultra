@@ -179,10 +179,6 @@ Page({
     return newObj;
   },
 
-  handleFontStyleAndSize() {
-    console.log('你点击了“字体样式和大小”。');
-  },
-
   handleLanguage() {
     console.log('你点击了“语言”');
     if (!this.data.optionsOn) {

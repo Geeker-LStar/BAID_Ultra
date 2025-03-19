@@ -6,7 +6,8 @@ Page({
    */
   data: {
     isLogged: undefined,
-    name: wx.getStorageSync('name'),
+    name: null,
+    role: null,
     texts: null,
   },
 
@@ -27,7 +28,8 @@ Page({
     let userId = wx.getStorageSync('userId');
     this.setData({
       isLogged: (userId != ''),
-      name: wx.getStorageSync('name')
+      name: wx.getStorageSync('name'),
+      role: wx.getStorageSync('role'),
     });
     
     // 处理多语言

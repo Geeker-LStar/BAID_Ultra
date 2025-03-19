@@ -112,9 +112,18 @@ Page({
   },
 
   goToNotifications() {
+    this.onShow();
+    wx.showModal({
+      title: this.data.texts.mTitle,
+      content: this.data.texts.mContent,
+      showCancel: false,
+      confirmText: this.data.texts.mConfirm,
+      complete: (res) => {},
+    });
+    /*
     wx.navigateTo({
       url: '/pages/me_setting_notifications/index',
-    });
+    });*/
   },
 
   goToPrivacy() {

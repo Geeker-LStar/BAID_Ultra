@@ -67,7 +67,7 @@ Page({
               wx.setStorageSync('pinyin', res.data.data.pinyin);
               wx.setStorageSync('role', res.data.data.role);
 
-              console.log("set successful");
+              console.log("set successfully");
               // this.setData({
               //   account: res.data.data.account,
               //   active_status: res.data.data.active_status,

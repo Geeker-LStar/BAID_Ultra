@@ -59,10 +59,17 @@ App({
       console.warn('检测到本地存储的语言设置缺失，已重置为简体中文（zh）！');
       wx.setStorageSync('lang', 'zh');
     };
+
+    // 检测头像设置
+    if (wx.getStorageSync('profile') == '') {
+      console.warn('检测到头像缺失，已重置用户头像ID！');
+      const profileId = this.randomId();
+      wx.setStorageSync('profile', profileId);
+    };
     
   },
   // 配置 markdown 解析器
-  towxml:require('/towxml/index'),
+  towxml: require('/towxml/index'),
   getText: (url, callback) => {
     wx.request({
       url: url,
@@ -78,5 +85,12 @@ App({
         console.error('请求失败', err);
       }
     });
-  }
+  },
+
+  randomId: () => {
+    const timestamp = Date.now(); // 当前时间戳（毫秒）
+    const randomNum = Math.floor(Math.random() * 1e6); // 0 到 999999 之间的随机数
+    const randomID = `${timestamp}${randomNum.toString().padStart(6, '0')}`;
+    return randomID;
+  },
 });

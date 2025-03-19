@@ -39,18 +39,4 @@
     </view>
   </view>
 
-  <view style="height: 2vh;"></view>
-  
-  <view class="option-view" bind:tap="handleFontStyleAndSize">
-    <view style="width: 5%;"></view>
-    <view class="option-text-view">
-      <text class="option-text">{{texts.font}}</text>
-    </view>
-    <view class="right-side-view">
-    </view>
-    <view class="option-arrow-view">
-      <text class="option-text">>></text>
-    </view>
-  </view>
-
 </view>
