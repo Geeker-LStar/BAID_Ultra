@@ -1,0 +1,9 @@
+<!--pages/edit_profile/index.wxml-->
+<view class="fs">
+
+  <view style="height: 5vh;"></view>
+  <text class="title">{{texts.edit_profile}}</text>
+  <view style="height: 5vh;"></view>
+  <canvas class="profile-preview" id="profilePreview" type="2d"></canvas>
+
+</view>

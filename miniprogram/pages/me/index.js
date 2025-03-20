@@ -9,6 +9,7 @@ Page({
     name: null,
     role: null,
     texts: null,
+    profileSrc: null,
   },
 
   onLoad() {
@@ -42,6 +43,27 @@ Page({
         texts: require("../../i18n/me/zh.js"),
       });
     };
+
+    // 处理头像
+    // 尝试获取云端头像
+    const targetURL = `cloud://baid-ultra-official-9css8ac4b5e7.6261-baid-ultra-official-9css8ac4b5e7-1338879792/profile_imgs/${wx.getStorageSync('userId')}.jpg`; // 存储的头像链接（如有）
+    wx.cloud.getTempFileURL({
+      fileList: [targetURL],
+      success: (res) => {
+        // 判断res.fileList[0].tempFileURL是否为空
+        if (res.fileList[0].tempFileURL == '') {
+          // 将图片资源设为本地默认图片
+          this.setData({
+            profileSrc: "/images/pages_me_images/profile-image-example.png",
+          });
+        } else {
+          // 将图片资源设为返回的临时链接
+          this.setData({
+            profileSrc: res.fileList[0].tempFileURL,
+          });
+        };
+      },
+    });
   },
 
   /**

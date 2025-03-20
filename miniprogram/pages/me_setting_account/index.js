@@ -75,11 +75,44 @@ Page({
   handleProfileClick() {
     // 用户点击头像按钮时的行为
     console.log('我的-设置-账号管理与安全：你点击了头像按钮。');
+    if (wx.getStorageSync('userId') != '') {
+      wx.navigateTo({
+        url: '/pages/edit_profile/index',
+      });
+    } else {
+      wx.showToast({
+        title: this.data.texts.please_login,
+        icon: 'error',
+        duration: 1000,
+        mask: false,
+      });
+    }
   },
   
   handleNameClick() {
     // 用户点击昵称按钮时的行为
     console.log('我的-设置-账号管理与安全：你点击了昵称按钮。');
+    if (wx.getStorageSync('userId') != '') {
+      wx.showModal({
+        title: '请输入新昵称',
+        content: '',
+        editable: true,
+        placeholderText: wx.getStorageSync('name'),
+        complete: (res) => {
+          console.log(res);
+          if (res.confirm) {
+            
+          };
+        },
+      });
+    } else {
+      wx.showToast({
+        title: this.data.texts.please_login,
+        icon: 'error',
+        duration: 1000,
+        mask: false,
+      });
+    }
   },
 
   handleMyAccount() {

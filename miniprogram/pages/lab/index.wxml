@@ -45,3 +45,5 @@
 <text>{{texts.language}}</text>
 
 <button bind:tap="wxcloudexp">点击获取database</button>
+
+<button bind:tap="loginAsDeveloper">开发人员登录</button>

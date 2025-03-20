@@ -12,7 +12,7 @@
     <view style="width: 5vw;"></view>
     <!--头像-->
     <view class="profile-view">
-      <image src="/images/pages_me_images/profile-image-example.png" class="profile"></image>
+      <image src="{{profileSrc}}" class="profile"></image>
     </view>
     <!--空白-->
     <view style="width: 6vw;"></view>
