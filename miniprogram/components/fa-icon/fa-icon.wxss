@@ -1,0 +1,7 @@
+.fa-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  svg {
+    display: block;
+  }

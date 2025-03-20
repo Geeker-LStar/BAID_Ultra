@@ -1,4 +1,4 @@
-module.exports = Behavior({
+    module.exports = Behavior({
     data: {
       ripples: [],
     },

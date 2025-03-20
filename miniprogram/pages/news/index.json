@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "BAID Ultra",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "fa-icon": "/components/fa-icon/fa-icon"
+  }
 }

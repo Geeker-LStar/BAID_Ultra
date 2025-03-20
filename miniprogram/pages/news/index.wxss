@@ -1,7 +1,9 @@
 .container {
   width: 95%;
   background-color: white; /* 米色背景 */
+  border: 2px solid var(--BorderColor);
   border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px auto;
   padding: 15px;
   display: flex;

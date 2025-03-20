@@ -1,5 +1,6 @@
 <view class="container">
   <view class="header">
+  
     <text class="title">⭐ 学校新闻</text>
     <!-- 注意这里 datatablename 只能用全小写，这是 wxml 的限制 -->
     <text class="more" bindtap="goToArticleList" data-datatablename="test">更多 >></text>
