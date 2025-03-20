@@ -32,9 +32,12 @@
 
 .more {
   font-size: 14px;
-  color: #007aff;
   position: absolute;
-  right: 10px;
+  right: 0px;
+  max-width: 80px;
+  padding: 8px 8px;
+  background-color: #007aff;
+  color: white;
 }
 
 .list {

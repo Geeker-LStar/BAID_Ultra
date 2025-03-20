@@ -1,8 +1,4 @@
 /* pages/app/app.wxss */
-page{
-    background-color: #d7faf4;
-}
-
 .head-container {
   height: 150vh;
   display: flex;
@@ -27,7 +23,7 @@ page{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   color: #333;
-  border: 2px solid #C3B3A3;
+  border: 2px solid var(--BorderColor);
 }
 
 .mid-button-container {
@@ -41,7 +37,7 @@ page{
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid #C3B3A3;
+  border: 2px solid var(--BorderColor);
 }
 
 .mid-button {
@@ -76,7 +72,7 @@ page{
   border-radius: 10px;
   margin-bottom: 20px; /* 增加按钮之间的间距 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 2px solid #C3B3A3; /* 添加米色细边框 */
+  border: 2px solid var(--BorderColor); /* 添加米色细边框 */
 }
 
 .button-logo {

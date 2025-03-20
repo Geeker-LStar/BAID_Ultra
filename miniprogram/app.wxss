@@ -28,5 +28,5 @@ page {
     justify-content: flex-start;
     --BorderColor: blueviolet;
     --Pagebg_light: #d7faf4
-    --Pagebg_dark: #000000
+    --Pagebg_dark: #262626
 }
