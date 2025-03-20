@@ -30,14 +30,14 @@ Page({
     };
     console.log(require("../../i18n/lab/en.js"));
 
-    wx.showModal({
+    /*wx.showModal({
       title: '标题',
       content: '内容',
       showCancel: false,
       complete: (res) => {
         console.log('回调');
       },
-    });
+    });*/
   },
 
   /**
@@ -248,6 +248,14 @@ Page({
   wxcloudexp() {
     const db = wx.cloud.database;
     console.log(db);
+  },
+
+  loginAsDeveloper() {
+    wx.setStorageSync('userId', '-1');
+    wx.setStorageSync('name', '测试人员');
+    wx.setStorageSync('pinyin', 'CeShiRenYuan');
+    wx.setStorageSync('role', 'developer');
+    console.log('已经设置开发人员信息！');
   },
 })
 

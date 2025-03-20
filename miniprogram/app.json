@@ -27,7 +27,8 @@
     "pages/apps/apps/Lists/Test/subpage/subpage",
     "pages/me_setting_notifications/index",
     "pages/me_setting_privacy/index",
-    "pages/language_and_theme/index"
+    "pages/language_and_theme/index",
+    "pages/edit_profile/index"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
