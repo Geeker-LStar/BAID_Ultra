@@ -27,6 +27,6 @@ page {
     flex-direction: column;
     justify-content: flex-start;
     --BorderColor: blueviolet;
-    --Pagebg_light: #d7faf4
-    --Pagebg_dark: #262626
+    --Bgcolor: #f0f0f0; /* 默认浅色模式 */
+    --Textcolor: #000000;
 }

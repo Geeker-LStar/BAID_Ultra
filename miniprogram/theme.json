@@ -1,0 +1,10 @@
+{
+    "light": {
+      "pageBgColor": "#f6f6f6",
+      "pageTxtStyle": "black"
+    },
+    "dark": {
+      "pageBgColor": "#191919",
+      "pageTxtStyle": "white"
+    }
+  }
