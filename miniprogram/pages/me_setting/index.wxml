@@ -78,7 +78,7 @@
   </view>  
   
   <!-- 如果 isLogged 为 false，显示去登录按钮 -->
-  <view class="exit-log-view" wx:else bind:tap="goToLogIn">
+  <view class="exit-log-view" wx:else bind:tap="goToLogIn" hover-class="button-item-active">
     <text class="log-text">{{texts.login}}</text>
   </view>
 </view>

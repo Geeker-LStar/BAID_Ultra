@@ -221,11 +221,6 @@
   justify-content: center;
 }
 
-.please-login-view:hover {
-  border: white 0.5vh solid;
-  height: 7vh;
-}
-
 .please-login-text {
   color: #000000;
   font-size: 4vh;

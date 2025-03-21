@@ -1,2 +1,6 @@
 <!--pages/apps/apps/Lists/Test/subpage/subpage.wxml-->
 <text>pages/apps/apps/Lists/Test/subpage/subpage.wxml</text>
+
+<i-input class="Input" value="{{ value1 }}" title="收货人" autofocus placeholder="名字"></i-input> 
+
+<i-switch class = "Switch" value="{{switch1}}" bind:change="onChange" slot="footer"></i-switch>

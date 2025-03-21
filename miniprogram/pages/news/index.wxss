@@ -38,6 +38,7 @@
   padding: 8px 8px;
   background-color: #007aff;
   color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .list {

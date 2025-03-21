@@ -1,9 +1,8 @@
 <view class="container">
   <view class="header">
-  
     <text class="title">⭐ 学校新闻</text>
     <!-- 注意这里 datatablename 只能用全小写，这是 wxml 的限制 -->
-    <button class="more" bindtap="goToArticleList" data-datatablename="test">更多 >></button>
+    <button class="more" bindtap="goToArticleList" data-datatablename="test" hover-class="button-item-active">更多 >></button>
   </view>
   <view class="list">
     <view class="divider"></view>
@@ -25,7 +24,7 @@
 <view class="container">
   <view class="header">
     <text class="title">⭐ 升学规划</text>
-    <button class="more" bindtap="goToArticleList" data-datatablename="application_info">更多 >></button>
+    <button class="more" bindtap="goToArticleList" data-datatablename="application_info" hover-class="button-item-active">更多 >></button>
   </view>
   <view class="list">
     <view class="divider"></view>
@@ -47,7 +46,7 @@
 <view class="container">
   <view class="header">
     <text class="title">⭐ 竞赛资讯</text>
-    <button class="more" bindtap="goToArticleList" data-datatablename="contest_info">更多 >></button>
+    <button class="more" bindtap="goToArticleList" data-datatablename="contest_info" hover-class="button-item-active">更多 >></button>
   </view>
   <view class="list">
     <view class="divider"></view>
@@ -69,7 +68,7 @@
 <view class="container">
   <view class="header">
     <text class="title">⭐ 学生活动</text>
-    <button class="more" bindtap="goToArticleList" data-datatablename="students_activities">更多 >></button>
+    <button class="more" bindtap="goToArticleList" data-datatablename="students_activities" hover-class="button-item-active">更多 >></button>
   </view>
   <view class="list">
     <view class="divider"></view>

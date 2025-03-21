@@ -70,7 +70,7 @@
     </view>
   </view>
   <!--未登录界面-->
-  <view class="please-login-view" bind:tap="goToLogIn" wx:else>
+  <view class="please-login-view" bind:tap="goToLogIn" hover-class="button-item-active" wx:else>
     <text class="please-login-text">{{texts.login}}</text>
   </view>
   <!--空白-->

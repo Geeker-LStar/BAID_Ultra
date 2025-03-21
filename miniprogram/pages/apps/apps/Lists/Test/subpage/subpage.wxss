@@ -1,0 +1,10 @@
+/* pages/apps/apps/Lists/Test/subpage/subpage.wxss */
+page {
+    background-color: #262626;
+}
+.Input {
+    background-color: #262626;
+}
+.Switch {
+    background-color: #262626;
+}

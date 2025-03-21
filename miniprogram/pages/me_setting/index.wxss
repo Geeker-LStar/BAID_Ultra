@@ -76,11 +76,6 @@
   justify-content: center;
 }
 
-.exit-log-view:hover {
-  border: white 0.5vh solid;
-  height: 9vh;
-}
-
 .exit-text {
   color: #FF0000;
   font-size: 4vh;
