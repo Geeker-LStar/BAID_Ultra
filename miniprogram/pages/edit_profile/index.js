@@ -109,13 +109,16 @@ Page({
                   canvas.height = height * dpr;
                   ctx.scale(dpr, dpr);
 
+                  // 绘制头像的灰色背景
+                  ctx.fillStyle = '#262626';
+                  ctx.fillRect(0, 0, 75*VW, 75*VW); 
+                  //ctx.draw();
+
                   // 绘制图片
                   const img = canvas.createImage();
                   img.src = imagePath;
                   console.log(img);
                   img.onload = () => {
-                    ctx.setFillStyle('#262626')
-                    ctx.fillRect(0, 0, 75*VW, 75*VW)
                     ctx.save();
                     ctx.beginPath();
                     ctx.arc(35*VW, 35*VW, 35*VW, 0, 2*Math.PI);

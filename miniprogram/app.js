@@ -26,7 +26,7 @@ App({
             // 设置“设置”页面内数据
             // 变量名称解释
             // btSts: buttonStatus（按钮的开、关）
-            // btBgCl: buttonBackgroudColor
+            // btBgCl: buttonBackgroundColor
             // btArcCl: buttonArcColor（控制按钮内小圆圈的颜色）
             btArcCl: {
             true: '#FFFFFF',
@@ -109,12 +109,5 @@ App({
                 console.error('请求失败', err);
             }
         });
-    },
-
-    randomId: () => {
-        const timestamp = Date.now(); // 当前时间戳（毫秒）
-        const randomNum = Math.floor(Math.random() * 1e6); // 0 到 999999 之间的随机数
-        const randomID = `${timestamp}${randomNum.toString().padStart(6, '0')}`;
-        return randomID;
     },
 });
