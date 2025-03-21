@@ -1,7 +1,7 @@
 <!--pages/me_setting/index.wxml-->
 
 <!--屏幕-->
-<view class="full-screen">
+<view class="fs">
 
   <!--空白-->
   <view style="height: 2vh;"></view>

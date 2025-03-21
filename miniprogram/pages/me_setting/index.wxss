@@ -1,8 +1,8 @@
 /* pages/me_setting/index.wxss */
 
-.full-screen {
+.fs {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #262626;
   display: flex;
   flex-direction: column;

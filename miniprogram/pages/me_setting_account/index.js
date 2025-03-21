@@ -94,14 +94,19 @@ Page({
     console.log('我的-设置-账号管理与安全：你点击了昵称按钮。');
     if (wx.getStorageSync('userId') != '') {
       wx.showModal({
-        title: '请输入新昵称',
+        title: this.data.texts.title,
         content: '',
         editable: true,
         placeholderText: wx.getStorageSync('name'),
         complete: (res) => {
           console.log(res);
           if (res.confirm) {
-            
+            wx.setStorageSync('name', res.content);
+            wx.showToast({
+              title: this.data.texts.success,
+              icon: 'success',
+              duration: 1000,
+            });
           };
         },
       });

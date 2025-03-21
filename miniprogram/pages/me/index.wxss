@@ -1,6 +1,6 @@
 /*wxss*/
 
-.full-screen {
+.fs {
   width: 100vw;
   min-height: 100vh;
   background-color: #262626;

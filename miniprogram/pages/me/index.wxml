@@ -1,7 +1,7 @@
 <!--/pages/me/index.wxml-->
 
 <!--屏幕-->
-<view class="full-screen">
+<view class="fs">
   <!--封面-->
   <view class="upper-image-view">
     <image src="/images/pages_me_images/upper-image-example.png" class="upper-image"></image>

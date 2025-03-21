@@ -114,6 +114,8 @@ Page({
                   img.src = imagePath;
                   console.log(img);
                   img.onload = () => {
+                    ctx.setFillStyle('#262626')
+                    ctx.fillRect(0, 0, 75*VW, 75*VW)
                     ctx.save();
                     ctx.beginPath();
                     ctx.arc(35*VW, 35*VW, 35*VW, 0, 2*Math.PI);
@@ -129,7 +131,7 @@ Page({
                       success: (res) => {
                         console.log(res);
                         imagePath = res.tempFilePath;
-                        //#region 延迟中，将头像上传至云端
+                        // 延迟中，将头像上传至云端
                         delay = 300;
                         wx.showToast({ // 裁切完毕后立即展示
                           title: this.data.texts.uploading,
