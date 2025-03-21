@@ -42,7 +42,8 @@
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
     "i-switch": "components/iview/switch/index",
-    "i-input": "components/iview/input/index"
+    "i-input": "components/iview/input/index",
+    "i-avatar": "components/iview/avatar/index"
   },
   "tabBar": {
     "color": "#A2A9B0",
