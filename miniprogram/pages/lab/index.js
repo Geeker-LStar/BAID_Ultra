@@ -1,4 +1,6 @@
 // pages/lab/index.js
+import { checkName } from "../../utils/checkName.js";
+
 Page({
 
   /**
@@ -256,6 +258,7 @@ Page({
     wx.setStorageSync('pinyin', 'CeShiRenYuan');
     wx.setStorageSync('role', 'developer');
     console.log('已经设置开发人员信息！');
+    checkName();
   },
 })
 

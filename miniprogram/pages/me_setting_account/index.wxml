@@ -35,7 +35,7 @@
     </view>
     <!--昵称-->
     <view class="right-side-view">
-      <text class="name-text">昵称</text> <!--todo:昵称过长的处理还没有完成-->
+      <text class="name-text">{{nameDisplayed}}</text>
     </view>
     <!--空白-->
     <view style="width: 2%;"></view>

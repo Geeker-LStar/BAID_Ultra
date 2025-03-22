@@ -1,3 +1,7 @@
+//const { success } = require("./i18n/bug_report/en");
+import { checkName } from "./utils/checkName";
+
+
 // app.js
 App({
     async onLaunch() {
@@ -19,7 +23,7 @@ App({
         // “设置”内按钮状态
         if (wx.getStorageSync('settingDataOK') != 'Ok') {
             wx.setStorageSync('settingDataOK', 'Ok');
-            wx.settorageSync('#activateNotifications', true)
+            wx.setStorageSync('#activateNotifications', true)
         };
 
         this.globalData = {
@@ -64,6 +68,10 @@ App({
         wx.onThemeChange(({ theme }) => {
             this.updateTheme(theme);
         });
+
+        // 检查云端昵称
+        checkName();
+
     }, //END OF ONLAUNCH
 
     async setTheme() {

@@ -6,6 +6,7 @@ Page({
    */
   data: {
     texts: null,
+    nameDisplayed: null,
   },
 
   /**
@@ -35,6 +36,19 @@ Page({
         texts: require("../../i18n/acc_and_sec/zh.js"),
       });
     };
+
+    const db = wx.cloud.database();
+    db.collection('names').doc(wx.getStorageSync('userId')).get({
+      success: (res) => {
+        console.log(res.data.nameDisplayed);
+        this.setData({
+          nameDisplayed: res.data.nameDisplayed,
+        });
+      },
+      fail: (err) => {
+        console.error(err);
+      },
+    });
   },
 
   /**
@@ -100,12 +114,38 @@ Page({
         placeholderText: wx.getStorageSync('name'),
         complete: (res) => {
           console.log(res);
-          if (res.confirm) {
+          const multiLines = !/\n|\r/.test(res.content); // 不包含换行符
+          const length = res.content.length <= 8; // 长度小于等于8
+          if (res.confirm && multiLines && length) {
             wx.setStorageSync('name', res.content);
+            const db = wx.cloud.database();
+            const name_displayed = res.content.length <= 5? res.content: `${res.content.slice(0, 4)}...`; // 根据昵称长度，决定显示的昵称
+            //console.log(String(wx.getStorageSync('userId')));
+            db.collection('names').doc(String(wx.getStorageSync('userId'))).update({
+              data: {
+                name: res.content,
+                nameDisplayed: name_displayed,
+              },
+              success: (res) => {
+                console.log(res);
+                wx.showToast({
+                  title: this.data.texts.success,
+                  icon: 'success',
+                  duration: 1000,
+                });
+                this.setData({
+                  nameDisplayed: name_displayed,
+                });
+              },
+              fail: (err) => {
+                console.error(err);
+              },
+            });
+          } else {
             wx.showToast({
-              title: this.data.texts.success,
-              icon: 'success',
-              duration: 1000,
+              title: '昵称过长！',
+              icon: 'error',
+              duration: 800,
             });
           };
         },

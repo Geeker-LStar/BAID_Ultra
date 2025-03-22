@@ -1,3 +1,5 @@
+import { checkName } from "../../utils/checkName";
+
 Page({
   data: {
     account: '',  // 存储账号
@@ -53,6 +55,7 @@ Page({
             title: '登录成功',
             icon: 'success',
           });
+          checkName();
           // 获取一些需要在别的页面显示的数据，存储起来
           wx.request({
             url: `http://123.56.160.48:520/info/${this.data.userId}`,
