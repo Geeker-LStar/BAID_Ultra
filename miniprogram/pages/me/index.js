@@ -1,3 +1,5 @@
+const { success } = require("../../i18n/acc_and_sec/en.js");
+
 // pages/me/index.js
 Page({
 
@@ -26,10 +28,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    // 判断是否登录，获取用户账户类型
     let userId = wx.getStorageSync('userId');
     this.setData({
       isLogged: (userId != ''),
-      name: wx.getStorageSync('name'),
+      // name: wx.getStorageSync('name'),
       role: wx.getStorageSync('role'),
     });
     
@@ -62,6 +65,20 @@ Page({
             profileSrc: res.fileList[0].tempFileURL,
           });
         };
+      },
+    });
+
+    // 处理昵称
+    const db = wx.cloud.database();
+    db.collection('names').doc(String(wx.getStorageSync('userId'))).get({
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          name: res.data.name,
+        });
+      },
+      fail: (err) => {
+        console.error(err);
       },
     });
   },

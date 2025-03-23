@@ -1,7 +1,7 @@
 export function checkName () {
     if (wx.getStorageSync('userId') != '') {
         const db = wx.cloud.database();
-        db.collection('names').doc(wx.getStorageSync('userId')).get({
+        db.collection('names').doc(String(wx.getStorageSync('userId'))).get({
             success: (res) => {
                 console.log(res);
             },

@@ -38,7 +38,8 @@ Page({
     };
 
     const db = wx.cloud.database();
-    db.collection('names').doc(wx.getStorageSync('userId')).get({
+    console.log(String(wx.getStorageSync('userId')));
+    db.collection('names').doc(String(wx.getStorageSync('userId'))).get({
       success: (res) => {
         console.log(res.data.nameDisplayed);
         this.setData({
@@ -46,7 +47,11 @@ Page({
         });
       },
       fail: (err) => {
+        // 说明用户未登录
         console.error(err);
+        this.setData({
+          nameDisplayed: '',
+        });
       },
     });
   },
@@ -111,7 +116,7 @@ Page({
         title: this.data.texts.title,
         content: '',
         editable: true,
-        placeholderText: wx.getStorageSync('name'),
+        placeholderText: this.data.texts.placeholder,
         complete: (res) => {
           console.log(res);
           const multiLines = !/\n|\r/.test(res.content); // 不包含换行符
