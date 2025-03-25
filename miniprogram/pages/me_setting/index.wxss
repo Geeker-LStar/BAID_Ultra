@@ -3,7 +3,7 @@
 .fs {
   width: 100vw;
   min-height: 100vh;
-  background-color: #262626;
+  background-color: --Bgcolor;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,16 +28,16 @@
 }*/
 
 .option-view {
-  width: 100%;
-  height: 6vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid #3B3838;
-}
-
-.option-view:hover {
-  background-color: #1F1F1F;
+    width: 95%;
+    height: 8vh;
+    display: flex;
+    margin: 10px auto;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid var(--BorderColor);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .option-text-view {
@@ -57,7 +57,7 @@
 }
 
 .option-text {
-  color: #ffffff;
+  color: --Textcolor;
   font-size: 2.5vh;
   font-weight: 400;
   font-style: normal;
@@ -68,12 +68,13 @@
 .exit-log-view {
   width: 45vw;
   height: 10vh;
-  background-color: #595959;
+  background-color: #A6A6A6;
   border-radius: 2vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .exit-text {

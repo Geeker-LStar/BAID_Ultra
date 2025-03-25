@@ -3,7 +3,7 @@
 .fs {
   width: 100vw;
   min-height: 100vh;
-  background-color: #262626;
+  background-color: --Bgcolor;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,11 +15,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid #3B3838;
+  border: 2px solid var(--BorderColor);
 }
 
 .option-view:hover {
-  background-color: #1F1F1F;
+  background-color: #e0e0e0;
 }
 
 .option-text-view {
@@ -51,7 +51,7 @@
 }
 
 .option-text {
-  color: #ffffff;
+  color: --Textcolor;
   font-size: 2.5vh;
   font-weight: 400;
   font-style: normal;
@@ -60,7 +60,7 @@
 }
 
 .light-text {
-  color: #bfbfbf;
+  color: #404040;
   font-size: 2.5vh;
   font-weight: 400;
   font-style: normal;

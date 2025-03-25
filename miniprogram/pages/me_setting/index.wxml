@@ -7,7 +7,7 @@
   <view style="height: 2vh;"></view>
 
   <!--单个设置-->
-  <view class="option-view" bind:tap="goToAccount">
+  <view class="option-view" bind:tap="goToAccount" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
@@ -19,12 +19,9 @@
       <text class="option-text">>></text>
     </view>
   </view>
-
-  <!--空白-->
-  <view style="height: 2vh;"></view>
-
+  
   <!--单个设置-->
-  <view class="option-view" bind:tap="goToNotifications">
+  <view class="option-view" bind:tap="goToNotifications" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
@@ -38,7 +35,7 @@
   </view>
 
   <!--单个设置-->
-  <view class="option-view" bind:tap="goToPrivacy">
+  <view class="option-view" bind:tap="goToPrivacy" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
@@ -51,11 +48,8 @@
     </view>
   </view>
 
-  <!--空白-->
-  <view style="height: 2vh;"></view>
-
   <!--单个设置-->
-  <view class="option-view" bind:tap="goToLanguageAndTheme">
+  <view class="option-view" bind:tap="goToLanguageAndTheme" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
@@ -73,7 +67,7 @@
 
   <view>
   <!-- 如果 isLogged 为 true，显示退出登录按钮 -->
-  <view class="exit-log-view" wx:if="{{isLogged}}" bind:tap="logOut">
+  <view class="exit-log-view" wx:if="{{isLogged}}" bind:tap="logOut" hover-class="button-item-active">
     <text class="exit-text">{{texts.logout}}</text>
   </view>  
   

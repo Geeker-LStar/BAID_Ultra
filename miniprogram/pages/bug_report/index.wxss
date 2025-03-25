@@ -3,7 +3,7 @@
 .full-screen {
   width: 100vw;
   min-height: 100vh;
-  background-color: #262626;
+  background-color: --Bgcolor;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
 .top-view {
   width: 100%;
   height: 6.5vh;
-  background-color: #595959;
+  background-color: #a6a6a6;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,7 +20,7 @@
 }
 
 .top-text {
-  color: #FFFFFF;
+  color: --Textcolor;
   font-size: 3vh;
   font-weight: 900;
   font-style: normal;
@@ -36,7 +36,7 @@
 }
 
 .hint-text {
-  color: #BFBFBF;
+  color: #404040;
   font-size: 2vh;
   font-weight: 300;
   font-style: normal;
@@ -44,18 +44,18 @@
 }
 
 .input-title {
-  color: white;
+  color: --Textcolor;
   font-size: 2vh;
   padding: 2vw;
   width: 90%;
   max-height: 9vh;
-  background-color: #3B3838;
+  background-color: #C4C7C7;
   border-radius: 10px;
 }
 
 .input-content-view {
   width: 90%;
-  background-color: #3B3838;
+  background-color: #c4c7c7;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@
 }
 
 .input-fake-content {
-  color: #ffffff;
+  color: --Textcolor;
   font-size: 2vh;
   font-weight: 500;
   font-style: normal;
@@ -87,7 +87,7 @@
 
 .input-content {
   font-size: 2vh;
-  color: #ffffff;
+  color: --Textcolor;
   width: 95%;
   position: absolute;
   top: 1vw;
@@ -98,17 +98,14 @@
   width: 23%;
   height: 90%;
   border-radius: 3vw;
-  border: #635E5E;
+  border: #9CA1A1;
   border-style: solid;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: border;
-}
-
-.upload-images-view:hover {
-  border: #FFFFFF solid;
+  /*background-color: ;*/
 }
 
 .image-overall-view {
@@ -118,7 +115,7 @@
   flex-direction: row;
   align-items: center;
   border-radius: 3vw;
-  border: #3B3838;
+  border: #C4C7C7;
   border-style: solid;
 }
 
@@ -141,16 +138,12 @@
 .delete-button {
   width: 100%;
   height: 20%;
-  background-color: #635E5E;
+  background-color: #9CA1A1;
   border-radius: 2vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-.delete-button:hover {
-  background-color: #D6D6D6;
 }
 
 .image-uploaded {
@@ -166,7 +159,7 @@
 .submit-view {
   width: 40%;
   height: 8vh;
-  background-color: #3B3838;
+  background-color: skyblue;
   border-radius: 4vh;
   display: flex;
   flex-direction: row;
@@ -174,13 +167,8 @@
   justify-content: center;
 }
 
-.submit-view:hover {
-  border: white 0.5vh solid;
-  height: 7vh;
-}
-
 .submit-text {
-  color: #ffffff;
+  color: --Textcolor;
   font-size: 3.5vh;
   font-weight: 900;
   font-style: normal;

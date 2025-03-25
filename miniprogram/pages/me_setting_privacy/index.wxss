@@ -3,7 +3,7 @@
 .fs {
   width: 100vw;
   min-height: 100vh;
-  background-color: #262626;
+  background-color: --Bgcolor;
   display: flex;
   flex-direction: column;
   align-items: center;

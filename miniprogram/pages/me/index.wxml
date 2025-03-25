@@ -77,7 +77,7 @@
   <view style="height: 5vh;" wx:if="isLogged"></view>
   <view style="height: 9vh;" wx:else></view>
   <!--选项1-->
-  <view class="option-view" bind:tap="goToBugReport">
+  <view class="option-view" bind:tap="goToBugReport" hover-class="box-item-active">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->
@@ -90,7 +90,7 @@
     </view>
   </view>
   <!--选项2-->
-  <view class="option-view" bind:tap="goToSetting">
+  <view class="option-view" bind:tap="goToSetting" hover-class="box-item-active">
     <!--空白-->
     <view style="width: 5vw;"></view>
     <!--文字-->

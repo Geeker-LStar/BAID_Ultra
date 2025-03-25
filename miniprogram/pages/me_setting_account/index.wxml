@@ -1,12 +1,8 @@
 <!--pages/me_setting_account/index.wxml-->
 
 <view class="fs">
-
-  <!--空白-->
-  <view style="height: 2vh;"></view>
-
   <!--单个设置-->
-  <view class="option-view" bind:tap="handleProfileClick">
+  <view class="option-view" bind:tap="handleProfileClick" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5%;"></view>
     <!--文字-->
@@ -26,7 +22,7 @@
   </view>
 
   <!--单个设置-->
-  <view class="option-view" bind:tap="handleNameClick">
+  <view class="option-view" bind:tap="handleNameClick" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5%;"></view>
     <!--文字-->
@@ -45,11 +41,8 @@
     </view>
   </view>
 
-  <!--空白-->
-  <view style="height: 2vh;"></view>
-
   <!--单个设置-->
-  <view class="option-view" bind:tap="handleMyAccount">
+  <view class="option-view" bind:tap="handleMyAccount" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5%;"></view>
     <!--文字-->
@@ -68,7 +61,7 @@
   </view>
 
   <!--单个设置-->
-  <view class="option-view" bind:tap="handleViewDevices">
+  <view class="option-view" bind:tap="handleViewDevices" hover-class="button-item-active">
     <!--空白-->
     <view style="width: 5%;"></view>
     <!--文字-->

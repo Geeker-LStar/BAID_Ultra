@@ -50,14 +50,14 @@
   <view style="height: 1vh;"></view>
   <view class="image-overall-view">
     <view style="width: 2%;"></view>
-    <view class="upload-images-view" bind:tap="uploadImages">
+    <view class="upload-images-view" bind:tap="uploadImages" hover-class="normal-item-active">
       <image src="/images/plus_icon.png" class="plus-icon"></image>
     </view>
     <view style="width: 2%;"></view>
     <view wx:for="{{images}}" wx:key="index" class="image-display-view">
       <view class="image-with-delete-button">
         <image src="{{item}}" class="image-uploaded"></image>
-        <view class="delete-button" bind:tap="deleteImage" data-index="{{index}}">
+        <view class="delete-button" bind:tap="deleteImage" data-index="{{index}}" hover-class="normal-item-active">
           <text>{{texts.delete}}</text>
         </view>
       </view>
@@ -67,7 +67,7 @@
 
   <view style="height: 6.5vh;"></view>
   <!--提交Bug反馈按钮-->
-  <view class="submit-view" bind:tap="submitReport">
+  <view class="submit-view" bind:tap="submitReport" hover-class="button-item-active">
     <text class="submit-text">{{texts.submit}}</text>
   </view>
   <view style="height: 15vh;"></view>
