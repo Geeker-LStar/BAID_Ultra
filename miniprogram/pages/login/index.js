@@ -1,4 +1,5 @@
 import { checkName } from "../../utils/checkName";
+import { checkDevice } from "../../utils/checkDevice";
 
 Page({
   data: {
@@ -56,6 +57,7 @@ Page({
             icon: 'success',
           });
           checkName();
+          checkDevice();
           // 获取一些需要在别的页面显示的数据，存储起来
           wx.request({
             url: `http://123.56.160.48:520/info/${this.data.userId}`,

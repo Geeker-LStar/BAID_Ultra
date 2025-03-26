@@ -3,6 +3,7 @@ module.exports = {
   notifications: 'Notifications',
   privacy: 'Privacy Policy',
   language_and_theme: 'Language & Theme',
+  please_log_in: 'Please log in!',
   login: 'Log In',
   logout: 'Log Out',
   mTitle: 'Notifications not Available', //m = Modal

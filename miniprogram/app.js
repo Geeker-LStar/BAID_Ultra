@@ -1,5 +1,6 @@
 //const { success } = require("./i18n/bug_report/en");
 import { checkName } from "./utils/checkName";
+import { checkDevice } from "./utils/checkDevice";
 
 
 // app.js
@@ -19,12 +20,6 @@ App({
             const buttonEffects = require("./behaviors/animation/animation");
             behaviors: [buttonEffects];
         }
-
-        // “设置”内按钮状态
-        if (wx.getStorageSync('settingDataOK') != 'Ok') {
-            wx.setStorageSync('settingDataOK', 'Ok');
-            wx.setStorageSync('#activateNotifications', true)
-        };
 
         this.globalData = {
             // 设置“设置”页面内数据
@@ -71,6 +66,9 @@ App({
 
         // 检查云端昵称
         checkName();
+
+        // 检查设备随机ID
+        checkDevice();
 
     }, //END OF ONLAUNCH
 

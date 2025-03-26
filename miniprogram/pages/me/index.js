@@ -1,5 +1,3 @@
-const { success } = require("../../i18n/acc_and_sec/en.js");
-
 // pages/me/index.js
 Page({
 
@@ -78,6 +76,7 @@ Page({
         });
       },
       fail: (err) => {
+        // 说明没有登录
         console.error(err);
       },
     });
@@ -120,9 +119,6 @@ Page({
 
   goToSetting() {
     console.log('我的：正在尝试跳转设置页面……');
-    // this.setData({
-    //   isLogged: false,
-    // })
     wx.navigateTo({
       url: '/pages/me_setting/index',
     });
@@ -136,7 +132,7 @@ Page({
         url: '/pages/wx_login/index',
       });
       wx.showToast({
-        title: '请登录微信！',
+        title: this.data.texts.please_log_in,
         icon: 'error',
       });
     } else {

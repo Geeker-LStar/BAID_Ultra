@@ -1,5 +1,5 @@
 // pages/me_setting/index.js
-
+import { logOut } from "../../utils/logOut.js";
 
 Page({
 
@@ -84,18 +84,7 @@ Page({
   },
 
   logOut() {
-    // 存储的和用户信息相关的全都删掉
-    wx.removeStorageSync('userId');
-    wx.removeStorageSync('name');
-    wx.removeStorageSync('pinyin');
-    wx.removeStorageSync('role');
-    console.log("已经执行删除用户ID代码");
-    wx.switchTab({
-      url: '/pages/me/index',
-    })
-    wx.showToast({
-      title: '你已退出登录！',
-    });
+    logOut();
   },
 
   goToLogIn() {
@@ -106,9 +95,17 @@ Page({
   },
 
   goToAccount() {
-    wx.navigateTo({
-      url: '/pages/me_setting_account/index',
-    });
+    if (wx.getStorageSync('userId') != '') {
+      wx.navigateTo({
+        url: '/pages/me_setting_account/index',
+      });
+    } else {
+      wx.showToast({
+        title: this.data.texts.please_log_in,
+        icon: 'error',
+        duration: 1500,
+      });
+    };
   },
 
   goToNotifications() {

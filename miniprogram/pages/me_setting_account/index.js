@@ -48,7 +48,7 @@ Page({
       },
       fail: (err) => {
         // 说明用户未登录
-        console.error(err);
+        //console.error(err);
         this.setData({
           nameDisplayed: '',
         });
@@ -173,12 +173,13 @@ Page({
   handleViewDevices() {
     //用户点击“查看已登录设备”按钮时的行为
     console.log('我的-设置-账号管理与安全：你点击了“查看已登录设备”按钮。');
-    const deviceInfo = wx.getDeviceInfo();
+    const deviceInfo = wx.getDeviceInfo().model;
     /* 获取屏幕尺寸
     console.group('getwindowinfo'); 
     console.log(wx.getWindowInfo().screenWidth);
     console.log(wx.getWindowInfo().screenHeight);
     console.groupEnd();*/
     console.log(deviceInfo); // 有待进一步完善
+    console.log(wx.getDeviceInfo());
   },
 })

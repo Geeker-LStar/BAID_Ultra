@@ -1,5 +1,8 @@
 // pages/lab/index.js
 import { checkName } from "../../utils/checkName.js";
+import { checkDevice } from "../../utils/checkDevice.js";
+import { logOut } from "../../utils/logOut.js";
+
 
 Page({
 
@@ -259,6 +262,32 @@ Page({
     wx.setStorageSync('role', 'developer');
     console.log('已经设置开发人员信息！');
     checkName();
+    checkDevice();
+  },
+
+  logout() {
+    logOut();
+  },
+
+  wxlogin() {
+    wx.login({
+      success: (res) => {
+        console.log(res);
+      },
+    })
+  },
+
+  wxcloudupdate() {
+    const db = wx.cloud.database();
+    console.log(db.collection('test'))
+    db.collection('test').get({
+      success: (res) => {
+        console.log(res);
+      },
+      fail: (err) => {
+        console.warn(err)
+      }
+    })
   },
 })
 
