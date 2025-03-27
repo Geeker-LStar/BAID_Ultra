@@ -67,7 +67,28 @@ App({
         // 检查云端昵称
         checkName();
 
-        // 检查设备随机ID
+        // 检查超时退登
+        const db = wx.cloud.database();
+        db.collection('devices').doc(String(wx.getStorageSync('userId'))).get({
+          success: (res) => {
+            console.log(res);
+            const devices = res.data.devices;
+            if (devices[wx.getStorageSync('randomID')].logInTime + 604800000 /*一周*/ < Date.now()) {
+              devices[wx.getStorageSync('randomID')].off = true;
+              db.collection('devices').doc(String(wx.getStorageSync('userId'))).update({
+                data: {
+                  devices: devices,
+                },
+                success: (res) => {
+                  console.log(res);
+                },
+              });
+            };
+          },
+          fail: (err) => {console.error(err);},
+        });
+
+        // 检查设备信息
         checkDevice();
 
     }, //END OF ONLAUNCH

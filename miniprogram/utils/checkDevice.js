@@ -45,13 +45,6 @@ export function checkDevice () {
               console.log(res);
             },
           });
-          // 检查其他设备登录超时
-          for (const randomID in devices) {
-            let logInTime = devices[randomID].logInTime;
-            if (logInTime + 604800000 /*一周*/ < Date.now()) {
-              devices.randomID.off = true // 设备超时退登
-            };
-          };
           // 检查退登
           setInterval(() => {
             //console.log(res.data.devices[wx.getStorageSync('randomID')].off);

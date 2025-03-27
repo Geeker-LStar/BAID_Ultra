@@ -39,6 +39,6 @@
     </view>
   </view>
 
-  <text style="color: white;">这里以后会改成：跟随系统或手动设置</text>
+  <text style="color: black;">这里以后会改成：跟随系统或手动设置</text>
 
 </view>
