@@ -7,6 +7,7 @@ Page({
   data: {
     texts: null,
     nameDisplayed: null,
+    profileSrc: null,
   },
 
   /**
@@ -54,6 +55,27 @@ Page({
         });
       },
     });
+
+    // 处理头像
+    // 尝试获取云端头像
+    const targetURL = `cloud://baid-ultra-official-9css8ac4b5e7.6261-baid-ultra-official-9css8ac4b5e7-1338879792/profile_imgs/${wx.getStorageSync('userId')}.jpg`; // 存储的头像链接（如有）
+    wx.cloud.getTempFileURL({
+      fileList: [targetURL],
+      success: (res) => {
+        // 判断res.fileList[0].tempFileURL是否为空
+        if (res.fileList[0].tempFileURL == '') {
+          // 将图片资源设为本地默认图片
+          this.setData({
+            profileSrc: "/images/pages_me_images/profile-image-example.png",
+          });
+        } else {
+          // 将图片资源设为返回的临时链接
+          this.setData({
+            profileSrc: res.fileList[0].tempFileURL,
+          });
+        };
+      },
+    });
   },
 
   /**
@@ -95,9 +117,19 @@ Page({
     // 用户点击头像按钮时的行为
     console.log('我的-设置-账号管理与安全：你点击了头像按钮。');
     if (wx.getStorageSync('userId') != '') {
-      wx.navigateTo({
-        url: '/pages/edit_profile/index',
-      });
+      if (wx.getDeviceInfo().platform == 'windows') {
+        wx.showModal({
+          title: this.data.texts.mTitle,
+          content: this.data.texts.mContent,
+          showCancel: false,
+          confirmText: this.data.texts.mConfirm,
+          complete: (res) => {},
+        });
+      } else {
+        wx.navigateTo({
+          url: '/pages/edit_profile/index',
+        });
+      };
     } else {
       wx.showToast({
         title: this.data.texts.please_login,

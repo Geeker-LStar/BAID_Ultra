@@ -110,7 +110,7 @@ Page({
                   ctx.scale(dpr, dpr);
 
                   // 绘制头像的灰色背景
-                  ctx.fillStyle = '#262626';
+                  ctx.fillStyle = '#F0F0F0';
                   ctx.fillRect(0, 0, 75*VW, 75*VW); 
                   //ctx.draw();
 
@@ -188,6 +188,9 @@ Page({
       fail: (err) => {
         // 选择媒体失败
         console.log(err);
+        wx.navigateBack({
+          delta: 1,
+        });
       },
     });
     

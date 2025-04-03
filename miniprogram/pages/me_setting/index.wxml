@@ -63,7 +63,7 @@
   </view>
 
   <!--空白-->
-  <view style="height: 42vh;"></view>
+  <view style="height: 30vh;"></view>
 
   <view>
   <!-- 如果 isLogged 为 true，显示退出登录按钮 -->

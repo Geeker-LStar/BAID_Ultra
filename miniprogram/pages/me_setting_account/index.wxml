@@ -11,7 +11,7 @@
     </view>
     <!--图像-->
     <view class="right-side-view">
-      <image src="/images/pages_me_images/profile-image-example.png" class="profile"></image>
+      <image src="{{profileSrc}}" class="profile"></image>
     </view>
     <!--空白-->
     <view style="width: 2%;"></view>

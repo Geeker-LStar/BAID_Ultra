@@ -21,7 +21,7 @@ export function checkDevice () {
             // 没有记录该设备
             devices[wx.getStorageSync('randomID')] = {
               logInTime: Date.now(),
-              model: wx.getDeviceInfo().model,
+              brand: wx.getDeviceInfo().brand,
               off: false,
             };
             db.collection('devices').doc(String(wx.getStorageSync('userId'))).update({

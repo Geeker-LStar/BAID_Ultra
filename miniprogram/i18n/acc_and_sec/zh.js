@@ -1,5 +1,8 @@
 module.exports = {
   profile: '更换头像',
+  mTitle: '无法在Windows系统上更换头像',
+  mContent: '由于技术原因，您无法在Windows系统上更换头像！',
+  mConfirm: '我知道了',
   please_login: '请先登录',
   name: '更换昵称',
   title: '请输入新昵称',

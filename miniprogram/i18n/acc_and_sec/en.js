@@ -1,5 +1,8 @@
 module.exports = {
   profile: 'Change Profile',
+  mTitle: 'Feature Not Available On Windows',
+  mContent: 'You are not able to edit your profile on Windows system for technical reasons.',
+  mConfirm: 'OK',
   please_login: 'Please Log in',
   name: 'Change Nickname',
   title: 'Type your new nickname:',
